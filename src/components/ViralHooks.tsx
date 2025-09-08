@@ -4,15 +4,14 @@ import { Target, TrendingUp, Zap, ArrowRight, Download, Star, CheckCircle, Rocke
 
 const ViralHooks = () => {
   return (
-    <section id="viral-hooks" className="section-padding tesla-hero-gradient relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-tesla-blue/20 rounded-full blur-3xl float-animation"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-success/20 rounded-full blur-3xl float-animation" style={{animationDelay: '2s'}}></div>
+    <section id="viral-hooks" className="section-padding master-bg relative overflow-hidden">
+      {/* Section-specific glow overlay */}
+      <div className="section-glow"></div>
       
       <div className="container-width relative z-10">
         <div className="text-center mb-20 animate-fade-in">
         {/* Bestseller Badge */}
-        <div className="inline-flex items-center px-6 py-3 mb-6 bg-gradient-to-r from-tesla-orange to-tesla-red rounded-full shadow-lg">
+        <div className="inline-flex items-center px-6 py-3 mb-6 tesla-gradient rounded-full shadow-lg">
           <span className="text-sm text-white font-bold">🏆 Bestseller Pack</span>
         </div>
           
@@ -45,9 +44,9 @@ const ViralHooks = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <Card className="p-8 bg-white/5 border-white/10 backdrop-blur-xl glass-effect tesla-hover group">
+          <Card className="p-8 card-bg tesla-hover group elevated-card">
             <CardContent className="p-0">
-              <div className="w-16 h-16 bg-gradient-to-r from-tesla-green to-tesla-blue rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 tesla-electric rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 icon-container">
                 <Target className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Proven to Convert</h3>
@@ -76,9 +75,9 @@ const ViralHooks = () => {
             </CardContent>
           </Card>
 
-          <Card className="p-8 bg-white/5 border-white/10 backdrop-blur-xl glass-effect tesla-hover group">
+          <Card className="p-8 card-bg tesla-hover group elevated-card">
             <CardContent className="p-0">
-              <div className="w-16 h-16 bg-gradient-to-r from-tesla-blue to-tesla-purple rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 tesla-gradient rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 icon-container">
                 <Rocket className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Ready-to-Use</h3>
@@ -107,9 +106,9 @@ const ViralHooks = () => {
             </CardContent>
           </Card>
 
-          <Card className="p-8 bg-white/5 border-white/10 backdrop-blur-xl glass-effect tesla-hover group">
+          <Card className="p-8 card-bg tesla-hover group elevated-card">
             <CardContent className="p-0">
-              <div className="w-16 h-16 bg-gradient-to-r from-tesla-electric to-tesla-blue rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-tesla-electric to-tesla-blue rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 icon-container">
                 <Download className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Instant Access</h3>
@@ -140,7 +139,7 @@ const ViralHooks = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center glass-effect rounded-3xl p-12 lg:p-16 border border-white/10">
+        <div className="text-center glass-strong rounded-3xl p-12 lg:p-16">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content?
@@ -173,7 +172,7 @@ const ViralHooks = () => {
               rel="noopener noreferrer"
               className="inline-block"
             >
-          <Button size="lg" variant="default" className="text-lg font-bold px-12 py-6" asChild>
+          <Button size="lg" variant="default" className="text-lg font-bold px-12 py-6 magnetic-button" asChild>
             <a href="/checkout">Get Viral Hooks Pack Now</a>
           </Button>
             </a>

@@ -3,22 +3,16 @@ import { ArrowRight, PlayCircle, Zap, Sparkles, TrendingUp } from "lucide-react"
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center tesla-hero-gradient overflow-hidden pt-20">
-      {/* Sophisticated background pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_35%,rgba(59,130,246,0.05)_50%,transparent_65%)]"></div>
-      </div>
-      
-      {/* Premium floating orbs */}
-      <div className="absolute -top-40 -left-40 w-80 h-80 bg-tesla-blue/30 rounded-full blur-3xl float-animation"></div>
-      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-success/20 rounded-full blur-3xl float-animation" style={{animationDelay: '2s'}}></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-warning/10 rounded-full blur-3xl float-animation" style={{animationDelay: '4s'}}></div>
+    <section className="relative min-h-screen flex items-center justify-center master-bg overflow-hidden pt-20">
+      {/* Floating background orbs */}
+      <div className="bg-orb w-80 h-80 -top-40 -left-40"></div>
+      <div className="bg-orb-secondary w-96 h-96 -bottom-40 -right-40"></div>
+      <div className="bg-orb w-[600px] h-[600px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 float-delayed"></div>
       
       <div className="container-width relative z-10">
         <div className="max-w-7xl mx-auto text-center animate-slide-up">
           {/* Trusted Badge */}
-          <div className="inline-flex items-center px-6 py-3 mb-8 bg-white/5 rounded-full border border-white/20 backdrop-blur-xl glass-effect">
+          <div className="inline-flex items-center px-6 py-3 mb-8 glass-medium rounded-full">
             <span className="text-sm text-white font-medium">
               ✨ Trusted by 10,000+ Creators Worldwide
             </span>
@@ -35,7 +29,7 @@ const Hero = () => {
             </span>
           </h1>
               
-          <p className="text-xl md:text-3xl text-white/80 max-w-5xl mx-auto leading-relaxed font-light mb-12">
+          <p className="text-xl md:text-3xl text-white/90 max-w-5xl mx-auto leading-relaxed font-light mb-12">
             Professional video hooks and marketing strategies engineered to capture attention in 
             <span className="text-tesla-blue font-semibold"> 3 seconds</span>, boost engagement by 
             <span className="text-success font-semibold"> 300%</span>, and drive real business results.
@@ -43,13 +37,13 @@ const Hero = () => {
             
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 mb-16 justify-center">
-            <Button size="lg" variant="default" className="text-lg font-bold px-10 py-5 h-auto" asChild>
+            <Button size="lg" variant="default" className="text-lg font-bold px-10 py-5 h-auto magnetic-button" asChild>
               <a href="#viral-hooks">
                 Start Creating Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg font-semibold px-10 py-5 h-auto" asChild>
+            <Button size="lg" variant="outline" className="text-lg font-semibold px-10 py-5 h-auto magnetic-button" asChild>
               <a href="#about">
                 <PlayCircle className="mr-2 h-5 w-5" />
                 Watch Demo
@@ -60,20 +54,20 @@ const Hero = () => {
           {/* Enhanced social proof */}
           <div className="pt-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="glass-effect rounded-2xl p-6 text-center border border-white/10">
+              <div className="glass-medium rounded-2xl p-6 text-center tesla-hover">
                 <div className="text-4xl font-black text-tesla-blue mb-2">10K+</div>
-                <div className="text-white/70 font-medium">Active Creators</div>
-                <div className="text-sm text-white/50 mt-1">Using our hooks daily</div>
+                <div className="text-white/80 font-medium">Active Creators</div>
+                <div className="text-sm text-white/60 mt-1">Using our hooks daily</div>
               </div>
-              <div className="glass-effect rounded-2xl p-6 text-center border border-white/10">
+              <div className="glass-medium rounded-2xl p-6 text-center tesla-hover">
                 <div className="text-4xl font-black text-success mb-2">50M+</div>
-                <div className="text-white/70 font-medium">Views Generated</div>
-                <div className="text-sm text-white/50 mt-1">Across all platforms</div>
+                <div className="text-white/80 font-medium">Views Generated</div>
+                <div className="text-sm text-white/60 mt-1">Across all platforms</div>
               </div>
-              <div className="glass-effect rounded-2xl p-6 text-center border border-white/10">
+              <div className="glass-medium rounded-2xl p-6 text-center tesla-hover">
                 <div className="text-4xl font-black text-warning mb-2">300%</div>
-                <div className="text-white/70 font-medium">Avg. Boost</div>
-                <div className="text-sm text-white/50 mt-1">In engagement rates</div>
+                <div className="text-white/80 font-medium">Avg. Boost</div>
+                <div className="text-sm text-white/60 mt-1">In engagement rates</div>
               </div>
             </div>
           </div>
