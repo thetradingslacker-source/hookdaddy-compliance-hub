@@ -25,7 +25,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -51,22 +51,29 @@
             --border: 240 3.7% 15.9%;
             --input: 240 3.7% 15.9%;
             --ring: 240 4.9% 83.9%;
+            --radius: 0.5rem;
         }
 
-        * {
+        *, ::before, ::after {
             box-sizing: border-box;
             border-width: 0;
             border-style: solid;
             border-color: hsl(240 3.7% 15.9%);
         }
 
+        ::before, ::after {
+            --tw-content: '';
+        }
+
         html {
             line-height: 1.5;
             -webkit-text-size-adjust: 100%;
+            -moz-tab-size: 4;
             tab-size: 4;
-            font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             font-feature-settings: normal;
             font-variation-settings: normal;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -77,7 +84,7 @@
             font-feature-settings: "rlig" 1, "calt" 1;
         }
 
-        /* Master background with Tesla-inspired gradient */
+        /* Master Background */
         .master-bg {
             background: linear-gradient(135deg, 
                 hsl(240 10% 3.9%) 0%, 
@@ -105,38 +112,87 @@
             z-index: 0;
         }
 
-        /* Utility classes */
+        /* Layout utilities */
         .relative { position: relative; z-index: 1; }
         .fixed { position: fixed; }
         .absolute { position: absolute; }
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding-left: 1rem; padding-right: 1rem; }
-        .section { padding-top: 5rem; padding-bottom: 5rem; }
+        .container { width: 100%; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+        .section { padding-top: 6rem; padding-bottom: 6rem; }
         .flex { display: flex; }
         .inline-flex { display: inline-flex; }
         .grid { display: grid; }
         .hidden { display: none; }
+        .block { display: block; }
+        .items-start { align-items: flex-start; }
         .items-center { align-items: center; }
+        .items-end { align-items: flex-end; }
+        .justify-start { justify-content: flex-start; }
+        .justify-end { justify-content: flex-end; }
         .justify-center { justify-content: center; }
         .justify-between { justify-content: space-between; }
-        .text-center { text-align: center; }
         .text-left { text-align: left; }
-        .gap-2 { gap: 0.5rem; }
-        .gap-3 { gap: 0.75rem; }
-        .gap-4 { gap: 1rem; }
-        .gap-6 { gap: 1.5rem; }
-        .gap-8 { gap: 2rem; }
-        .space-y-2 > * + * { margin-top: 0.5rem; }
-        .space-y-3 > * + * { margin-top: 0.75rem; }
-        .space-y-4 > * + * { margin-top: 1rem; }
-        .space-y-6 > * + * { margin-top: 1.5rem; }
-        
-        /* Responsive grid */
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+        .flex-col { flex-direction: column; }
+        .flex-row { flex-direction: row; }
+
+        /* Container sizes */
+        @media (min-width: 640px) {
+            .container { max-width: 640px; }
+        }
+        @media (min-width: 768px) {
+            .container { max-width: 768px; }
+        }
+        @media (min-width: 1024px) {
+            .container { max-width: 1024px; }
+        }
+        @media (min-width: 1280px) {
+            .container { max-width: 1280px; }
+        }
+        @media (min-width: 1536px) {
+            .container { max-width: 1536px; }
+        }
+
+        /* Grid templates */
         .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
         .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
+        /* Responsive grid */
+        @media (min-width: 640px) {
+            .sm\\:flex-row { flex-direction: row; }
+            .sm\\:inline-flex { display: inline-flex; }
+        }
+        @media (min-width: 768px) {
+            .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .md\\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            .md\\:col-span-2 { grid-column: span 2 / span 2; }
+            .md\\:flex-row { flex-direction: row; }
+            .md\\:mt-0 { margin-top: 0; }
+        }
+        @media (min-width: 1024px) {
+            .lg\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .lg\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .lg\\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+
         /* Spacing */
+        .gap-1 { gap: 0.25rem; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+        .gap-12 { gap: 3rem; }
+
+        .space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem; }
+        .space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem; }
+        .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+        .space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+        .space-y-8 > :not([hidden]) ~ :not([hidden]) { margin-top: 2rem; }
+
         .p-4 { padding: 1rem; }
         .p-6 { padding: 1.5rem; }
         .px-4 { padding-left: 1rem; padding-right: 1rem; }
@@ -144,6 +200,10 @@
         .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
         .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
         .pt-20 { padding-top: 5rem; }
+        .pt-8 { padding-top: 2rem; }
+        .pb-8 { padding-bottom: 2rem; }
+
+        .m-0 { margin: 0; }
         .mb-2 { margin-bottom: 0.5rem; }
         .mb-4 { margin-bottom: 1rem; }
         .mb-6 { margin-bottom: 1.5rem; }
@@ -154,6 +214,7 @@
         .mx-auto { margin-left: auto; margin-right: auto; }
 
         /* Sizing */
+        .w-2 { width: 0.5rem; }
         .w-4 { width: 1rem; }
         .w-5 { width: 1.25rem; }
         .w-6 { width: 1.5rem; }
@@ -161,12 +222,15 @@
         .w-12 { width: 3rem; }
         .w-16 { width: 4rem; }
         .w-full { width: 100%; }
+        .h-2 { height: 0.5rem; }
         .h-4 { height: 1rem; }
         .h-5 { height: 1.25rem; }
         .h-6 { height: 1.5rem; }
         .h-8 { height: 2rem; }
         .h-12 { height: 3rem; }
         .h-16 { height: 4rem; }
+        .min-h-screen { min-height: 100vh; }
+
         .max-w-3xl { max-width: 48rem; }
         .max-w-4xl { max-width: 56rem; }
         .max-w-6xl { max-width: 72rem; }
@@ -182,10 +246,12 @@
         .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
         .text-5xl { font-size: 3rem; line-height: 1; }
         .text-6xl { font-size: 3.75rem; line-height: 1; }
+
         .font-medium { font-weight: 500; }
         .font-semibold { font-weight: 600; }
         .font-bold { font-weight: 700; }
         .font-extrabold { font-weight: 800; }
+
         .leading-tight { line-height: 1.25; }
         .leading-relaxed { line-height: 1.625; }
 
@@ -194,13 +260,17 @@
         .text-primary { color: hsl(var(--primary)); }
         .text-green-400 { color: #4ade80; }
         .text-yellow-400 { color: #facc15; }
-        .bg-primary { background-color: hsl(var(--primary)); }
         .bg-green-400 { background-color: #4ade80; }
 
         /* Border radius */
         .rounded { border-radius: 0.25rem; }
-        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-lg { border-radius: var(--radius); }
         .rounded-full { border-radius: 9999px; }
+
+        /* Border */
+        .border { border-width: 1px; }
+        .border-t { border-top-width: 1px; }
+        .border-border { border-color: hsl(var(--border)); }
 
         /* Header */
         .header {
@@ -213,7 +283,7 @@
             background: hsla(240, 10%, 3.9%, 0.8);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid hsl(var(--border));
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .nav-links {
@@ -229,7 +299,7 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 0.875rem;
-            transition: color 0.2s ease;
+            transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
         }
 
@@ -237,30 +307,35 @@
             color: hsl(var(--primary));
         }
 
-        /* Buttons */
+        /* Button styles */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: 500;
+            white-space: nowrap;
+            border-radius: var(--radius);
             font-size: 0.875rem;
+            font-weight: 500;
             text-decoration: none;
-            transition: all 0.2s ease;
             cursor: pointer;
             border: none;
-            white-space: nowrap;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0.5rem 1rem;
+        }
+
+        .btn:focus-visible {
+            outline: 2px solid hsl(var(--ring));
+            outline-offset: 2px;
         }
 
         .btn-primary {
-            background: hsl(var(--primary));
+            background-color: hsl(var(--primary));
             color: hsl(var(--primary-foreground));
         }
 
         .btn-primary:hover {
-            background: hsl(var(--primary) / 0.9);
+            background-color: hsl(var(--primary) / 0.9);
             transform: translateY(-1px);
         }
 
@@ -271,7 +346,7 @@
         }
 
         .btn-secondary:hover {
-            background: hsl(var(--secondary));
+            background-color: hsl(var(--secondary));
             border-color: hsl(var(--primary) / 0.3);
         }
 
@@ -280,33 +355,39 @@
             font-size: 1rem;
         }
 
-        /* Cards */
+        .btn-sm {
+            padding: 0.5rem 0.75rem;
+            font-size: 0.875rem;
+        }
+
+        /* Card styles */
         .card {
-            background: hsl(var(--card));
+            background-color: hsl(var(--card));
+            color: hsl(var(--card-foreground));
             border: 1px solid hsl(var(--border));
-            border-radius: 0.5rem;
+            border-radius: var(--radius);
             padding: 1.5rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .card:hover {
             border-color: hsl(var(--primary) / 0.3);
-            box-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+            box-shadow: 0 10px 25px -3px hsl(var(--primary) / 0.1), 0 4px 6px -2px hsl(var(--primary) / 0.05);
             transform: translateY(-4px);
         }
 
-        /* Badge */
+        /* Badge styles */
         .badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             padding: 0.25rem 0.75rem;
-            background: hsl(var(--secondary));
+            background-color: hsl(var(--secondary));
             color: hsl(var(--secondary-foreground));
+            border: 1px solid hsl(var(--border));
             border-radius: 9999px;
             font-size: 0.75rem;
             font-weight: 500;
-            border: 1px solid hsl(var(--border));
         }
 
         .badge-success {
@@ -317,10 +398,70 @@
 
         /* Gradient text */
         .gradient-text {
-            background: linear-gradient(135deg, hsl(var(--primary)), #a855f7, #3b82f6);
+            background: linear-gradient(135deg, 
+                hsl(var(--primary)) 0%, 
+                #a855f7 50%, 
+                #3b82f6 100%
+            );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        /* Form styles */
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: hsl(var(--input));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            color: hsl(var(--foreground));
+            font-size: 0.875rem;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: hsl(var(--primary));
+            box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: hsl(var(--background));
+            padding: 2rem;
+            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 40;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background-color: hsl(var(--foreground));
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 1px;
         }
 
         /* Animations */
@@ -378,62 +519,6 @@
             animation: float 7s ease-in-out infinite;
         }
 
-        /* Form styles */
-        .form-input, .form-textarea {
-            width: 100%;
-            padding: 0.75rem;
-            background: hsl(var(--input));
-            border: 1px solid hsl(var(--border));
-            border-radius: 0.375rem;
-            color: hsl(var(--foreground));
-            font-size: 0.875rem;
-            transition: all 0.2s ease;
-        }
-
-        .form-input:focus, .form-textarea:focus {
-            outline: none;
-            border-color: hsl(var(--primary));
-            box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        /* Mobile menu */
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100vh;
-            background: hsl(var(--background));
-            padding: 2rem;
-            transition: left 0.3s ease;
-            z-index: 40;
-        }
-
-        .mobile-menu.active {
-            left: 0;
-        }
-
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 4px;
-            cursor: pointer;
-            padding: 8px;
-        }
-
-        .mobile-menu-toggle span {
-            width: 20px;
-            height: 2px;
-            background: hsl(var(--foreground));
-            transition: all 0.3s ease;
-            border-radius: 1px;
-        }
-
         /* Stats grid */
         .stats-grid {
             display: grid;
@@ -447,9 +532,9 @@
             padding: 2rem 1.5rem;
             background: hsl(var(--card) / 0.5);
             border: 1px solid hsl(var(--border));
-            border-radius: 0.75rem;
+            border-radius: var(--radius);
             backdrop-filter: blur(8px);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .stat-item:hover {
@@ -459,12 +544,15 @@
 
         /* Footer */
         .footer {
-            background: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(240 8% 6%) 100%);
+            background: linear-gradient(135deg, 
+                hsl(240 10% 3.9%) 0%, 
+                hsl(240 8% 6%) 100%
+            );
             border-top: 1px solid hsl(var(--border));
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             .nav-links { display: none; }
             .mobile-menu-toggle { display: flex; }
             .grid-cols-3 { grid-template-columns: 1fr; }
@@ -474,55 +562,30 @@
             .text-5xl { font-size: 2rem; }
             .text-4xl { font-size: 1.75rem; }
             .section { padding-top: 3rem; padding-bottom: 3rem; }
-            .container { padding-left: 1rem; padding-right: 1rem; }
             .btn-lg { padding: 0.75rem 1.5rem; font-size: 0.875rem; }
             .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
         }
 
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
-            .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .lg\\:grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
+            .lg\\:grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
         }
 
-        @media (min-width: 640px) {
-            .sm\\:flex-row { flex-direction: row; }
-            .sm\\:inline-flex { display: inline-flex; }
+        /* Hidden utilities for mobile */
+        @media (max-width: 767px) {
+            .hidden { display: none !important; }
+            .md\\:inline-flex { display: none !important; }
         }
 
         @media (min-width: 768px) {
-            .md\\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-            .md\\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-            .md\\:col-span-2 { grid-column: span 2 / span 2; }
-            .md\\:flex-row { flex-direction: row; }
-            .md\\:mt-0 { margin-top: 0; }
+            .md\\:inline-flex { display: inline-flex !important; }
         }
 
-        @media (min-width: 1024px) {
-            .lg\\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-            .lg\\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-            .lg\\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Icon containers */
-        .icon-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 0.5rem;
-        }
-
-        .icon-container-primary {
-            background: hsl(var(--primary));
+        /* Icon container utilities */
+        .icon-bg-primary {
+            background-color: hsl(var(--primary));
             color: hsl(var(--primary-foreground));
         }
-
-        .flex-col { flex-direction: column; }
-        .space-y-8 > * + * { margin-top: 2rem; }
     </style>
 </head>
 
@@ -533,8 +596,8 @@
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
                 <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                        <i data-lucide="zap" class="w-5 h-5" style="color: hsl(var(--primary-foreground));"></i>
+                    <div class="w-8 h-8 icon-bg-primary rounded-lg flex items-center justify-center">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
                     </div>
                     <span class="font-bold text-xl">HookDaddy</span>
                 </div>
@@ -551,7 +614,7 @@
 
                 <!-- Desktop CTA -->
                 <div class="flex items-center gap-4">
-                    <a href="#services" class="btn btn-primary hidden md:inline-flex">Get Started</a>
+                    <a href="#services" class="btn btn-primary btn-sm hidden md:inline-flex font-semibold">Get Started</a>
                     
                     <!-- Mobile Menu Toggle -->
                     <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
@@ -566,16 +629,16 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu">
             <div class="flex justify-end mb-8">
-                <button onclick="toggleMobileMenu()" class="text-2xl">&times;</button>
+                <button onclick="toggleMobileMenu()" style="background: none; border: none; color: hsl(var(--foreground)); font-size: 1.5rem; cursor: pointer;">&times;</button>
             </div>
             <nav>
-                <ul class="flex flex-col gap-6">
-                    <li><a href="#about" onclick="toggleMobileMenu()">About</a></li>
-                    <li><a href="#services" onclick="toggleMobileMenu()">Services</a></li>
-                    <li><a href="#viral-hooks" onclick="toggleMobileMenu()">Viral Hooks</a></li>
-                    <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
-                </ul>
-                <a href="#services" class="btn btn-primary w-full mt-8" onclick="toggleMobileMenu()">Get Started</a>
+                <div class="flex flex-col gap-6">
+                    <a href="#about" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500;">About</a>
+                    <a href="#services" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500;">Services</a>
+                    <a href="#viral-hooks" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500;">Viral Hooks</a>
+                    <a href="#contact" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500;">Contact</a>
+                </div>
+                <a href="#services" class="btn btn-primary font-semibold mt-8 w-full" onclick="toggleMobileMenu()">Get Started</a>
             </nav>
         </div>
     </header>
@@ -649,32 +712,32 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                     <div class="card text-center">
-                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="award" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="award" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Proven Expertise</h3>
                         <p class="text-muted-foreground text-sm">5+ years of proven success in digital content strategy and viral marketing</p>
                     </div>
                     
                     <div class="card text-center">
-                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="zap" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="zap" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Rapid Results</h3>
                         <p class="text-muted-foreground text-sm">See immediate impact with our tested hooks and strategies within 24 hours</p>
                     </div>
                     
                     <div class="card text-center">
-                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="shield-check" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Secure & Compliant</h3>
                         <p class="text-muted-foreground text-sm">All our solutions are fully compliant with international business standards</p>
                     </div>
                     
                     <div class="card text-center">
-                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="lightbulb" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="lightbulb" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Innovation First</h3>
                         <p class="text-muted-foreground text-sm">Cutting-edge strategies that keep you ahead of the competition</p>
@@ -712,8 +775,8 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
                     <!-- Viral Hooks Pack -->
                     <div class="card">
-                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="trending-up" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Viral Hooks Packs</h3>
                         <p class="text-muted-foreground mb-4">Ready-to-use viral hooks that guarantee engagement. Tested on millions of views.</p>
@@ -723,7 +786,7 @@
                             <div class="text-sm text-muted-foreground">Downloads</div>
                         </div>
                         
-                        <ul class="space-y-2 mb-6">
+                        <ul class="space-y-2 mb-6" style="list-style: none; padding: 0;">
                             <li class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 100+ Proven Hooks
@@ -750,8 +813,8 @@
                     
                     <!-- Educational Content -->
                     <div class="card">
-                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="graduation-cap" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Educational Content</h3>
                         <p class="text-muted-foreground mb-4">Comprehensive courses and resources to master digital content creation.</p>
@@ -761,7 +824,7 @@
                             <div class="text-sm text-muted-foreground">Students</div>
                         </div>
                         
-                        <ul class="space-y-2 mb-6">
+                        <ul class="space-y-2 mb-6" style="list-style: none; padding: 0;">
                             <li class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Expert-Led Courses
@@ -788,8 +851,8 @@
                     
                     <!-- Custom Solutions -->
                     <div class="card">
-                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="settings" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="settings" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Custom Solutions</h3>
                         <p class="text-muted-foreground mb-4">Tailored content strategies and implementations for enterprise clients.</p>
@@ -799,7 +862,7 @@
                             <div class="text-sm text-muted-foreground">Solutions</div>
                         </div>
                         
-                        <ul class="space-y-2 mb-6">
+                        <ul class="space-y-2 mb-6" style="list-style: none; padding: 0;">
                             <li class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Strategy Development
@@ -876,14 +939,14 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <!-- Proven to Convert -->
                     <div class="card text-center">
-                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="trending-up" class="w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
+                        <div class="w-16 h-16 icon-bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="trending-up" class="w-8 h-8"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Proven to Convert</h3>
                         <p class="text-muted-foreground mb-6">
                             Every hook has been tested and proven to drive engagement across multiple platforms and industries.
                         </p>
-                        <ul class="space-y-3 text-left">
+                        <ul class="space-y-3 text-left" style="list-style: none; padding: 0;">
                             <li class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Tested on 50M+ views</span>
@@ -905,14 +968,14 @@
                     
                     <!-- Ready-to-Use -->
                     <div class="card text-center">
-                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="clock" class="w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
+                        <div class="w-16 h-16 icon-bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="clock" class="w-8 h-8"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Ready-to-Use</h3>
                         <p class="text-muted-foreground mb-6">
                             No need to spend hours brainstorming. Copy, paste, and customize these hooks for immediate results.
                         </p>
-                        <ul class="space-y-3 text-left">
+                        <ul class="space-y-3 text-left" style="list-style: none; padding: 0;">
                             <li class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">100+ hooks included</span>
@@ -934,14 +997,14 @@
                     
                     <!-- Instant Access -->
                     <div class="card text-center">
-                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="download" class="w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
+                        <div class="w-16 h-16 icon-bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="download" class="w-8 h-8"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Instant Access</h3>
                         <p class="text-muted-foreground mb-6">
                             Download immediately after purchase. Start using the hooks within minutes of your order.
                         </p>
-                        <ul class="space-y-3 text-left">
+                        <ul class="space-y-3 text-left" style="list-style: none; padding: 0;">
                             <li class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Instant digital delivery</span>
@@ -1145,8 +1208,8 @@
                 <!-- Brand -->
                 <div class="md:col-span-2">
                     <div class="flex items-center gap-2 mb-4">
-                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                            <i data-lucide="zap" class="w-5 h-5" style="color: hsl(var(--primary-foreground));"></i>
+                        <div class="w-8 h-8 icon-bg-primary rounded-lg flex items-center justify-center">
+                            <i data-lucide="zap" class="w-5 h-5"></i>
                         </div>
                         <span class="font-bold text-xl">HookDaddy</span>
                     </div>
@@ -1163,22 +1226,22 @@
                 <!-- Company Links -->
                 <div>
                     <h4 class="font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="text-muted-foreground hover:text-primary">About Us</a></li>
-                        <li><a href="#services" class="text-muted-foreground hover:text-primary">Our Services</a></li>
-                        <li><a href="#contact" class="text-muted-foreground hover:text-primary">Contact</a></li>
-                    </ul>
+                    <div class="space-y-2">
+                        <div><a href="#about" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">About Us</a></div>
+                        <div><a href="#services" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Our Services</a></div>
+                        <div><a href="#contact" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Contact</a></div>
+                    </div>
                 </div>
                 
                 <!-- Legal Links -->
                 <div>
                     <h4 class="font-semibold mb-4">Legal & Support</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-muted-foreground hover:text-primary">Privacy Policy</a></li>
-                        <li><a href="#" class="text-muted-foreground hover:text-primary">Terms & Conditions</a></li>
-                        <li><a href="#" class="text-muted-foreground hover:text-primary">Return & Refund</a></li>
-                        <li><a href="#" class="text-muted-foreground hover:text-primary">Support Center</a></li>
-                    </ul>
+                    <div class="space-y-2">
+                        <div><a href="#" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Privacy Policy</a></div>
+                        <div><a href="#" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Terms & Conditions</a></div>
+                        <div><a href="#" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Return & Refund</a></div>
+                        <div><a href="#" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Support Center</a></div>
+                    </div>
                 </div>
             </div>
             
@@ -1186,7 +1249,7 @@
             <div class="pt-8 border-t border-border">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <p class="text-muted-foreground text-sm">
-                        © 2024 HookDaddy Digital Solutions. All rights reserved.
+                        © 2025 HookDaddy Digital Solutions. All rights reserved.
                     </p>
                     <div class="flex items-center gap-2 mt-4 md:mt-0">
                         <div class="w-2 h-2 bg-green-400 rounded-full"></div>
@@ -1213,9 +1276,13 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
@@ -1230,7 +1297,7 @@
             // Here you would typically send the data to your backend
             console.log('Form submitted:', data);
             
-            // Show success message (you can replace this with a proper notification)
+            // Show success message
             alert('Thank you for your message! We will get back to you within 24 hours.');
             
             // Reset form
@@ -1241,13 +1308,13 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
             if (window.scrollY > 50) {
-                header.style.background = 'hsl(var(--background) / 0.95)';
+                header.style.background = 'hsla(240, 10%, 3.9%, 0.95)';
             } else {
-                header.style.background = 'hsl(var(--background) / 0.8)';
+                header.style.background = 'hsla(240, 10%, 3.9%, 0.8)';
             }
         });
 
-        // Add some interactive animations
+        // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1263,11 +1330,21 @@
         }, observerOptions);
 
         // Observe all cards for animation
-        document.querySelectorAll('.card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                observer.observe(card);
+            });
+
+            // Observe stat items
+            document.querySelectorAll('.stat-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                observer.observe(item);
+            });
         });
     </script>
 </body>
