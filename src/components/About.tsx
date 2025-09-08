@@ -3,20 +3,29 @@ import { Target, Zap, Shield, Rocket, TrendingUp } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="section-padding bg-secondary/30">
-      <div className="container-width">
-        <div className="text-center mb-20 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect text-sm font-medium mb-6">
-            <TrendingUp className="w-4 h-4 text-tesla-blue" />
+    <section id="about" className="section-padding tesla-hero-gradient relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+      </div>
+      
+      <div className="absolute top-20 left-20 w-72 h-72 bg-tesla-blue/20 rounded-full blur-3xl float-animation"></div>
+      <div className="absolute bottom-20 right-20 w-80 h-80 bg-success/15 rounded-full blur-3xl float-animation" style={{animationDelay: '3s'}}></div>
+      <div className="container-width relative z-10">
+        <div className="text-center mb-24 animate-fade-in">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-effect text-sm font-semibold mb-8 border border-white/20 text-white/90">
+            <TrendingUp className="w-5 h-5 text-tesla-blue" />
             <span>Industry Leading</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-[0.9] tracking-tighter">
             Why Leading Brands
-            <span className="block text-tesla-blue">Choose HookDaddy</span>
+            <span className="block bg-gradient-to-r from-tesla-blue via-success to-warning bg-clip-text text-transparent">
+              Choose HookDaddy
+            </span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
             We specialize in creating professional, results-driven digital solutions that deliver measurable impact. 
             From viral video hooks to educational resources, our content meets the highest standards of compliance, 
             innovation, and business growth.
@@ -70,22 +79,22 @@ const About = () => {
         </div>
 
         {/* Stats section */}
-        <div className="glass-effect rounded-3xl p-12 lg:p-16">
+        <div className="glass-effect rounded-3xl p-12 lg:p-16 border border-white/10">
           <div className="grid md:grid-cols-3 gap-12 text-center">
             <div className="space-y-2">
               <div className="text-5xl lg:text-6xl font-bold text-tesla-blue">2024</div>
-              <div className="text-lg text-muted-foreground">Founded</div>
-              <div className="text-sm text-muted-foreground opacity-70">Innovation driven from day one</div>
+              <div className="text-lg text-white/80 font-semibold">Founded</div>
+              <div className="text-sm text-white/60">Innovation driven from day one</div>
             </div>
             <div className="space-y-2">
               <div className="text-5xl lg:text-6xl font-bold text-success">Global</div>
-              <div className="text-lg text-muted-foreground">Reach</div>
-              <div className="text-sm text-muted-foreground opacity-70">Serving clients worldwide</div>
+              <div className="text-lg text-white/80 font-semibold">Reach</div>
+              <div className="text-sm text-white/60">Serving clients worldwide</div>
             </div>
             <div className="space-y-2">
               <div className="text-5xl lg:text-6xl font-bold text-warning">100%</div>
-              <div className="text-lg text-muted-foreground">Compliant</div>
-              <div className="text-sm text-muted-foreground opacity-70">Meeting all industry standards</div>
+              <div className="text-lg text-white/80 font-semibold">Compliant</div>
+              <div className="text-sm text-white/60">Meeting all industry standards</div>
             </div>
           </div>
         </div>

@@ -6,22 +6,30 @@ import { Building2, Mail, Clock, Shield, Send, TrendingUp } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="section-padding bg-background">
-      <div className="container-width">
+    <section id="contact" className="section-padding tesla-hero-gradient relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+      </div>
+      
+      <div className="absolute top-20 left-20 w-72 h-72 bg-tesla-blue/20 rounded-full blur-3xl float-animation"></div>
+      <div className="absolute bottom-20 right-20 w-80 h-80 bg-success/15 rounded-full blur-3xl float-animation" style={{animationDelay: '3s'}}></div>
+      
+      <div className="container-width relative z-10">
         <div className="text-center mb-24 animate-fade-in">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-effect text-sm font-semibold mb-8 border border-border/20">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-effect text-sm font-semibold mb-8 border border-white/20 text-white/90">
             <TrendingUp className="w-5 h-5 text-tesla-blue" />
             <span>Professional Support</span>
           </div>
           
-          <h2 className="text-5xl md:text-7xl font-black text-foreground mb-8 leading-[0.9] tracking-tighter">
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-[0.9] tracking-tighter">
             Get in
             <span className="block bg-gradient-to-r from-tesla-blue via-success to-warning bg-clip-text text-transparent">
               Touch
             </span>
           </h2>
           
-          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
             Questions about our solutions? Our expert team is ready to help you scale your content strategy 
             and achieve measurable results.
           </p>
