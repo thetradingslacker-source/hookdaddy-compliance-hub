@@ -294,17 +294,38 @@
 
         /* Tesla gradients */
         .text-gradient {
-            background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--tesla-blue)), hsl(var(--primary)));
+            background: linear-gradient(135deg, 
+                hsl(var(--primary)), 
+                hsl(320, 80%, 70%), 
+                hsl(var(--tesla-blue)), 
+                hsl(15, 85%, 65%), 
+                hsl(280, 90%, 75%), 
+                hsl(var(--primary)));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            background-size: 200% 200%;
+            animation: gradient-shift 4s ease-in-out infinite;
         }
 
         .text-electric {
-            background: linear-gradient(135deg, hsl(var(--tesla-electric)), hsl(var(--tesla-blue)), hsl(var(--tesla-purple)));
+            background: linear-gradient(135deg, 
+                hsl(var(--tesla-electric)), 
+                hsl(340, 85%, 70%), 
+                hsl(var(--tesla-blue)), 
+                hsl(25, 90%, 65%), 
+                hsl(var(--tesla-purple)), 
+                hsl(200, 100%, 75%));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            background-size: 200% 200%;
+            animation: gradient-shift 4s ease-in-out infinite reverse;
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
         /* Border radius */
@@ -1628,7 +1649,7 @@
                     </div>
                     
                     <div class="flex items-center">
-                        <div class="glass-effect rounded-lg px-4 py-2" style="border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="glass-effect rounded-lg px-4 py-2" style="border: 1px solid rgba(255,255,255,0.1); padding-top: calc(0.5rem + 1px); padding-bottom: calc(0.5rem + 1px);">
                             <div class="flex items-center gap-2">
                                 <div class="w-2 h-2 rounded-full animate-pulse" style="background: linear-gradient(to right, #ec4899, #3b82f6, #10b981);"></div>
                                 <span class="text-muted-foreground font-medium footer-small">All Operational</span>
