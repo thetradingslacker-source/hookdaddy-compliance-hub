@@ -149,7 +149,7 @@ const Footer = () => {
             <div className="flex items-center">
               <div className="glass-effect rounded-lg px-4 py-2 border border-white/10">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-gradient-to-r from-tesla-blue via-tesla-electric to-tesla-purple rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-pink-500 via-blue-500 to-green-500 rounded-full animate-pulse"></div>
                   <span className="text-white/80 font-medium text-xs">All Operational</span>
                 </div>
               </div>
