@@ -33,8 +33,8 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <Button variant="default" size="sm" className="hidden sm:inline-flex font-semibold">
-            Get Started
+          <Button variant="default" size="sm" className="hidden sm:inline-flex font-semibold" asChild>
+            <a href="#services">Get Started</a>
           </Button>
           
           <Button 
@@ -80,8 +80,8 @@ const Header = () => {
             >
               Contact
             </a>
-            <Button variant="default" size="sm" className="font-semibold mt-4 w-full">
-              Get Started
+            <Button variant="default" size="sm" className="font-semibold mt-4 w-full" asChild>
+              <a href="#services" onClick={toggleMenu}>Get Started</a>
             </Button>
           </nav>
         </div>
