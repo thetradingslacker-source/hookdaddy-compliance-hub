@@ -166,9 +166,11 @@ const Services = () => {
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
             Join thousands of creators who have transformed their content and grown their audience with our proven strategies.
           </p>
-          <Button size="lg" variant="default" className="text-lg font-bold px-12 py-6">
-            Get Started Today
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button size="lg" variant="default" className="text-lg font-bold px-12 py-6" asChild>
+            <a href="#contact">
+              Get Started Today
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
           </Button>
         </div>
       </div>

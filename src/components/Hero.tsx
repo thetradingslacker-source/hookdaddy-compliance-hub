@@ -43,13 +43,17 @@ const Hero = () => {
             
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 mb-16 justify-center">
-            <Button size="lg" variant="default" className="text-lg font-bold px-10 py-5 h-auto">
-              Start Creating Now
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" variant="default" className="text-lg font-bold px-10 py-5 h-auto" asChild>
+              <a href="#viral-hooks">
+                Start Creating Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg font-semibold px-10 py-5 h-auto">
-              <PlayCircle className="mr-2 h-5 w-5" />
-              Watch Demo
+            <Button size="lg" variant="outline" className="text-lg font-semibold px-10 py-5 h-auto" asChild>
+              <a href="#about">
+                <PlayCircle className="mr-2 h-5 w-5" />
+                Watch Demo
+              </a>
             </Button>
           </div>
             

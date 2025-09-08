@@ -96,8 +96,11 @@ const Contact = () => {
                 <Button 
                   variant="outline" 
                   className="w-full py-4 text-lg font-semibold border-2 border-white/30 text-white hover:border-tesla-blue hover:text-tesla-blue hover:bg-tesla-blue/10 transition-all duration-300"
+                  asChild
                 >
-                  Partnership Inquiries
+                  <a href="mailto:admin@hookdaddy.store">
+                    Partnership Inquiries
+                  </a>
                 </Button>
               </CardContent>
             </Card>
