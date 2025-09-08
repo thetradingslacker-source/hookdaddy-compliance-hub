@@ -2,120 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-/* HookDaddy - Corporate Premium Theme (Hormozi x Tesla x Professional) */
+/* HookDaddy - Tesla Minimal Futuristic Theme */
 
 @layer base {
   :root {
-    /* Clean Corporate Background */
-    --background: 0 0% 98%;
-    --foreground: 240 10% 8%;
+    /* Tesla-inspired Minimal Palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
 
-    /* Card System - Clean White */
+    /* Clean Card System */
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 8%;
+    --card-foreground: 0 0% 3.9%;
 
     /* Popover */
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 8%;
+    --popover-foreground: 0 0% 3.9%;
 
-    /* Brand Primary - Tesla Dark */
-    --primary: 240 10% 8%;
+    /* Tesla Dark Primary */
+    --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
 
-    /* Secondary - Electric Blue */
-    --secondary: 210 100% 50%;
+    /* Tesla Red Accent */
+    --secondary: 0 91% 71%;
     --secondary-foreground: 0 0% 98%;
 
-    /* Muted Elements */
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    /* Subtle Muted */
+    --muted: 210 40% 98%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    /* Accent - Premium Electric Blue */
-    --accent: 210 100% 50%;
+    /* Tesla Blue Accent */
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 98%;
 
-    /* Success - Clean Green */
-    --success: 142 76% 36%;
+    /* Success - Minimal Green */
+    --success: 142 71% 45%;
     --success-foreground: 0 0% 98%;
 
-    /* Professional Gold Accent */
-    --gold: 45 93% 47%;
-    --gold-foreground: 0 0% 98%;
+    /* Old Money Gold */
+    --gold: 47 100% 68%;
+    --gold-foreground: 0 0% 3.9%;
 
-    /* Destructive - Clean Red */
+    /* Subtle Red */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Borders and Inputs - Subtle */
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 210 100% 50%;
+    /* Minimal Borders */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 217 91% 60%;
 
-    /* Border Radius - Modern */
-    --radius: 8px;
+    /* Refined Radius */
+    --radius: 6px;
 
-    /* Corporate Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(240 10% 8%) 0%, hsl(240 10% 12%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(210 100% 45%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(45 93% 47%) 0%, hsl(45 93% 40%) 100%);
-    --gradient-premium: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(240 5% 96%) 100%);
+    /* Tesla Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 9%) 0%, hsl(0 0% 6%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 55%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(47 100% 68%) 0%, hsl(47 100% 63%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
     
-    /* Professional Shadows */
-    --shadow-soft: 0 1px 3px 0 hsla(240, 10%, 8%, 0.1), 0 1px 2px 0 hsla(240, 10%, 8%, 0.06);
-    --shadow-medium: 0 4px 6px -1px hsla(240, 10%, 8%, 0.1), 0 2px 4px -1px hsla(240, 10%, 8%, 0.06);
-    --shadow-strong: 0 20px 25px -5px hsla(240, 10%, 8%, 0.1), 0 10px 10px -5px hsla(240, 10%, 8%, 0.04);
-    --shadow-glow: 0 0 20px hsla(210, 100%, 50%, 0.15);
+    /* Subtle Tesla Shadows */
+    --shadow-soft: 0 1px 3px 0 hsla(0, 0%, 0%, 0.1), 0 1px 2px 0 hsla(0, 0%, 0%, 0.06);
+    --shadow-medium: 0 4px 6px -1px hsla(0, 0%, 0%, 0.1), 0 2px 4px -1px hsla(0, 0%, 0%, 0.06);
+    --shadow-strong: 0 25px 50px -12px hsla(0, 0%, 0%, 0.25);
+    --shadow-glow: 0 0 0 1px hsla(217, 91%, 60%, 0.1), 0 10px 40px -10px hsla(217, 91%, 60%, 0.4);
 
-    /* Smooth Transitions */
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Smooth Tesla Transitions */
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 10% 8%;
-    --sidebar-primary: 210 100% 50%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 3.9%;
+    --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 5% 96%;
-    --sidebar-accent-foreground: 240 10% 8%;
-    --sidebar-border: 240 6% 90%;
-    --sidebar-ring: 210 100% 50%;
+    --sidebar-accent: 210 40% 98%;
+    --sidebar-accent-foreground: 0 0% 3.9%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 217 91% 60%;
   }
 
   .dark {
-    /* Professional Dark Mode */
-    --background: 240 10% 8%;
+    /* Tesla Dark Mode */
+    --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 240 10% 10%;
+    --card: 0 0% 6%;
     --card-foreground: 0 0% 98%;
-    --popover: 240 10% 10%;
+    --popover: 0 0% 6%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
-    --primary-foreground: 240 10% 8%;
-    --secondary: 210 100% 50%;
+    --primary-foreground: 0 0% 3.9%;
+    --secondary: 0 91% 71%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 240 8% 15%;
-    --muted-foreground: 240 5% 65%;
-    --accent: 210 100% 50%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 98%;
-    --success: 142 76% 36%;
+    --success: 142 71% 45%;
     --success-foreground: 0 0% 98%;
-    --gold: 45 93% 47%;
-    --gold-foreground: 240 10% 8%;
-    --destructive: 0 84% 60%;
+    --gold: 47 100% 68%;
+    --gold-foreground: 0 0% 3.9%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 8% 20%;
-    --input: 240 8% 15%;
-    --ring: 210 100% 50%;
-    --gradient-hero: linear-gradient(135deg, hsl(240 10% 8%) 0%, hsl(240 10% 5%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(210 100% 45%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(45 93% 47%) 0%, hsl(45 93% 40%) 100%);
-    --gradient-premium: linear-gradient(135deg, hsl(240 10% 10%) 0%, hsl(240 8% 15%) 100%);
-    --sidebar-background: 240 10% 10%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 217 91% 60%;
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 3.9%) 0%, hsl(0 0% 0%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 55%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(47 100% 68%) 0%, hsl(47 100% 63%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(0 0% 14.9%) 100%);
+    --sidebar-background: 0 0% 6%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 8% 15%;
+    --sidebar-accent: 0 0% 14.9%;
     --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 240 8% 20%;
-    --sidebar-ring: 210 100% 50%;
+    --sidebar-border: 0 0% 14.9%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -125,9 +125,42 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
   }
 }
 
-/* Professional Typography */
+/* Tesla-inspired Typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Tesla Animations */
+@keyframes tesla-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tesla-scale {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.tesla-animate {
+  animation: tesla-fade-up 0.6s ease-out;
+}
+
+.tesla-hover {
+  transition: var(--transition);
+}
+
+.tesla-hover:hover {
+  transform: translateY(-2px);
+}
