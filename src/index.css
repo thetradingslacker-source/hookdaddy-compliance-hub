@@ -28,20 +28,23 @@
     --ring: 217 91% 60%;
     --radius: 16px;
 
-    /* Enhanced Tesla color palette - More vibrant */
+    /* Premium Tesla color palette - Sophisticated monochrome */
     --tesla-blue: 217 91% 60%;
     --tesla-red: 0 84% 60%;
     --tesla-silver: 215 25% 27%;
-    --tesla-electric: 188 100% 50%;
-    --tesla-green: 142 76% 36%;
-    --tesla-orange: 25 95% 53%;
+    --tesla-electric: 188 95% 45%;
+    --tesla-green: 142 50% 50%;
     --tesla-purple: 258 90% 66%;
-    --success: 142 76% 36%;
-    --warning: 25 95% 53%;
+    --success: 142 50% 50%;
+    --warning: 45 93% 47%;
 
-    /* Seamless master background gradients */
-    --gradient-master: radial-gradient(ellipse 120% 120% at 50% 0%, hsl(0 0% 2%) 0%, hsl(0 0% 0%) 40%, hsl(0 0% 1%) 100%);
-    --gradient-section: radial-gradient(ellipse 100% 60% at 50% 50%, hsl(217 91% 10% / 0.2) 0%, transparent 70%);
+    /* Premium background with subtle grid pattern */
+    --gradient-master: 
+      radial-gradient(ellipse 120% 120% at 50% 0%, hsl(0 0% 2%) 0%, hsl(0 0% 0%) 40%, hsl(0 0% 1%) 100%),
+      radial-gradient(circle at 25% 25%, hsl(217 91% 60% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(258 90% 66% / 0.03) 0%, transparent 50%);
+    --grid-pattern: radial-gradient(circle, hsl(217 91% 60% / 0.15) 1px, transparent 1px);
+    --gradient-section: radial-gradient(ellipse 100% 60% at 50% 50%, hsl(217 91% 10% / 0.15) 0%, transparent 70%);
     --gradient-blue: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(258 90% 66%) 100%);
     --gradient-electric: linear-gradient(135deg, hsl(188 100% 50%) 0%, hsl(217 91% 60%) 100%);
     --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(217 91% 60%) 100%);
@@ -110,11 +113,31 @@
 }
 
 @layer components {
-  /* Master seamless background */
+  /* Master seamless background with grid */
   .master-bg {
-    background: var(--gradient-master);
+    background: 
+      var(--grid-pattern),
+      var(--gradient-master);
+    background-size: 40px 40px, 100% 100%;
+    background-position: 0 0, 0 0;
     position: relative;
     overflow: hidden;
+  }
+  
+  .master-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-master);
+    z-index: 1;
+  }
+  
+  .master-bg > * {
+    position: relative;
+    z-index: 2;
   }
 
   .section-glow {

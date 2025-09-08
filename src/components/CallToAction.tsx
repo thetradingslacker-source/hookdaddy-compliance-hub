@@ -14,49 +14,57 @@ const CallToAction = () => {
           <span className="text-sm text-white font-bold">⚡ Limited Time Offer</span>
         </div>
           
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-8 leading-[0.9] tracking-tighter">
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-[0.9] tracking-tighter">
             Ready to
-            <span className="block bg-gradient-to-r from-tesla-blue via-success to-warning bg-clip-text text-transparent">
-              Transform?
+            <span className="block text-gradient">
+              Transform Your Content?
             </span>
           </h2>
           
-          <p className="text-2xl md:text-3xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            Join the elite tier of content creators who've already boosted their engagement by 
-            <span className="text-success font-semibold"> 300%</span> using our proven viral hook strategies.
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Join 10,000+ successful marketers who've already boosted their engagement by 
+            <span className="text-tesla-blue font-semibold"> 300%</span> using our proven viral hooks system.
           </p>
           
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 mb-12 justify-center">
-          <Button size="lg" variant="default" className="text-lg font-bold px-12 py-6 magnetic-button" asChild>
-            <a href="#contact">
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
-          <Button size="lg" variant="outline" className="text-lg font-semibold px-12 py-6 magnetic-button" asChild>
-            <a href="#about">
-              Learn More
-              <ExternalLink className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
-        </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-tesla-blue">300%</div>
+              <div className="text-sm text-white/70">Avg. Engagement Boost</div>
+            </div>
+            <div className="w-px h-8 bg-white/20 hidden sm:block"></div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-tesla-electric">10K+</div>
+              <div className="text-sm text-white/70">Happy Customers</div>
+            </div>
+            <div className="w-px h-8 bg-white/20 hidden sm:block"></div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-warning">4.9★</div>
+              <div className="text-sm text-white/70">Customer Rating</div>
+            </div>
+          </div>
           
-        {/* Trust indicators */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-          <div className="glass-medium rounded-2xl p-6 text-center tesla-hover">
-            <div className="text-3xl font-black text-tesla-blue mb-2">10K+</div>
-            <div className="text-white/80 font-medium text-sm">Happy Customers</div>
+          <div className="flex flex-col sm:flex-row gap-6 mb-12 justify-center">
+            <a 
+              href="https://hookdaddy.store/checkouts/checkout-2/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" variant="default" className="text-lg font-bold px-12 py-6 magnetic-button">
+                Get Viral Hooks Pack Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <Button size="lg" variant="outline" className="text-lg font-semibold px-12 py-6 magnetic-button" asChild>
+              <a href="#about">
+                Learn More
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
           </div>
-          <div className="glass-medium rounded-2xl p-6 text-center tesla-hover">
-            <div className="text-3xl font-black text-success mb-2">4.9★</div>
-            <div className="text-white/80 font-medium text-sm">Average Rating</div>
-          </div>
-          <div className="glass-medium rounded-2xl p-6 text-center tesla-hover">
-            <div className="text-3xl font-black text-warning mb-2">30d</div>
-            <div className="text-white/80 font-medium text-sm">Money Back</div>
-          </div>
-        </div>
+          
+          <p className="text-sm text-white/70 mb-8">
+            Secure payment • Instant download • 30-day guarantee
+          </p>
         </div>
       </div>
     </section>

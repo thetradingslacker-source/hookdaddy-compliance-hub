@@ -138,50 +138,6 @@ const ViralHooks = () => {
           </Card>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center glass-strong rounded-3xl p-12 lg:p-16">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Content?
-            </h3>
-            <p className="text-lg text-white/80 mb-8 leading-relaxed">
-              Join 10,000+ successful marketers who've already boosted their engagement rates by 300% 
-              using our proven viral hooks system.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-tesla-blue">300%</div>
-                <div className="text-sm text-white/70">Avg. Engagement Boost</div>
-              </div>
-              <div className="w-px h-8 bg-white/20 hidden sm:block"></div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-success">10K+</div>
-                <div className="text-sm text-white/70">Happy Customers</div>
-              </div>
-              <div className="w-px h-8 bg-white/20 hidden sm:block"></div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-warning">4.9★</div>
-                <div className="text-sm text-white/70">Customer Rating</div>
-              </div>
-            </div>
-            
-            <a 
-              href="https://hookdaddy.store/checkouts/checkout-2/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
-          <Button size="lg" variant="default" className="text-lg font-bold px-12 py-6 magnetic-button" asChild>
-            <a href="/checkout">Get Viral Hooks Pack Now</a>
-          </Button>
-            </a>
-            
-            <p className="text-sm text-white/70 mt-4">
-              Secure payment • Instant download • 30-day guarantee
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
