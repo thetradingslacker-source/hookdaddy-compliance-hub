@@ -39,10 +39,10 @@
 
     /* Enhanced Apple AI-style background with prominent accents */
     --gradient-apple-ai: 
-      radial-gradient(ellipse 80% 50% at 30% 20%, hsl(240 100% 70% / 0.0147) 0%, transparent 50%),
-      radial-gradient(ellipse 60% 80% at 70% 70%, hsl(280 90% 65% / 0.01176) 0%, transparent 50%),
-      radial-gradient(ellipse 100% 60% at 50% 90%, hsl(200 100% 60% / 0.00924) 0%, transparent 40%),
-      linear-gradient(125deg, hsl(240 100% 70% / 0.00756) 0%, hsl(280 90% 65% / 0.0063) 30%, hsl(320 80% 60% / 0.00504) 60%, hsl(200 100% 60% / 0.0084) 100%);
+      radial-gradient(ellipse 80% 50% at 30% 20%, hsl(240 100% 70% / 0.00441) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 80% at 70% 70%, hsl(280 90% 65% / 0.003528) 0%, transparent 50%),
+      radial-gradient(ellipse 100% 60% at 50% 90%, hsl(200 100% 60% / 0.002772) 0%, transparent 40%),
+      linear-gradient(125deg, hsl(240 100% 70% / 0.002268) 0%, hsl(280 90% 65% / 0.00189) 30%, hsl(320 80% 60% / 0.001512) 60%, hsl(200 100% 60% / 0.00252) 100%);
     --gradient-master: 
       var(--gradient-apple-ai),
       radial-gradient(ellipse 120% 120% at 50% 0%, hsl(0 0% 0% / 0.7) 0%, hsl(0 0% 0% / 0.85) 40%, hsl(0 0% 0% / 0.95) 100%),
