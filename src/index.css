@@ -130,16 +130,27 @@
   /* Enhanced Apple-style background with animated grid */
   .master-bg {
     background: 
-      var(--gradient-master),
-      var(--grid-pattern);
+      /* SUPER BRIGHT TEST - This should be impossible to miss */
+      radial-gradient(circle at 30% 30%, hsl(217 100% 50% / 0.9) 0%, transparent 40%),
+      radial-gradient(circle at 70% 70%, hsl(258 100% 60% / 0.8) 0%, transparent 50%),
+      radial-gradient(circle at 50% 20%, hsl(188 100% 50% / 0.7) 0%, transparent 60%),
+      radial-gradient(circle at 20% 80%, hsl(300 100% 60% / 0.6) 0%, transparent 50%),
+      /* Base dark background */
+      linear-gradient(135deg, hsl(0 0% 2%) 0%, hsl(0 0% 0%) 100%),
+      /* Grid lines */
+      linear-gradient(hsl(255 255% 255% / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(255 255% 255% / 0.1) 1px, transparent 1px);
     background-size: 
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
       100% 100%,
       40px 40px,
       40px 40px;
-    background-position: 0 0, 0 0, 0 0;
+    background-position: 0 0;
     position: relative;
     overflow: hidden;
-    animation: grid-move 20s linear infinite;
   }
 
   @keyframes grid-move {
