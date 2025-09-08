@@ -19,10 +19,10 @@ const buttonVariants = cva(
         link: "text-tesla-blue underline-offset-4 hover:underline hover:text-tesla-electric",
       },
       size: {
-        default: "h-12 px-6 py-3",
-        sm: "h-10 rounded-lg px-4 text-xs",
-        lg: "h-14 rounded-2xl px-8 text-base font-bold",
-        icon: "h-12 w-12",
+        default: "h-10 px-4 py-2 text-sm",
+        sm: "h-8 rounded-lg px-3 text-xs",
+        lg: "h-12 rounded-xl px-6 text-base font-bold",
+        icon: "h-10 w-10",
       },
     },
     defaultVariants: {
