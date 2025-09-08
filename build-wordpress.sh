@@ -7,8 +7,14 @@ echo "🚀 Building HookDaddy for WordPress/ReactPress integration..."
 rm -rf dist-wordpress
 
 # Build with WordPress configuration
-npx vite build --config vite.wordpress.config.ts
+npm run build -- --config vite.wordpress.config.ts --outDir dist-wordpress
 
 echo "✅ WordPress build completed!"
-echo "📁 Files are ready in 'dist-wordpress' folder"
-echo "📖 Follow the wordpress-integration-guide.md for setup instructions"
+echo "📁 Files ready for upload:"
+echo "   📄 dist-wordpress/hookdaddy-app.umd.js"
+echo "   📄 dist-wordpress/hookdaddy-app.es.js" 
+echo "   📄 dist-wordpress/style.css"
+echo ""
+echo "🔗 Next steps:"
+echo "1. Upload files from 'dist-wordpress/' to '/wp-content/uploads/reactpress/'"
+echo "2. Follow README-WORDPRESS.md for ReactPress setup"
