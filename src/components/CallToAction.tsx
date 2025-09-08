@@ -26,20 +26,20 @@ const CallToAction = () => {
             <span className="text-tesla-blue font-semibold"> 300%</span> using our proven viral hooks system.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 mb-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-tesla-blue">300%</div>
-              <div className="text-sm text-white/70">Avg. Engagement Boost</div>
+              <div className="text-2xl sm:text-3xl font-bold text-tesla-blue">300%</div>
+              <div className="text-xs sm:text-sm text-white/70">Avg. Engagement Boost</div>
             </div>
-            <div className="w-px h-8 bg-white/20 hidden sm:block"></div>
+            <div className="w-px h-6 bg-white/20 hidden sm:block"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-tesla-electric">10K+</div>
-              <div className="text-sm text-white/70">Happy Customers</div>
+              <div className="text-2xl sm:text-3xl font-bold text-tesla-electric">10K+</div>
+              <div className="text-xs sm:text-sm text-white/70">Happy Customers</div>
             </div>
-            <div className="w-px h-8 bg-white/20 hidden sm:block"></div>
+            <div className="w-px h-6 bg-white/20 hidden sm:block"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-warning">4.9★</div>
-              <div className="text-sm text-white/70">Customer Rating</div>
+              <div className="text-2xl sm:text-3xl font-bold text-warning">4.9★</div>
+              <div className="text-xs sm:text-sm text-white/70">Customer Rating</div>
             </div>
           </div>
           
