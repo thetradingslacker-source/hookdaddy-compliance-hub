@@ -19,8 +19,9 @@ const config: Config = {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Inter', 'system-ui', 'sans-serif'],
-				'mono': ['JetBrains Mono', 'Fira Code', 'monospace'],
+				'sans': ['Manrope', '-apple-system', 'BlinkMacSystemFont', 'Inter', 'system-ui', 'sans-serif'],
+				'display': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'SF Mono', 'Monaco', 'Cascadia Code', 'monospace'],
 			},
 			colors: {
 				border: "hsl(var(--border))",
@@ -56,6 +57,12 @@ const config: Config = {
 					DEFAULT: "hsl(var(--card))",
 					foreground: "hsl(var(--card-foreground))",
 				},
+				// Apple AI Tech Colors
+				neural: "hsl(var(--neural))",
+				quantum: "hsl(var(--quantum))",
+				cyber: "hsl(var(--cyber))",
+				matrix: "hsl(var(--matrix))",
+				plasma: "hsl(var(--plasma))",
 				tesla: {
 					blue: "hsl(var(--tesla-blue))",
 					red: "hsl(var(--tesla-red))",
@@ -71,12 +78,16 @@ const config: Config = {
 			},
 			boxShadow: {
 				'glass': 'var(--shadow-glass)',
-				'tesla': 'var(--shadow-tesla)',
+				'neural': 'var(--shadow-neural)', 
 				'elevated': 'var(--shadow-elevated)',
+				'intense': 'var(--shadow-intense)',
+				'button': 'var(--shadow-button)',
 			},
 			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-blue': 'var(--gradient-blue)',
+				'gradient-primary': 'var(--gradient-neural)',
+				'gradient-neural': 'var(--gradient-neural)',
+				'gradient-quantum': 'var(--gradient-quantum)',
+				'gradient-cyber': 'var(--gradient-cyber)',
 				'gradient-glass': 'var(--gradient-glass)',
 			},
 			keyframes: {
