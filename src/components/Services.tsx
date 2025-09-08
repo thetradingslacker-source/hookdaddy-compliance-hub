@@ -40,14 +40,14 @@ const Services = () => {
                 Ready-to-use video hooks that have generated millions of views. Download instantly and start creating viral content today.
               </p>
               
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
-                  <Download className="h-4 w-4 text-tesla-blue" />
-                  <span className="text-white text-xs font-medium">50K+ Downloads</span>
+              <div className="flex items-center gap-2 sm:gap-4 mb-6 flex-wrap">
+                <div className="flex items-center gap-1 glass-subtle px-2 py-1 rounded-full">
+                  <Download className="h-3 w-3 text-tesla-blue" />
+                  <span className="text-white text-[10px] sm:text-xs font-medium whitespace-nowrap">50K+ Downloads</span>
                 </div>
-                <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
-                  <Star className="h-4 w-4 text-warning" />
-                  <span className="text-white text-xs font-medium">4.9 Rating</span>
+                <div className="flex items-center gap-1 glass-subtle px-2 py-1 rounded-full">
+                  <Star className="h-3 w-3 text-warning" />
+                  <span className="text-white text-[10px] sm:text-xs font-medium whitespace-nowrap">4.9 Rating</span>
                 </div>
               </div>
               
@@ -82,14 +82,14 @@ const Services = () => {
                 Comprehensive guides, tutorials, and masterclasses to level up your content creation and marketing strategies.
               </p>
               
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
-                  <Users className="h-4 w-4 text-tesla-blue" />
-                  <span className="text-white text-xs font-medium">25K+ Students</span>
+              <div className="flex items-center gap-2 sm:gap-4 mb-6 flex-wrap">
+                <div className="flex items-center gap-1 glass-subtle px-2 py-1 rounded-full">
+                  <Users className="h-3 w-3 text-tesla-blue" />
+                  <span className="text-white text-[10px] sm:text-xs font-medium whitespace-nowrap">25K+ Students</span>
                 </div>
-                <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
-                  <CheckCircle className="h-4 w-4 text-success" />
-                  <span className="text-white text-xs font-medium">Certified</span>
+                <div className="flex items-center gap-1 glass-subtle px-2 py-1 rounded-full">
+                  <CheckCircle className="h-3 w-3 text-success" />
+                  <span className="text-white text-[10px] sm:text-xs font-medium whitespace-nowrap">Certified</span>
                 </div>
               </div>
               
@@ -124,14 +124,14 @@ const Services = () => {
                 Bespoke content strategies and done-for-you services tailored to your brand's unique requirements and goals.
               </p>
               
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
-                  <Target className="h-4 w-4 text-tesla-blue" />
-                  <span className="text-white text-xs font-medium">100% ROI</span>
+              <div className="flex items-center gap-2 sm:gap-4 mb-6 flex-wrap">
+                <div className="flex items-center gap-1 glass-subtle px-2 py-1 rounded-full">
+                  <Target className="h-3 w-3 text-tesla-blue" />
+                  <span className="text-white text-[10px] sm:text-xs font-medium whitespace-nowrap">100% ROI</span>
                 </div>
-                <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
-                  <Award className="h-4 w-4 text-warning" />
-                  <span className="text-white text-xs font-medium">Premium</span>
+                <div className="flex items-center gap-1 glass-subtle px-2 py-1 rounded-full">
+                  <Award className="h-3 w-3 text-warning" />
+                  <span className="text-white text-[10px] sm:text-xs font-medium whitespace-nowrap">Premium</span>
                 </div>
               </div>
               
