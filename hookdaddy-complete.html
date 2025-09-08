@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HookDaddy - Professional Digital Content Solutions</title>
+    <meta name="description" content="HookDaddy delivers enterprise-grade digital content services, viral marketing strategies and educational resources for businesses worldwide. Fully compliant with international standards.">
+    <meta name="author" content="HookDaddy Digital Solutions">
+    <meta name="keywords" content="digital content, viral marketing, business solutions, educational resources, content strategy, professional services">
+    <link rel="canonical" href="https://hookdaddy.store/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HookDaddy - Professional Digital Content Solutions">
+    <meta property="og:description" content="Enterprise-grade digital content services and viral marketing strategies for modern businesses. Fully compliant and professional.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hookdaddy.store/">
+    <meta property="og:image" content="https://hookdaddy.store/og-image.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HookDaddy - Digital Content Solutions">
+    <meta name="twitter:description" content="Professional digital content services for businesses worldwide">
+    <meta name="twitter:image" content="https://hookdaddy.store/og-image.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <style>
+        :root {
+            /* Dark theme colors */
+            --background: 240 10% 3.9%;
+            --foreground: 0 0% 98%;
+            --card: 240 10% 3.9%;
+            --card-foreground: 0 0% 98%;
+            --popover: 240 10% 3.9%;
+            --popover-foreground: 0 0% 98%;
+            --primary: 0 0% 98%;
+            --primary-foreground: 240 5.9% 10%;
+            --secondary: 240 3.7% 15.9%;
+            --secondary-foreground: 0 0% 98%;
+            --muted: 240 3.7% 15.9%;
+            --muted-foreground: 240 5% 64.9%;
+            --accent: 240 3.7% 15.9%;
+            --accent-foreground: 0 0% 98%;
+            --destructive: 0 62.8% 30.6%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 240 3.7% 15.9%;
+            --input: 240 3.7% 15.9%;
+            --ring: 240 4.9% 83.9%;
+            --chart-1: 220 70% 50%;
+            --chart-2: 160 60% 45%;
+            --chart-3: 30 80% 55%;
+            --chart-4: 280 65% 60%;
+            --chart-5: 340 75% 55%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .text-center { text-align: center; }
+        .hidden { display: none; }
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .block { display: block; }
+        .inline-flex { display: inline-flex; }
+
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .pt-20 { padding-top: 5rem; }
+        .pb-8 { padding-bottom: 2rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-12 { margin-bottom: 3rem; }
+        .mt-8 { margin-top: 2rem; }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .h-16 { height: 4rem; }
+        .min-h-screen { min-height: 100vh; }
+
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-full { border-radius: 9999px; }
+        .border { border: 1px solid hsl(var(--border)); }
+
+        .text-sm { font-size: 0.875rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-4xl { font-size: 2.25rem; }
+        .text-5xl { font-size: 3rem; }
+        .text-6xl { font-size: 3.75rem; }
+
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .leading-tight { line-height: 1.25; }
+        .leading-relaxed { line-height: 1.625; }
+
+        .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+        .text-primary { color: hsl(var(--primary)); }
+
+        .opacity-50 { opacity: 0.5; }
+        .opacity-70 { opacity: 0.7; }
+
+        /* Background */
+        .master-bg {
+            background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(240 8% 8%) 100%);
+            position: relative;
+        }
+
+        .master-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, hsl(280 100% 70% / 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(220 100% 70% / 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, hsl(340 100% 70% / 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .relative { position: relative; z-index: 1; }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: hsl(var(--background) / 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid hsl(var(--border));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: hsl(var(--foreground));
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: hsl(var(--primary));
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+            font-size: 0.875rem;
+        }
+
+        .btn-primary {
+            background: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+
+        .btn-primary:hover {
+            background: hsl(var(--primary) / 0.9);
+        }
+
+        .btn-secondary {
+            background: hsl(var(--secondary));
+            color: hsl(var(--secondary-foreground));
+            border: 1px solid hsl(var(--border));
+        }
+
+        .btn-secondary:hover {
+            background: hsl(var(--secondary) / 0.8);
+        }
+
+        .btn-lg {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+        }
+
+        /* Cards */
+        .card {
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: hsl(var(--primary) / 0.3);
+            box-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Grid layouts */
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, hsl(var(--primary)), hsl(280 100% 70%));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0.75rem;
+            background: hsl(var(--secondary));
+            color: hsl(var(--secondary-foreground));
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .badge-success {
+            background: hsl(120 100% 25%);
+            color: hsl(120 100% 90%);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Background orbs */
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .bg-orb-1 {
+            width: 200px;
+            height: 200px;
+            background: hsl(280 100% 70%);
+            top: 10%;
+            left: 10%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .bg-orb-2 {
+            width: 150px;
+            height: 150px;
+            background: hsl(220 100% 70%);
+            top: 60%;
+            right: 10%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .bg-orb-3 {
+            width: 100px;
+            height: 100px;
+            background: hsl(340 100% 70%);
+            bottom: 20%;
+            left: 60%;
+            animation: float 7s ease-in-out infinite;
+        }
+
+        /* Form styles */
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background: hsl(var(--input));
+            border: 1px solid hsl(var(--border));
+            border-radius: 0.375rem;
+            color: hsl(var(--foreground));
+            font-size: 0.875rem;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: hsl(var(--primary));
+            box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: hsl(var(--background));
+            padding: 2rem;
+            transition: left 0.3s ease;
+            z-index: 40;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background: hsl(var(--foreground));
+            transition: all 0.3s ease;
+        }
+
+        /* Stats grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: hsl(var(--card) / 0.5);
+            border: 1px solid hsl(var(--border));
+            border-radius: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-toggle { display: flex; }
+            .grid-cols-3 { grid-template-columns: 1fr; }
+            .grid-cols-2 { grid-template-columns: 1fr; }
+            .text-6xl { font-size: 2.5rem; }
+            .text-5xl { font-size: 2rem; }
+            .text-4xl { font-size: 1.75rem; }
+            .section { padding: 2rem 0; }
+            .container { padding: 0 1rem; }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(240 8% 6%) 100%);
+            border-top: 1px solid hsl(var(--border));
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                        <i data-lucide="zap" class="w-5 h-5" style="color: hsl(var(--primary-foreground));"></i>
+                    </div>
+                    <span class="font-bold text-xl">HookDaddy</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#viral-hooks">Viral Hooks</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="flex items-center gap-4">
+                    <a href="#services" class="btn btn-primary hidden md:inline-flex">Get Started</a>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="flex justify-end mb-8">
+                <button onclick="toggleMobileMenu()" class="text-2xl">&times;</button>
+            </div>
+            <nav>
+                <ul class="flex flex-col gap-6">
+                    <li><a href="#about" onclick="toggleMobileMenu()">About</a></li>
+                    <li><a href="#services" onclick="toggleMobileMenu()">Services</a></li>
+                    <li><a href="#viral-hooks" onclick="toggleMobileMenu()">Viral Hooks</a></li>
+                    <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+                </ul>
+                <a href="#services" class="btn btn-primary w-full mt-8" onclick="toggleMobileMenu()">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="master-bg pt-20">
+        <!-- Background Orbs -->
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+
+        <!-- Hero Section -->
+        <section class="section relative">
+            <div class="container">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="badge mb-6">
+                        <i data-lucide="users" class="w-4 h-4"></i>
+                        Trusted by 10,000+ Creators Worldwide
+                    </div>
+                    
+                    <h1 class="text-6xl font-extrabold mb-6 leading-tight">
+                        Create Content That 
+                        <span class="gradient-text">Converts</span>
+                    </h1>
+                    
+                    <p class="text-xl text-muted-foreground mb-8 leading-relaxed">
+                        Transform your content strategy with our proven viral hooks, educational resources, and custom solutions. 
+                        Get 10x more engagement in 24 hours with our enterprise-grade digital content services.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                        <a href="#services" class="btn btn-primary btn-lg">
+                            <i data-lucide="rocket" class="w-5 h-5"></i>
+                            Start Creating Now
+                        </a>
+                        <a href="#viral-hooks" class="btn btn-secondary btn-lg">
+                            <i data-lucide="play" class="w-5 h-5"></i>
+                            Watch Demo
+                        </a>
+                    </div>
+                    
+                    <!-- Social Proof Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="text-3xl font-bold mb-2">10,000+</div>
+                            <div class="text-muted-foreground">Active Creators</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="text-3xl font-bold mb-2">50M+</div>
+                            <div class="text-muted-foreground">Views Generated</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="text-3xl font-bold mb-2">300%</div>
+                            <div class="text-muted-foreground">Avg. Boost</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section relative">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">Why Choose HookDaddy?</h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                        We deliver enterprise-grade digital content solutions with proven results. 
+                        Our comprehensive approach combines viral marketing strategies with educational excellence.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <div class="card text-center">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="award" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Proven Expertise</h3>
+                        <p class="text-muted-foreground text-sm">5+ years of proven success in digital content strategy and viral marketing</p>
+                    </div>
+                    
+                    <div class="card text-center">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="zap" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Rapid Results</h3>
+                        <p class="text-muted-foreground text-sm">See immediate impact with our tested hooks and strategies within 24 hours</p>
+                    </div>
+                    
+                    <div class="card text-center">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="shield-check" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Secure & Compliant</h3>
+                        <p class="text-muted-foreground text-sm">All our solutions are fully compliant with international business standards</p>
+                    </div>
+                    
+                    <div class="card text-center">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="lightbulb" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Innovation First</h3>
+                        <p class="text-muted-foreground text-sm">Cutting-edge strategies that keep you ahead of the competition</p>
+                    </div>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold mb-2">2019</div>
+                        <div class="text-muted-foreground">Founded</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">50+</div>
+                        <div class="text-muted-foreground">Countries Served</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">100%</div>
+                        <div class="text-muted-foreground">Compliance Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section relative">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">Our Premium Services</h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                        Enterprise-grade content solutions designed to transform your digital presence and drive unprecedented engagement.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Viral Hooks Pack -->
+                    <div class="card">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="trending-up" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Viral Hooks Packs</h3>
+                        <p class="text-muted-foreground mb-4">Ready-to-use viral hooks that guarantee engagement. Tested on millions of views.</p>
+                        
+                        <div class="mb-4">
+                            <div class="text-2xl font-bold">50,000+</div>
+                            <div class="text-sm text-muted-foreground">Downloads</div>
+                        </div>
+                        
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                100+ Proven Hooks
+                            </li>
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                Industry Specific
+                            </li>
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                Instant Download
+                            </li>
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                Regular Updates
+                            </li>
+                        </ul>
+                        
+                        <a href="#viral-hooks" class="btn btn-primary w-full">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            Get Hooks Pack
+                        </a>
+                    </div>
+                    
+                    <!-- Educational Content -->
+                    <div class="card">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="graduation-cap" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Educational Content</h3>
+                        <p class="text-muted-foreground mb-4">Comprehensive courses and resources to master digital content creation.</p>
+                        
+                        <div class="mb-4">
+                            <div class="text-2xl font-bold">5,000+</div>
+                            <div class="text-sm text-muted-foreground">Students</div>
+                        </div>
+                        
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                Expert-Led Courses
+                            </li>
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                Practical Exercises
+                            </li>
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                Community Access
+                            </li>
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                Certificate
+                            </li>
+                        </ul>
+                        
+                        <a href="#contact" class="btn btn-secondary w-full">
+                            <i data-lucide="book-open" class="w-4 h-4"></i>
+                            Learn More
+                        </a>
+                    </div>
+                    
+                    <!-- Custom Solutions -->
+                    <div class="card">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="settings" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Custom Solutions</h3>
+                        <p class="text-muted-foreground mb-4">Tailored content strategies and implementations for enterprise clients.</p>
+                        
+                        <div class="mb-4">
+                            <div class="text-2xl font-bold">Enterprise</div>
+                            <div class="text-sm text-muted-foreground">Solutions</div>
+                        </div>
+                        
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                Strategy Development
+                            </li>
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                Content Creation
+                            </li>
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                Performance Analytics
+                            </li>
+                            <li class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                Dedicated Support
+                            </li>
+                        </ul>
+                        
+                        <a href="#contact" class="btn btn-secondary w-full">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <p class="text-lg text-muted-foreground mb-6">Ready to transform your content strategy?</p>
+                    <a href="#viral-hooks" class="btn btn-primary btn-lg">
+                        <i data-lucide="rocket" class="w-5 h-5"></i>
+                        Start Your Journey
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Viral Hooks Section -->
+        <section id="viral-hooks" class="section relative">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <div class="badge badge-success mb-4">
+                        <i data-lucide="star" class="w-4 h-4"></i>
+                        Bestseller Pack
+                    </div>
+                    <h2 class="text-4xl font-bold mb-4">Get Our Viral Hooks Pack</h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
+                        100+ proven viral hooks that have generated millions of views. 
+                        Ready to use, tested, and guaranteed to boost your engagement.
+                    </p>
+                    
+                    <div class="flex items-center justify-center gap-4 mb-6">
+                        <div class="flex items-center gap-1">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
+                            <span class="font-semibold ml-2">4.9/5</span>
+                        </div>
+                        <div class="text-muted-foreground">|</div>
+                        <div>
+                            <i data-lucide="download" class="w-5 h-5 inline mr-1"></i>
+                            <span class="font-semibold">50,000+ Downloads</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <a href="https://hookdaddy.gumroad.com/l/hookpack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg animate-float">
+                            <i data-lucide="zap" class="w-5 h-5"></i>
+                            Get Hooks Pack Now - $27
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Proven to Convert -->
+                    <div class="card text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="trending-up" class="w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Proven to Convert</h3>
+                        <p class="text-muted-foreground mb-6">
+                            Every hook has been tested and proven to drive engagement across multiple platforms and industries.
+                        </p>
+                        <ul class="space-y-3 text-left">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">Tested on 50M+ views</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">300% average engagement boost</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">Multi-platform optimized</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">Industry-specific variations</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Ready-to-Use -->
+                    <div class="card text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="clock" class="w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Ready-to-Use</h3>
+                        <p class="text-muted-foreground mb-6">
+                            No need to spend hours brainstorming. Copy, paste, and customize these hooks for immediate results.
+                        </p>
+                        <ul class="space-y-3 text-left">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">100+ hooks included</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">Categorized by industry</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">Easy customization guide</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">Multiple format options</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Instant Access -->
+                    <div class="card text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="download" class="w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Instant Access</h3>
+                        <p class="text-muted-foreground mb-6">
+                            Download immediately after purchase. Start using the hooks within minutes of your order.
+                        </p>
+                        <ul class="space-y-3 text-left">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">Instant digital delivery</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">Lifetime access included</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">Free updates forever</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span class="text-sm">30-day money-back guarantee</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="section relative">
+            <div class="container">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="badge mb-6">
+                        <i data-lucide="clock" class="w-4 h-4"></i>
+                        Limited Time Offer
+                    </div>
+                    
+                    <h2 class="text-4xl font-bold mb-6">
+                        Transform Your Content Today
+                    </h2>
+                    
+                    <p class="text-xl text-muted-foreground mb-8 leading-relaxed">
+                        Join thousands of successful creators who've revolutionized their content strategy. 
+                        Get instant access to our proven viral hooks and start seeing results within 24 hours. 
+                        Trusted by industry leaders worldwide.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">300%</div>
+                            <div class="text-muted-foreground">Engagement Boost</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">10,000+</div>
+                            <div class="text-muted-foreground">Happy Customers</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">4.9/5</div>
+                            <div class="text-muted-foreground">Rating</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <a href="https://hookdaddy.gumroad.com/l/hookpack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                            <i data-lucide="zap" class="w-5 h-5"></i>
+                            Get Viral Hooks Pack Now
+                        </a>
+                        <a href="#services" class="btn btn-secondary btn-lg">
+                            <i data-lucide="info" class="w-5 h-5"></i>
+                            Learn More
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center justify-center gap-6 text-sm text-muted-foreground">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="credit-card" class="w-4 h-4"></i>
+                            Secure Payment
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="shield" class="w-4 h-4"></i>
+                            30-Day Guarantee
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            Instant Access
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section relative">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <div class="badge mb-4">
+                        <i data-lucide="headphones" class="w-4 h-4"></i>
+                        Professional Support
+                    </div>
+                    <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                        Ready to transform your content strategy? Contact our team of experts for personalized solutions 
+                        and enterprise-grade support.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <!-- Contact Information -->
+                    <div class="space-y-6">
+                        <div class="card">
+                            <h3 class="text-xl font-semibold mb-6">Business Information</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="building" class="w-5 h-5 mt-1 text-primary"></i>
+                                    <div>
+                                        <div class="font-medium">HookDaddy Digital Solutions</div>
+                                        <div class="text-muted-foreground text-sm">Professional Content Services</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="mail" class="w-5 h-5 mt-1 text-primary"></i>
+                                    <div>
+                                        <div class="font-medium">hello@hookdaddy.store</div>
+                                        <div class="text-muted-foreground text-sm">Business Inquiries & Support</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 mt-1 text-primary"></i>
+                                    <div>
+                                        <div class="font-medium">Monday - Friday: 9 AM - 6 PM EST</div>
+                                        <div class="text-muted-foreground text-sm">Response within 24 hours</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="shield-check" class="w-5 h-5 mt-1 text-primary"></i>
+                                    <div>
+                                        <div class="font-medium">Fully Compliant & Secure</div>
+                                        <div class="text-muted-foreground text-sm">International business standards</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <h3 class="text-lg font-semibold mb-4">Enterprise Partnerships</h3>
+                            <p class="text-muted-foreground mb-4">
+                                Looking for custom solutions or enterprise partnerships? 
+                                We offer tailored content strategies for large organizations.
+                            </p>
+                            <a href="mailto:partnerships@hookdaddy.store" class="btn btn-secondary">
+                                <i data-lucide="mail" class="w-4 h-4"></i>
+                                Inquire About Partnership
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="card">
+                        <h3 class="text-xl font-semibold mb-6">Send us a Message</h3>
+                        
+                        <form onsubmit="handleSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">First Name *</label>
+                                    <input type="text" name="firstName" required class="form-input" placeholder="John">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Last Name *</label>
+                                    <input type="text" name="lastName" required class="form-input" placeholder="Doe">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email Address *</label>
+                                <input type="email" name="email" required class="form-input" placeholder="john@example.com">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Company (Optional)</label>
+                                <input type="text" name="company" class="form-input" placeholder="Your Company">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Message *</label>
+                                <textarea name="message" required class="form-textarea" rows="5" placeholder="Tell us about your project or inquiry..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-full">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                            <i data-lucide="zap" class="w-5 h-5" style="color: hsl(var(--primary-foreground));"></i>
+                        </div>
+                        <span class="font-bold text-xl">HookDaddy</span>
+                    </div>
+                    <p class="text-muted-foreground mb-4">
+                        Professional digital content solutions for modern businesses. 
+                        We deliver enterprise-grade viral marketing strategies and educational resources worldwide.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm">
+                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                        <span class="text-muted-foreground">All Operational</span>
+                    </div>
+                </div>
+                
+                <!-- Company Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-muted-foreground hover:text-primary">About Us</a></li>
+                        <li><a href="#services" class="text-muted-foreground hover:text-primary">Our Services</a></li>
+                        <li><a href="#contact" class="text-muted-foreground hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Legal & Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-muted-foreground hover:text-primary">Privacy Policy</a></li>
+                        <li><a href="#" class="text-muted-foreground hover:text-primary">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-muted-foreground hover:text-primary">Return & Refund</a></li>
+                        <li><a href="#" class="text-muted-foreground hover:text-primary">Support Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-border">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-muted-foreground text-sm">
+                        © 2024 HookDaddy Digital Solutions. All rights reserved.
+                    </p>
+                    <div class="flex items-center gap-2 mt-4 md:mt-0">
+                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                        <span class="text-muted-foreground text-sm">All Operational</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would typically send the data to your backend
+            console.log('Form submitted:', data);
+            
+            // Show success message (you can replace this with a proper notification)
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'hsl(var(--background) / 0.95)';
+            } else {
+                header.style.background = 'hsl(var(--background) / 0.8)';
+            }
+        });
+
+        // Add some interactive animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
