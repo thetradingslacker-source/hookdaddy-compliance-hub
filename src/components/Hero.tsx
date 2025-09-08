@@ -1,64 +1,74 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Target, TrendingUp, Shield } from "lucide-react";
+import { ArrowRight, PlayCircle, Zap } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-hero text-primary-foreground py-16 md:py-24 lg:py-32">
-      <div className="container mx-auto px-6">
-        <div className="max-w-5xl mx-auto text-center tesla-animate">
-          <h1 className="text-mobile-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-6 md:mb-8 leading-tight font-heading tracking-tight">
-            Unlock the Power of
-            <span className="bg-gradient-accent bg-clip-text text-transparent font-normal"> Viral Content</span>
-          </h1>
-          
-          <p className="text-mobile-lg md:text-xl lg:text-2xl mb-8 md:mb-12 text-primary-foreground/70 max-w-4xl mx-auto leading-relaxed font-light">
-            HookDaddy delivers proven digital hooks, video packs, and marketing insights designed to help businesses capture attention, increase engagement, and grow revenue.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 md:mb-20">
-            <a href="#viral-hooks">
-              <Button size="lg" variant="secondary" className="text-base md:text-lg px-8 md:px-12 py-4 tesla-hover shadow-glow">
-                Get Started Today
-              </Button>
-            </a>
-            <a href="#services">
-              <Button size="lg" variant="outline" className="text-base md:text-lg px-8 md:px-12 py-4 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 tesla-hover">
-                Our Services
-              </Button>
-            </a>
+    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
+      {/* Animated background grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      
+      {/* Gradient orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-tesla-blue/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      
+      <div className="container-width relative z-10">
+        <div className="max-w-6xl mx-auto text-center space-y-12 animate-slide-up">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect text-sm font-medium">
+            <Zap className="w-4 h-4 text-tesla-blue" />
+            <span>Trusted by 10,000+ creators</span>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            <Card className="bg-card/5 border-primary-foreground/10 backdrop-blur-xl shadow-strong tesla-hover">
-              <CardContent className="p-6 lg:p-8 text-center">
-                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-accent rounded-2xl mx-auto mb-4 lg:mb-6 flex items-center justify-center">
-                  <Target className="w-6 h-6 lg:w-8 lg:h-8 text-accent-foreground" />
-                </div>
-                <h3 className="text-mobile-lg md:text-lg lg:text-xl font-semibold mb-2 md:mb-3 text-primary-foreground font-heading">Targeted Solutions</h3>
-                <p className="text-mobile-base md:text-base text-primary-foreground/60 leading-relaxed">Custom content strategies tailored to your business needs</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/5 border-primary-foreground/10 backdrop-blur-xl shadow-strong tesla-hover">
-              <CardContent className="p-6 lg:p-8 text-center">
-                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-gold rounded-2xl mx-auto mb-4 lg:mb-6 flex items-center justify-center">
-                  <TrendingUp className="w-6 h-6 lg:w-8 lg:h-8 text-gold-foreground" />
-                </div>
-                <h3 className="text-mobile-lg md:text-lg lg:text-xl font-semibold mb-2 md:mb-3 text-primary-foreground font-heading">Proven Results</h3>
-                <p className="text-mobile-base md:text-base text-primary-foreground/60 leading-relaxed">Data-driven approaches with measurable outcomes</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/5 border-primary-foreground/10 backdrop-blur-xl shadow-strong tesla-hover">
-              <CardContent className="p-6 lg:p-8 text-center">
-                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-success rounded-2xl mx-auto mb-4 lg:mb-6 flex items-center justify-center">
-                  <Shield className="w-6 h-6 lg:w-8 lg:h-8 text-success-foreground" />
-                </div>
-                <h3 className="text-mobile-lg md:text-lg lg:text-xl font-semibold mb-2 md:mb-3 text-primary-foreground font-heading">Secure & Compliant</h3>
-                <p className="text-mobile-base md:text-base text-primary-foreground/60 leading-relaxed">Full compliance with international payment standards</p>
-              </CardContent>
-            </Card>
+          
+          {/* Main headline */}
+          <div className="space-y-6">
+            <h1 className="hero-text text-gradient">
+              Create Content
+              <br />
+              <span className="text-tesla-blue">That Converts</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Professional video hooks and marketing strategies that capture attention 
+              and drive real business results. Join thousands of creators scaling their impact.
+            </p>
+          </div>
+          
+          {/* CTA buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+            <Button 
+              size="lg" 
+              className="tesla-gradient text-white text-lg px-10 py-6 rounded-xl shadow-tesla hover:shadow-elevated transition-all duration-300 group font-semibold"
+            >
+              Start Creating Now
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-10 py-6 rounded-xl border-2 border-border hover:border-tesla-blue hover:text-tesla-blue transition-all duration-300 group font-semibold"
+            >
+              <PlayCircle className="mr-2 h-5 w-5" />
+              Watch Demo
+            </Button>
+          </div>
+          
+          {/* Social proof */}
+          <div className="pt-16 flex items-center justify-center gap-8 opacity-60">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-foreground">10K+</div>
+              <div className="text-sm text-muted-foreground">Creators</div>
+            </div>
+            <div className="w-px h-8 bg-border"></div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-foreground">50M+</div>
+              <div className="text-sm text-muted-foreground">Views Generated</div>
+            </div>
+            <div className="w-px h-8 bg-border"></div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-foreground">99%</div>
+              <div className="text-sm text-muted-foreground">Satisfaction</div>
+            </div>
           </div>
         </div>
       </div>
