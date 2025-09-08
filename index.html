@@ -25,54 +25,91 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
     <style>
         :root {
-            --background: 240 10% 3.9%;
-            --foreground: 0 0% 98%;
-            --card: 240 10% 3.9%;
-            --card-foreground: 0 0% 98%;
-            --popover: 240 10% 3.9%;
-            --popover-foreground: 0 0% 98%;
-            --primary: 0 0% 98%;
-            --primary-foreground: 240 5.9% 10%;
-            --secondary: 240 3.7% 15.9%;
-            --secondary-foreground: 0 0% 98%;
-            --muted: 240 3.7% 15.9%;
-            --muted-foreground: 240 5% 64.9%;
-            --accent: 240 3.7% 15.9%;
-            --accent-foreground: 0 0% 98%;
-            --destructive: 0 62.8% 30.6%;
-            --destructive-foreground: 0 0% 98%;
-            --border: 240 3.7% 15.9%;
-            --input: 240 3.7% 15.9%;
-            --ring: 240 4.9% 83.9%;
-            --radius: 0.5rem;
+            /* Premium Tesla/Apple-inspired theme - Dark Mode Excellence */
+            --background: 0 0% 0%;
+            --foreground: 0 0% 100%;
+            --card: 0 0% 6%;
+            --card-foreground: 0 0% 100%;
+            --popover: 0 0% 6%;
+            --popover-foreground: 0 0% 100%;
+            --primary: 0 0% 100%;
+            --primary-foreground: 0 0% 0%;
+            --secondary: 240 3% 11%;
+            --secondary-foreground: 0 0% 100%;
+            --muted: 240 5% 26%;
+            --muted-foreground: 0 0% 64%;
+            --accent: 217 91% 60%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84% 60%;
+            --destructive-foreground: 0 0% 100%;
+            --border: 240 6% 25%;
+            --input: 240 3% 11%;
+            --ring: 217 91% 60%;
+            --radius: 16px;
+
+            /* Premium Tesla color palette - Tech webapp focused */
+            --tesla-blue: 217 91% 60%;
+            --tesla-red: 0 84% 60%;
+            --tesla-silver: 215 25% 27%;
+            --tesla-electric: 188 95% 45%;
+            --tesla-purple: 258 90% 66%;
+            --success: 217 91% 60%;
+            --warning: 45 93% 47%;
+
+            /* Enhanced Apple AI-style background with prominent accents */
+            --gradient-apple-ai: 
+                radial-gradient(ellipse 80% 50% at 30% 20%, hsl(240 100% 70% / 0.00441) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 80% at 70% 70%, hsl(280 90% 65% / 0.003528) 0%, transparent 50%),
+                radial-gradient(ellipse 100% 60% at 50% 90%, hsl(200 100% 60% / 0.002772) 0%, transparent 40%),
+                linear-gradient(125deg, hsl(240 100% 70% / 0.002268) 0%, hsl(280 90% 65% / 0.00189) 30%, hsl(320 80% 60% / 0.001512) 60%, hsl(200 100% 60% / 0.00252) 100%);
+            --gradient-master: 
+                var(--gradient-apple-ai),
+                radial-gradient(ellipse 120% 120% at 50% 0%, hsl(0 0% 0% / 0.7) 0%, hsl(0 0% 0% / 0.85) 40%, hsl(0 0% 0% / 0.95) 100%),
+                radial-gradient(circle at 20% 20%, hsl(217 91% 60% / 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, hsl(258 90% 66% / 0.132) 0%, transparent 50%),
+                radial-gradient(circle at 60% 10%, hsl(188 100% 50% / 0.108) 0%, transparent 40%),
+                radial-gradient(circle at 90% 30%, hsl(270 100% 70% / 0.09) 0%, transparent 60%),
+                linear-gradient(135deg, hsl(217 91% 60% / 0.048) 0%, transparent 50%, hsl(258 90% 66% / 0.036) 100%);
+            --grid-pattern: 
+                linear-gradient(hsl(255 255% 255% / 0.084) 1px, transparent 1px),
+                linear-gradient(90deg, hsl(255 255% 255% / 0.084) 1px, transparent 1px);
+            --gradient-section: radial-gradient(ellipse 100% 60% at 50% 50%, hsl(217 91% 10% / 0.08) 0%, transparent 70%);
+            --gradient-blue: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(258 90% 66%) 100%);
+            --gradient-electric: linear-gradient(135deg, hsl(188 100% 50%) 0%, hsl(217 91% 60%) 100%);
+            --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(217 91% 60%) 100%);
+            
+            /* Apple-style glass effects - Ultra refined */
+            --gradient-glass-subtle: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
+            --gradient-glass-medium: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.04) 100%);
+            --gradient-glass-strong: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(15,15,25,0.6) 100%);
+            --gradient-card-bg: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(10,15,25,0.7) 100%);
+            
+            /* Apple-style shadows with subtle depth */
+            --shadow-glass: 0 1px 3px rgba(0, 0, 0, 0.5), 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+            --shadow-webapp: 0 8px 30px rgba(0, 0, 0, 0.6), 0 2px 12px rgba(59, 130, 246, 0.2);
+            --shadow-elevated: 0 12px 24px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(59, 130, 246, 0.15);
+            --shadow-intense: 0 20px 40px rgba(0, 0, 0, 0.7), 0 8px 32px rgba(59, 130, 246, 0.2);
+            --shadow-button: 0 4px 16px rgba(59, 130, 246, 0.3), 0 1px 4px rgba(0, 0, 0, 0.2);
+            --shadow-icon: 0 2px 8px rgba(59, 130, 246, 0.25), 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         *, ::before, ::after {
             box-sizing: border-box;
             border-width: 0;
             border-style: solid;
-            border-color: hsl(240 3.7% 15.9%);
-        }
-
-        ::before, ::after {
-            --tw-content: '';
+            border-color: hsl(var(--border));
         }
 
         html {
             line-height: 1.5;
             -webkit-text-size-adjust: 100%;
-            -moz-tab-size: 4;
-            tab-size: 4;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            font-feature-settings: normal;
-            font-variation-settings: normal;
             scroll-behavior: smooth;
         }
 
@@ -81,77 +118,60 @@
             line-height: inherit;
             background-color: hsl(var(--background));
             color: hsl(var(--foreground));
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             font-feature-settings: "rlig" 1, "calt" 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Master Background */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        /* Enhanced Apple-style background with animated grid */
         .master-bg {
-            background: linear-gradient(135deg, 
-                hsl(240 10% 3.9%) 0%, 
-                hsl(240 8% 6%) 25%, 
-                hsl(240 6% 8%) 50%, 
-                hsl(240 8% 6%) 75%, 
-                hsl(240 10% 3.9%) 100%
-            );
+            background: 
+                var(--grid-pattern),
+                var(--gradient-master);
+            background-size: 
+                40px 40px,
+                40px 40px, 
+                100% 100%;
+            background-position: 0 0, 0 0, 0 0;
             position: relative;
+            overflow: hidden;
+            animation: grid-move 20s linear infinite;
             min-height: 100vh;
         }
 
-        .master-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, hsla(280, 100%, 70%, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, hsla(220, 100%, 70%, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, hsla(340, 100%, 70%, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
+        @keyframes grid-move {
+            0% { background-position: 0 0, 0 0, 0 0; }
+            100% { background-position: 40px 40px, 40px 40px, 0 0; }
+        }
+        
+        .master-bg > * {
+            position: relative;
+            z-index: 2;
         }
 
         /* Layout utilities */
-        .relative { position: relative; z-index: 1; }
+        .relative { position: relative; }
         .fixed { position: fixed; }
         .absolute { position: absolute; }
-        .container { width: 100%; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
-        .section { padding-top: 6rem; padding-bottom: 6rem; }
+        .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+        .section-padding { padding-top: 4rem; padding-bottom: 4rem; }
         .flex { display: flex; }
         .inline-flex { display: inline-flex; }
         .grid { display: grid; }
         .hidden { display: none; }
-        .block { display: block; }
-        .items-start { align-items: flex-start; }
         .items-center { align-items: center; }
-        .items-end { align-items: flex-end; }
-        .justify-start { justify-content: flex-start; }
-        .justify-end { justify-content: flex-end; }
         .justify-center { justify-content: center; }
         .justify-between { justify-content: space-between; }
-        .text-left { text-align: left; }
         .text-center { text-align: center; }
-        .text-right { text-align: right; }
+        .text-left { text-align: left; }
         .flex-col { flex-direction: column; }
-        .flex-row { flex-direction: row; }
-
-        /* Container sizes */
-        @media (min-width: 640px) {
-            .container { max-width: 640px; }
-        }
-        @media (min-width: 768px) {
-            .container { max-width: 768px; }
-        }
-        @media (min-width: 1024px) {
-            .container { max-width: 1024px; }
-        }
-        @media (min-width: 1280px) {
-            .container { max-width: 1280px; }
-        }
-        @media (min-width: 1536px) {
-            .container { max-width: 1536px; }
-        }
 
         /* Grid templates */
         .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
@@ -159,51 +179,25 @@
         .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
-        /* Responsive grid */
-        @media (min-width: 640px) {
-            .sm\\:flex-row { flex-direction: row; }
-            .sm\\:inline-flex { display: inline-flex; }
-        }
-        @media (min-width: 768px) {
-            .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .md\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-            .md\\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-            .md\\:col-span-2 { grid-column: span 2 / span 2; }
-            .md\\:flex-row { flex-direction: row; }
-            .md\\:mt-0 { margin-top: 0; }
-        }
-        @media (min-width: 1024px) {
-            .lg\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .lg\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-            .lg\\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-        }
-
         /* Spacing */
-        .gap-1 { gap: 0.25rem; }
         .gap-2 { gap: 0.5rem; }
-        .gap-3 { gap: 0.75rem; }
         .gap-4 { gap: 1rem; }
         .gap-6 { gap: 1.5rem; }
         .gap-8 { gap: 2rem; }
         .gap-12 { gap: 3rem; }
 
-        .space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem; }
-        .space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem; }
-        .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
-        .space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
-        .space-y-8 > :not([hidden]) ~ :not([hidden]) { margin-top: 2rem; }
+        .space-y-2 > * + * { margin-top: 0.5rem; }
+        .space-y-3 > * + * { margin-top: 0.75rem; }
+        .space-y-4 > * + * { margin-top: 1rem; }
+        .space-y-6 > * + * { margin-top: 1.5rem; }
 
-        .p-4 { padding: 1rem; }
         .p-6 { padding: 1.5rem; }
-        .px-4 { padding-left: 1rem; padding-right: 1rem; }
-        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
         .pt-20 { padding-top: 5rem; }
         .pt-8 { padding-top: 2rem; }
-        .pb-8 { padding-bottom: 2rem; }
 
-        .m-0 { margin: 0; }
         .mb-2 { margin-bottom: 0.5rem; }
         .mb-4 { margin-bottom: 1rem; }
         .mb-6 { margin-bottom: 1.5rem; }
@@ -229,11 +223,11 @@
         .h-8 { height: 2rem; }
         .h-12 { height: 3rem; }
         .h-16 { height: 4rem; }
-        .min-h-screen { min-height: 100vh; }
 
         .max-w-3xl { max-width: 48rem; }
         .max-w-4xl { max-width: 56rem; }
         .max-w-6xl { max-width: 72rem; }
+        .max-w-7xl { max-width: 80rem; }
 
         /* Typography */
         .text-xs { font-size: 0.75rem; line-height: 1rem; }
@@ -246,14 +240,17 @@
         .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
         .text-5xl { font-size: 3rem; line-height: 1; }
         .text-6xl { font-size: 3.75rem; line-height: 1; }
+        .text-7xl { font-size: 4.5rem; line-height: 1; }
+        .text-8xl { font-size: 6rem; line-height: 1; }
 
         .font-medium { font-weight: 500; }
         .font-semibold { font-weight: 600; }
         .font-bold { font-weight: 700; }
-        .font-extrabold { font-weight: 800; }
+        .font-black { font-weight: 900; }
 
         .leading-tight { line-height: 1.25; }
-        .leading-relaxed { line-height: 1.625; }
+        .leading-none { line-height: 1; }
+        .tracking-tighter { letter-spacing: -0.05em; }
 
         /* Colors */
         .text-muted-foreground { color: hsl(var(--muted-foreground)); }
@@ -262,15 +259,24 @@
         .text-yellow-400 { color: #facc15; }
         .bg-green-400 { background-color: #4ade80; }
 
+        /* Tesla gradients */
+        .text-gradient {
+            background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--tesla-blue)), hsl(var(--primary)));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-electric {
+            background: linear-gradient(135deg, hsl(var(--tesla-electric)), hsl(var(--tesla-blue)), hsl(var(--tesla-purple)));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         /* Border radius */
-        .rounded { border-radius: 0.25rem; }
         .rounded-lg { border-radius: var(--radius); }
         .rounded-full { border-radius: 9999px; }
-
-        /* Border */
-        .border { border-width: 1px; }
-        .border-t { border-top-width: 1px; }
-        .border-border { border-color: hsl(var(--border)); }
 
         /* Header */
         .header {
@@ -280,9 +286,9 @@
             right: 0;
             z-index: 50;
             height: 4rem;
-            background: hsla(240, 10%, 3.9%, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid hsl(var(--border));
+            backdrop-filter: blur(16px) saturate(180%);
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -299,12 +305,52 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 0.875rem;
-            transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .nav-links a:hover {
-            color: hsl(var(--primary));
+            color: hsl(var(--tesla-blue));
+        }
+
+        /* Enhanced Apple-style glass effects */
+        .glass-effect {
+            backdrop-filter: blur(16px) saturate(180%);
+            background: var(--gradient-glass-medium);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: var(--shadow-glass);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-effect:hover {
+            background: var(--gradient-glass-subtle);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        /* Webapp-style card backgrounds */
+        .card-bg {
+            background: var(--gradient-card-bg);
+            box-shadow: var(--shadow-webapp);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-bg:hover {
+            box-shadow: var(--shadow-intense);
+            transform: translateY(-2px) scale(1.01);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+
+        /* Refined icon containers */
+        .icon-container {
+            background: var(--gradient-glass-strong);
+            box-shadow: var(--shadow-icon);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(16px);
         }
 
         /* Button styles */
@@ -316,38 +362,51 @@
             white-space: nowrap;
             border-radius: var(--radius);
             font-size: 0.875rem;
-            font-weight: 500;
+            font-weight: 600;
             text-decoration: none;
             cursor: pointer;
             border: none;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             padding: 0.5rem 1rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        .btn:focus-visible {
-            outline: 2px solid hsl(var(--ring));
-            outline-offset: 2px;
+        .btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            transform: translateX(-100%);
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn:hover::before {
+            transform: translateX(100%);
         }
 
         .btn-primary {
-            background-color: hsl(var(--primary));
+            background: hsl(var(--primary));
             color: hsl(var(--primary-foreground));
+            box-shadow: var(--shadow-button);
         }
 
         .btn-primary:hover {
-            background-color: hsl(var(--primary) / 0.9);
-            transform: translateY(-1px);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-intense);
         }
 
         .btn-secondary {
-            background-color: transparent;
+            background: transparent;
             border: 1px solid hsl(var(--border));
             color: hsl(var(--foreground));
+            backdrop-filter: blur(16px);
         }
 
         .btn-secondary:hover {
-            background-color: hsl(var(--secondary));
-            border-color: hsl(var(--primary) / 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: hsl(var(--tesla-blue));
+            transform: translateY(-2px);
         }
 
         .btn-lg {
@@ -360,75 +419,25 @@
             font-size: 0.875rem;
         }
 
-        /* Card styles */
-        .card {
-            background-color: hsl(var(--card));
-            color: hsl(var(--card-foreground));
-            border: 1px solid hsl(var(--border));
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .card:hover {
-            border-color: hsl(var(--primary) / 0.3);
-            box-shadow: 0 10px 25px -3px hsl(var(--primary) / 0.1), 0 4px 6px -2px hsl(var(--primary) / 0.05);
-            transform: translateY(-4px);
-        }
-
         /* Badge styles */
         .badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.25rem 0.75rem;
-            background-color: hsl(var(--secondary));
-            color: hsl(var(--secondary-foreground));
-            border: 1px solid hsl(var(--border));
+            padding: 0.5rem 1rem;
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 9999px;
             font-size: 0.75rem;
             font-weight: 500;
+            color: hsl(var(--foreground));
         }
 
         .badge-success {
-            background: linear-gradient(135deg, #059669, #10b981);
+            background: var(--gradient-success);
             color: white;
             border: none;
-        }
-
-        /* Gradient text */
-        .gradient-text {
-            background: linear-gradient(135deg, 
-                hsl(var(--primary)) 0%, 
-                #a855f7 50%, 
-                #3b82f6 100%
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Form styles */
-        .form-input, .form-textarea {
-            width: 100%;
-            padding: 0.75rem;
-            background-color: hsl(var(--input));
-            border: 1px solid hsl(var(--border));
-            border-radius: var(--radius);
-            color: hsl(var(--foreground));
-            font-size: 0.875rem;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .form-input:focus, .form-textarea:focus {
-            outline: none;
-            border-color: hsl(var(--primary));
-            box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 120px;
         }
 
         /* Mobile menu */
@@ -438,7 +447,8 @@
             left: -100%;
             width: 100%;
             height: 100vh;
-            background-color: hsl(var(--background));
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
             padding: 2rem;
             transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 40;
@@ -459,64 +469,52 @@
         .mobile-menu-toggle span {
             width: 20px;
             height: 2px;
-            background-color: hsl(var(--foreground));
+            background: hsl(var(--foreground));
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border-radius: 1px;
         }
 
         /* Animations */
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            33% { transform: translateY(-15px) rotate(2deg) scale(1.05); }
+            66% { transform: translateY(-25px) rotate(-1deg) scale(0.95); }
         }
 
-        @keyframes fade-in {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
+        .float-animation {
+            animation: float 8s ease-in-out infinite;
         }
 
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
+        .float-delayed {
+            animation: float 8s ease-in-out infinite 2s;
         }
 
-        .animate-fade-in {
-            animation: fade-in 0.6s ease-out;
-        }
-
-        /* Background orbs */
+        /* Enhanced floating background orbs */
         .bg-orb {
             position: absolute;
             border-radius: 50%;
+            background: radial-gradient(circle, hsl(var(--tesla-blue) / 0.15) 0%, transparent 70%);
             filter: blur(40px);
+            animation: float 12s ease-in-out infinite;
+            opacity: 0.6;
+        }
+
+        .bg-orb-secondary {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, hsl(var(--tesla-electric) / 0.12) 0%, transparent 70%);
+            filter: blur(35px);
+            animation: float 15s ease-in-out infinite reverse;
             opacity: 0.4;
-            pointer-events: none;
         }
 
-        .bg-orb-1 {
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(135deg, #a855f7, #3b82f6);
-            top: 10%;
-            left: 10%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .bg-orb-2 {
-            width: 200px;
-            height: 200px;
-            background: linear-gradient(135deg, #3b82f6, #06b6d4);
-            top: 60%;
-            right: 10%;
-            animation: float 8s ease-in-out infinite reverse;
-        }
-
-        .bg-orb-3 {
-            width: 150px;
-            height: 150px;
-            background: linear-gradient(135deg, #06b6d4, #a855f7);
-            bottom: 20%;
-            left: 60%;
-            animation: float 7s ease-in-out infinite;
+        .bg-orb-tertiary {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, hsl(var(--tesla-purple) / 0.08) 0%, transparent 70%);
+            filter: blur(50px);
+            animation: float 18s ease-in-out infinite;
+            opacity: 0.3;
         }
 
         /* Stats grid */
@@ -530,23 +528,47 @@
         .stat-item {
             text-align: center;
             padding: 2rem 1.5rem;
-            background: hsl(var(--card) / 0.5);
-            border: 1px solid hsl(var(--border));
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--radius);
-            backdrop-filter: blur(8px);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .stat-item:hover {
             transform: translateY(-2px);
-            border-color: hsl(var(--primary) / 0.3);
+            border-color: hsl(var(--tesla-blue) / 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Form styles */
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background: hsl(var(--input));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            color: hsl(var(--foreground));
+            font-size: 0.875rem;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: hsl(var(--tesla-blue));
+            box-shadow: 0 0 0 2px hsl(var(--tesla-blue) / 0.2);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
         }
 
         /* Footer */
         .footer {
             background: linear-gradient(135deg, 
-                hsl(240 10% 3.9%) 0%, 
-                hsl(240 8% 6%) 100%
+                hsl(var(--background)) 0%, 
+                hsl(0 0% 3%) 100%
             );
             border-top: 1px solid hsl(var(--border));
         }
@@ -561,30 +583,58 @@
             .text-6xl { font-size: 2.5rem; }
             .text-5xl { font-size: 2rem; }
             .text-4xl { font-size: 1.75rem; }
-            .section { padding-top: 3rem; padding-bottom: 3rem; }
-            .btn-lg { padding: 0.75rem 1.5rem; font-size: 0.875rem; }
+            .text-7xl { font-size: 3rem; }
+            .text-8xl { font-size: 4rem; }
+            .section-padding { padding-top: 3rem; padding-bottom: 3rem; }
+            .py-16 { padding-top: 3rem; padding-bottom: 3rem; }
+            .py-24 { padding-top: 4rem; padding-bottom: 4rem; }
             .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
-        }
-
-        @media (min-width: 768px) and (max-width: 1023px) {
-            .lg\\:grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
-            .lg\\:grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        /* Hidden utilities for mobile */
-        @media (max-width: 767px) {
-            .hidden { display: none !important; }
-            .md\\:inline-flex { display: none !important; }
+            .container { padding: 0 1rem; }
         }
 
         @media (min-width: 768px) {
-            .md\\:inline-flex { display: inline-flex !important; }
+            .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .md\\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            .md\\:col-span-2 { grid-column: span 2 / span 2; }
+            .md\\:flex-row { flex-direction: row; }
+            .md\\:mt-0 { margin-top: 0; }
+            .md\\:text-7xl { font-size: 4.5rem; }
+            .md\\:py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+            .md\\:inline-flex { display: inline-flex; }
         }
 
-        /* Icon container utilities */
-        .icon-bg-primary {
-            background-color: hsl(var(--primary));
-            color: hsl(var(--primary-foreground));
+        @media (min-width: 1024px) {
+            .lg\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .lg\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .lg\\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            .lg\\:py-32 { padding-top: 8rem; padding-bottom: 8rem; }
+        }
+
+        @media (min-width: 1280px) {
+            .xl\\:text-8xl { font-size: 6rem; }
+            .xl\\:px-12 { padding-left: 3rem; padding-right: 3rem; }
+        }
+
+        /* Hero text styling */
+        .hero-text {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: -0.05em;
+        }
+
+        @media (min-width: 768px) {
+            .hero-text { font-size: 4.5rem; }
+        }
+
+        @media (min-width: 1280px) {
+            .hero-text { font-size: 6rem; }
+        }
+
+        @media (min-width: 640px) {
+            .sm\\:flex-row { flex-direction: row; }
+            .sm\\:px-8 { padding-left: 2rem; padding-right: 2rem; }
         }
     </style>
 </head>
@@ -596,7 +646,7 @@
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
                 <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 icon-bg-primary rounded-lg flex items-center justify-center">
+                    <div class="w-8 h-8 icon-container rounded-lg flex items-center justify-center">
                         <i data-lucide="zap" class="w-5 h-5"></i>
                     </div>
                     <span class="font-bold text-xl">HookDaddy</span>
@@ -614,7 +664,7 @@
 
                 <!-- Desktop CTA -->
                 <div class="flex items-center gap-4">
-                    <a href="#services" class="btn btn-primary btn-sm hidden md:inline-flex font-semibold">Get Started</a>
+                    <a href="#services" class="btn btn-primary btn-sm hidden md:inline-flex">Get Started</a>
                     
                     <!-- Mobile Menu Toggle -->
                     <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
@@ -628,17 +678,23 @@
 
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu">
-            <div class="flex justify-end mb-8">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 icon-container rounded-lg flex items-center justify-center">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-bold text-xl">HookDaddy</span>
+                </div>
                 <button onclick="toggleMobileMenu()" style="background: none; border: none; color: hsl(var(--foreground)); font-size: 1.5rem; cursor: pointer;">&times;</button>
             </div>
             <nav>
                 <div class="flex flex-col gap-6">
-                    <a href="#about" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500;">About</a>
-                    <a href="#services" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500;">Services</a>
-                    <a href="#viral-hooks" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500;">Viral Hooks</a>
-                    <a href="#contact" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500;">Contact</a>
+                    <a href="#about" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500; font-size: 1.125rem;">About</a>
+                    <a href="#services" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500; font-size: 1.125rem;">Services</a>
+                    <a href="#viral-hooks" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500; font-size: 1.125rem;">Viral Hooks</a>
+                    <a href="#contact" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500; font-size: 1.125rem;">Contact</a>
                 </div>
-                <a href="#services" class="btn btn-primary font-semibold mt-8 w-full" onclick="toggleMobileMenu()">Get Started</a>
+                <a href="#services" class="btn btn-primary mt-8 w-full" onclick="toggleMobileMenu()">Get Started</a>
             </nav>
         </div>
     </header>
@@ -646,25 +702,25 @@
     <!-- Main Content -->
     <main class="master-bg pt-20">
         <!-- Background Orbs -->
-        <div class="bg-orb bg-orb-1"></div>
-        <div class="bg-orb bg-orb-2"></div>
-        <div class="bg-orb bg-orb-3"></div>
+        <div class="bg-orb" style="width: 600px; height: 600px; top: 10%; left: -10%;"></div>
+        <div class="bg-orb-secondary" style="width: 400px; height: 400px; top: 60%; right: -5%;"></div>
+        <div class="bg-orb-tertiary" style="width: 300px; height: 300px; bottom: 20%; left: 50%;"></div>
 
         <!-- Hero Section -->
-        <section class="section relative">
-            <div class="container">
+        <section class="py-16 md:py-24 lg:py-32 relative">
+            <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
                 <div class="text-center max-w-4xl mx-auto">
                     <div class="badge mb-6">
                         <i data-lucide="users" class="w-4 h-4"></i>
                         Trusted by 10,000+ Creators Worldwide
                     </div>
                     
-                    <h1 class="text-6xl font-extrabold mb-6 leading-tight">
+                    <h1 class="hero-text mb-6 leading-none tracking-tighter">
                         Create Content That 
-                        <span class="gradient-text">Converts</span>
+                        <span class="text-gradient">Converts</span>
                     </h1>
                     
-                    <p class="text-xl text-muted-foreground mb-8 leading-relaxed">
+                    <p class="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
                         Transform your content strategy with our proven viral hooks, educational resources, and custom solutions. 
                         Get 10x more engagement in 24 hours with our enterprise-grade digital content services.
                     </p>
@@ -700,10 +756,10 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="section relative">
-            <div class="container">
+        <section id="about" class="py-16 md:py-24 lg:py-32 relative">
+            <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold mb-4">Why Choose HookDaddy?</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">Why Choose HookDaddy?</h2>
                     <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
                         We deliver enterprise-grade digital content solutions with proven results. 
                         Our comprehensive approach combines viral marketing strategies with educational excellence.
@@ -711,32 +767,32 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                    <div class="card text-center">
-                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <div class="card-bg text-center">
+                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="award" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Proven Expertise</h3>
                         <p class="text-muted-foreground text-sm">5+ years of proven success in digital content strategy and viral marketing</p>
                     </div>
                     
-                    <div class="card text-center">
-                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <div class="card-bg text-center">
+                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="zap" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Rapid Results</h3>
                         <p class="text-muted-foreground text-sm">See immediate impact with our tested hooks and strategies within 24 hours</p>
                     </div>
                     
-                    <div class="card text-center">
-                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <div class="card-bg text-center">
+                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="shield-check" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Secure & Compliant</h3>
                         <p class="text-muted-foreground text-sm">All our solutions are fully compliant with international business standards</p>
                     </div>
                     
-                    <div class="card text-center">
-                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <div class="card-bg text-center">
+                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="lightbulb" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Innovation First</h3>
@@ -763,10 +819,10 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="section relative">
-            <div class="container">
+        <section id="services" class="py-16 md:py-24 lg:py-32 relative">
+            <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold mb-4">Our Premium Services</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">Our Premium Services</h2>
                     <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
                         Enterprise-grade content solutions designed to transform your digital presence and drive unprecedented engagement.
                     </p>
@@ -774,8 +830,8 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
                     <!-- Viral Hooks Pack -->
-                    <div class="card">
-                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <div class="card-bg">
+                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
                             <i data-lucide="trending-up" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Viral Hooks Packs</h3>
@@ -786,24 +842,24 @@
                             <div class="text-sm text-muted-foreground">Downloads</div>
                         </div>
                         
-                        <ul class="space-y-2 mb-6" style="list-style: none; padding: 0;">
-                            <li class="flex items-center gap-2 text-sm">
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 100+ Proven Hooks
-                            </li>
-                            <li class="flex items-center gap-2 text-sm">
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Industry Specific
-                            </li>
-                            <li class="flex items-center gap-2 text-sm">
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Instant Download
-                            </li>
-                            <li class="flex items-center gap-2 text-sm">
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Regular Updates
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                         
                         <a href="#viral-hooks" class="btn btn-primary w-full">
                             <i data-lucide="download" class="w-4 h-4"></i>
@@ -812,8 +868,8 @@
                     </div>
                     
                     <!-- Educational Content -->
-                    <div class="card">
-                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <div class="card-bg">
+                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
                             <i data-lucide="graduation-cap" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Educational Content</h3>
@@ -824,24 +880,24 @@
                             <div class="text-sm text-muted-foreground">Students</div>
                         </div>
                         
-                        <ul class="space-y-2 mb-6" style="list-style: none; padding: 0;">
-                            <li class="flex items-center gap-2 text-sm">
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Expert-Led Courses
-                            </li>
-                            <li class="flex items-center gap-2 text-sm">
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Practical Exercises
-                            </li>
-                            <li class="flex items-center gap-2 text-sm">
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Community Access
-                            </li>
-                            <li class="flex items-center gap-2 text-sm">
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Certificate
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                         
                         <a href="#contact" class="btn btn-secondary w-full">
                             <i data-lucide="book-open" class="w-4 h-4"></i>
@@ -850,8 +906,8 @@
                     </div>
                     
                     <!-- Custom Solutions -->
-                    <div class="card">
-                        <div class="w-12 h-12 icon-bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <div class="card-bg">
+                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
                             <i data-lucide="settings" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Custom Solutions</h3>
@@ -862,24 +918,24 @@
                             <div class="text-sm text-muted-foreground">Solutions</div>
                         </div>
                         
-                        <ul class="space-y-2 mb-6" style="list-style: none; padding: 0;">
-                            <li class="flex items-center gap-2 text-sm">
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Strategy Development
-                            </li>
-                            <li class="flex items-center gap-2 text-sm">
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Content Creation
-                            </li>
-                            <li class="flex items-center gap-2 text-sm">
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Performance Analytics
-                            </li>
-                            <li class="flex items-center gap-2 text-sm">
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
                                 <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
                                 Dedicated Support
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                         
                         <a href="#contact" class="btn btn-secondary w-full">
                             <i data-lucide="mail" class="w-4 h-4"></i>
@@ -899,14 +955,14 @@
         </section>
 
         <!-- Viral Hooks Section -->
-        <section id="viral-hooks" class="section relative">
-            <div class="container">
+        <section id="viral-hooks" class="py-16 md:py-24 lg:py-32 relative">
+            <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
                 <div class="text-center mb-12">
                     <div class="badge badge-success mb-4">
                         <i data-lucide="star" class="w-4 h-4"></i>
                         Bestseller Pack
                     </div>
-                    <h2 class="text-4xl font-bold mb-4">Get Our Viral Hooks Pack</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">Get Our Viral Hooks Pack</h2>
                     <p class="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
                         100+ proven viral hooks that have generated millions of views. 
                         Ready to use, tested, and guaranteed to boost your engagement.
@@ -929,7 +985,7 @@
                     </div>
                     
                     <div class="mb-8">
-                        <a href="https://hookdaddy.gumroad.com/l/hookpack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg animate-float">
+                        <a href="https://hookdaddy.gumroad.com/l/hookpack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg float-animation">
                             <i data-lucide="zap" class="w-5 h-5"></i>
                             Get Hooks Pack Now - $27
                         </a>
@@ -938,105 +994,105 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <!-- Proven to Convert -->
-                    <div class="card text-center">
-                        <div class="w-16 h-16 icon-bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div class="card-bg text-center">
+                        <div class="w-16 h-16 icon-container rounded-full flex items-center justify-center mx-auto mb-6">
                             <i data-lucide="trending-up" class="w-8 h-8"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Proven to Convert</h3>
                         <p class="text-muted-foreground mb-6">
                             Every hook has been tested and proven to drive engagement across multiple platforms and industries.
                         </p>
-                        <ul class="space-y-3 text-left" style="list-style: none; padding: 0;">
-                            <li class="flex items-center gap-3">
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Tested on 50M+ views</span>
-                            </li>
-                            <li class="flex items-center gap-3">
+                            </div>
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">300% average engagement boost</span>
-                            </li>
-                            <li class="flex items-center gap-3">
+                            </div>
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Multi-platform optimized</span>
-                            </li>
-                            <li class="flex items-center gap-3">
+                            </div>
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Industry-specific variations</span>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Ready-to-Use -->
-                    <div class="card text-center">
-                        <div class="w-16 h-16 icon-bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div class="card-bg text-center">
+                        <div class="w-16 h-16 icon-container rounded-full flex items-center justify-center mx-auto mb-6">
                             <i data-lucide="clock" class="w-8 h-8"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Ready-to-Use</h3>
                         <p class="text-muted-foreground mb-6">
                             No need to spend hours brainstorming. Copy, paste, and customize these hooks for immediate results.
                         </p>
-                        <ul class="space-y-3 text-left" style="list-style: none; padding: 0;">
-                            <li class="flex items-center gap-3">
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">100+ hooks included</span>
-                            </li>
-                            <li class="flex items-center gap-3">
+                            </div>
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Categorized by industry</span>
-                            </li>
-                            <li class="flex items-center gap-3">
+                            </div>
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Easy customization guide</span>
-                            </li>
-                            <li class="flex items-center gap-3">
+                            </div>
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Multiple format options</span>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Instant Access -->
-                    <div class="card text-center">
-                        <div class="w-16 h-16 icon-bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div class="card-bg text-center">
+                        <div class="w-16 h-16 icon-container rounded-full flex items-center justify-center mx-auto mb-6">
                             <i data-lucide="download" class="w-8 h-8"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Instant Access</h3>
                         <p class="text-muted-foreground mb-6">
                             Download immediately after purchase. Start using the hooks within minutes of your order.
                         </p>
-                        <ul class="space-y-3 text-left" style="list-style: none; padding: 0;">
-                            <li class="flex items-center gap-3">
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Instant digital delivery</span>
-                            </li>
-                            <li class="flex items-center gap-3">
+                            </div>
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Lifetime access included</span>
-                            </li>
-                            <li class="flex items-center gap-3">
+                            </div>
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Free updates forever</span>
-                            </li>
-                            <li class="flex items-center gap-3">
+                            </div>
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">30-day money-back guarantee</span>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Call to Action Section -->
-        <section class="section relative">
-            <div class="container">
+        <section class="py-16 md:py-24 lg:py-32 relative">
+            <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
                 <div class="text-center max-w-4xl mx-auto">
                     <div class="badge mb-6">
                         <i data-lucide="clock" class="w-4 h-4"></i>
                         Limited Time Offer
                     </div>
                     
-                    <h2 class="text-4xl font-bold mb-6">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tighter">
                         Transform Your Content Today
                     </h2>
                     
@@ -1091,14 +1147,14 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section relative">
-            <div class="container">
+        <section id="contact" class="py-16 md:py-24 lg:py-32 relative">
+            <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
                 <div class="text-center mb-12">
                     <div class="badge mb-4">
                         <i data-lucide="headphones" class="w-4 h-4"></i>
                         Professional Support
                     </div>
-                    <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">Get in Touch</h2>
                     <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
                         Ready to transform your content strategy? Contact our team of experts for personalized solutions 
                         and enterprise-grade support.
@@ -1108,7 +1164,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     <!-- Contact Information -->
                     <div class="space-y-6">
-                        <div class="card">
+                        <div class="card-bg">
                             <h3 class="text-xl font-semibold mb-6">Business Information</h3>
                             
                             <div class="space-y-4">
@@ -1146,7 +1202,7 @@
                             </div>
                         </div>
                         
-                        <div class="card">
+                        <div class="card-bg">
                             <h3 class="text-lg font-semibold mb-4">Enterprise Partnerships</h3>
                             <p class="text-muted-foreground mb-4">
                                 Looking for custom solutions or enterprise partnerships? 
@@ -1160,7 +1216,7 @@
                     </div>
                     
                     <!-- Contact Form -->
-                    <div class="card">
+                    <div class="card-bg">
                         <h3 class="text-xl font-semibold mb-6">Send us a Message</h3>
                         
                         <form onsubmit="handleSubmit(event)" class="space-y-4">
@@ -1202,18 +1258,18 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer section">
-        <div class="container">
+    <footer class="footer py-16 md:py-24">
+        <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <!-- Brand -->
                 <div class="md:col-span-2">
                     <div class="flex items-center gap-2 mb-4">
-                        <div class="w-8 h-8 icon-bg-primary rounded-lg flex items-center justify-center">
+                        <div class="w-8 h-8 icon-container rounded-lg flex items-center justify-center">
                             <i data-lucide="zap" class="w-5 h-5"></i>
                         </div>
                         <span class="font-bold text-xl">HookDaddy</span>
                     </div>
-                    <p class="text-muted-foreground mb-4">
+                    <p class="text-muted-foreground mb-6 max-w-md">
                         Professional digital content solutions for modern businesses. 
                         We deliver enterprise-grade viral marketing strategies and educational resources worldwide.
                     </p>
@@ -1226,35 +1282,31 @@
                 <!-- Company Links -->
                 <div>
                     <h4 class="font-semibold mb-4">Company</h4>
-                    <div class="space-y-2">
-                        <div><a href="#about" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">About Us</a></div>
-                        <div><a href="#services" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Our Services</a></div>
-                        <div><a href="#contact" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Contact</a></div>
+                    <div class="space-y-3">
+                        <div><a href="#about" class="text-muted-foreground hover:text-primary transition-colors" style="text-decoration: none;">About Us</a></div>
+                        <div><a href="#services" class="text-muted-foreground hover:text-primary transition-colors" style="text-decoration: none;">Our Services</a></div>
+                        <div><a href="#contact" class="text-muted-foreground hover:text-primary transition-colors" style="text-decoration: none;">Contact</a></div>
                     </div>
                 </div>
                 
                 <!-- Legal Links -->
                 <div>
                     <h4 class="font-semibold mb-4">Legal & Support</h4>
-                    <div class="space-y-2">
-                        <div><a href="#" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Privacy Policy</a></div>
-                        <div><a href="#" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Terms & Conditions</a></div>
-                        <div><a href="#" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Return & Refund</a></div>
-                        <div><a href="#" class="text-muted-foreground hover:text-primary" style="text-decoration: none; transition: color 0.2s;">Support Center</a></div>
+                    <div class="space-y-3">
+                        <div><a href="#" class="text-muted-foreground hover:text-primary transition-colors" style="text-decoration: none;">Privacy Policy</a></div>
+                        <div><a href="#" class="text-muted-foreground hover:text-primary transition-colors" style="text-decoration: none;">Terms & Conditions</a></div>
+                        <div><a href="#" class="text-muted-foreground hover:text-primary transition-colors" style="text-decoration: none;">Return & Refund</a></div>
+                        <div><a href="#" class="text-muted-foreground hover:text-primary transition-colors" style="text-decoration: none;">Support Center</a></div>
                     </div>
                 </div>
             </div>
             
             <!-- Bottom Bar -->
-            <div class="pt-8 border-t border-border">
+            <div class="pt-8 border-t" style="border-color: hsl(var(--border));">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <p class="text-muted-foreground text-sm">
                         © 2025 HookDaddy Digital Solutions. All rights reserved.
                     </p>
-                    <div class="flex items-center gap-2 mt-4 md:mt-0">
-                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-                        <span class="text-muted-foreground text-sm">All Operational</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1294,13 +1346,8 @@
             const formData = new FormData(event.target);
             const data = Object.fromEntries(formData);
             
-            // Here you would typically send the data to your backend
             console.log('Form submitted:', data);
-            
-            // Show success message
             alert('Thank you for your message! We will get back to you within 24 hours.');
-            
-            // Reset form
             event.target.reset();
         }
 
@@ -1308,13 +1355,15 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
             if (window.scrollY > 50) {
-                header.style.background = 'hsla(240, 10%, 3.9%, 0.95)';
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+                header.style.borderColor = 'rgba(255, 255, 255, 0.2)';
             } else {
-                header.style.background = 'hsla(240, 10%, 3.9%, 0.8)';
+                header.style.background = 'rgba(0, 0, 0, 0.8)';
+                header.style.borderColor = 'rgba(255, 255, 255, 0.1)';
             }
         });
 
-        // Intersection Observer for fade-in animations
+        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1329,16 +1378,17 @@
             });
         }, observerOptions);
 
-        // Observe all cards for animation
+        // Initialize animations on load
         document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.card').forEach(card => {
+            // Animate cards
+            document.querySelectorAll('.card-bg').forEach(card => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
                 card.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
                 observer.observe(card);
             });
 
-            // Observe stat items
+            // Animate stat items
             document.querySelectorAll('.stat-item').forEach(item => {
                 item.style.opacity = '0';
                 item.style.transform = 'translateY(20px)';
