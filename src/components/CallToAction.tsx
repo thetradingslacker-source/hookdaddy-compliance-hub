@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles, Zap, ExternalLink } from "lucide-react";
 
 const CallToAction = () => {
   return (
-    <section className="py-16 md:py-[100px] master-bg relative overflow-hidden">
+    <section className="py-8 md:py-16 master-bg relative overflow-hidden">
       {/* Section-specific glow overlay */}
       <div className="section-glow"></div>
       
