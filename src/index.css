@@ -28,40 +28,40 @@
     --ring: 217 91% 60%;
     --radius: 16px;
 
-    /* Premium Tesla color palette - Sophisticated monochrome */
+    /* Premium Tesla color palette - Tech webapp focused */
     --tesla-blue: 217 91% 60%;
     --tesla-red: 0 84% 60%;
     --tesla-silver: 215 25% 27%;
     --tesla-electric: 188 95% 45%;
-    --tesla-green: 142 50% 50%;
     --tesla-purple: 258 90% 66%;
-    --success: 142 50% 50%;
+    --success: 217 91% 60%; /* Changed from green to blue */
     --warning: 45 93% 47%;
 
-    /* Premium background with subtle grid pattern */
+    /* Apple-style background with refined dot grid */
     --gradient-master: 
-      radial-gradient(ellipse 120% 120% at 50% 0%, hsl(0 0% 2%) 0%, hsl(0 0% 0%) 40%, hsl(0 0% 1%) 100%),
-      radial-gradient(circle at 25% 25%, hsl(217 91% 60% / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsl(258 90% 66% / 0.03) 0%, transparent 50%);
-    --grid-pattern: radial-gradient(circle, hsl(217 91% 60% / 0.15) 1px, transparent 1px);
-    --gradient-section: radial-gradient(ellipse 100% 60% at 50% 50%, hsl(217 91% 10% / 0.15) 0%, transparent 70%);
+      radial-gradient(ellipse 120% 120% at 50% 0%, hsl(0 0% 1%) 0%, hsl(0 0% 0%) 40%, hsl(0 0% 0%) 100%),
+      radial-gradient(circle at 20% 20%, hsl(217 91% 60% / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, hsl(258 90% 66% / 0.02) 0%, transparent 50%);
+    --grid-pattern: 
+      radial-gradient(circle, hsl(255 255% 255% / 0.05) 0.5px, transparent 0.5px);
+    --gradient-section: radial-gradient(ellipse 100% 60% at 50% 50%, hsl(217 91% 10% / 0.08) 0%, transparent 70%);
     --gradient-blue: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(258 90% 66%) 100%);
     --gradient-electric: linear-gradient(135deg, hsl(188 100% 50%) 0%, hsl(217 91% 60%) 100%);
     --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(217 91% 60%) 100%);
     
-    /* Enhanced glass effects with better contrast */
-    --gradient-glass-subtle: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
-    --gradient-glass-medium: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.08) 100%);
-    --gradient-glass-strong: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
-    --gradient-card-bg: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(15,15,15,0.8) 100%);
+    /* Apple-style glass effects - Ultra refined */
+    --gradient-glass-subtle: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
+    --gradient-glass-medium: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.04) 100%);
+    --gradient-glass-strong: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(15,15,25,0.6) 100%);
+    --gradient-card-bg: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(10,15,25,0.7) 100%);
     
-    /* Premium shadows with electric glow */
-    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.8), 0 2px 16px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255,255,255,0.1);
-    --shadow-tesla: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 8px 32px rgba(59, 130, 246, 0.4);
-    --shadow-elevated: 0 20px 40px -8px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(59, 130, 246, 0.2);
-    --shadow-intense: 0 32px 64px -12px rgba(0, 0, 0, 0.9), 0 16px 48px rgba(59, 130, 246, 0.3);
-    --shadow-button: 0 8px 24px rgba(59, 130, 246, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-icon: 0 4px 12px rgba(59, 130, 246, 0.3), 0 2px 6px rgba(0, 0, 0, 0.4);
+    /* Apple-style shadows with subtle depth */
+    --shadow-glass: 0 1px 3px rgba(0, 0, 0, 0.5), 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+    --shadow-webapp: 0 8px 30px rgba(0, 0, 0, 0.6), 0 2px 12px rgba(59, 130, 246, 0.2);
+    --shadow-elevated: 0 12px 24px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(59, 130, 246, 0.15);
+    --shadow-intense: 0 20px 40px rgba(0, 0, 0, 0.7), 0 8px 32px rgba(59, 130, 246, 0.2);
+    --shadow-button: 0 4px 16px rgba(59, 130, 246, 0.3), 0 1px 4px rgba(0, 0, 0, 0.2);
+    --shadow-icon: 0 2px 8px rgba(59, 130, 246, 0.25), 0 1px 3px rgba(0, 0, 0, 0.3);
   }
 
   .dark {
@@ -113,12 +113,12 @@
 }
 
 @layer components {
-  /* Master seamless background with grid */
+  /* Apple-style background with precise dot grid */
   .master-bg {
     background: 
       var(--grid-pattern),
       var(--gradient-master);
-    background-size: 40px 40px, 100% 100%;
+    background-size: 24px 24px, 100% 100%;
     background-position: 0 0, 0 0;
     position: relative;
     overflow: hidden;
@@ -132,6 +132,7 @@
     right: 0;
     bottom: 0;
     background: var(--gradient-master);
+    backdrop-filter: blur(1px);
     z-index: 1;
   }
   
@@ -144,37 +145,39 @@
     background: var(--gradient-section);
   }
 
-  /* Enhanced glass effects */
+  /* Apple-style glass effects */
   .glass-subtle {
-    @apply backdrop-blur-xl border border-white/20;
+    @apply backdrop-blur-xl border border-white/10;
     background: var(--gradient-glass-subtle);
     box-shadow: var(--shadow-glass);
   }
 
   .glass-medium {
-    @apply backdrop-blur-xl border border-white/25;
+    @apply backdrop-blur-xl border border-white/15;
     background: var(--gradient-glass-medium);
-    box-shadow: var(--shadow-elevated);
+    box-shadow: var(--shadow-webapp);
   }
 
   .glass-strong {
-    @apply backdrop-blur-2xl border border-white/30;
+    @apply backdrop-blur-2xl border border-white/20;
     background: var(--gradient-glass-strong);
     box-shadow: var(--shadow-intense);
   }
 
-  /* Card backgrounds with better contrast */
+  /* Webapp-style card backgrounds */
   .card-bg {
     background: var(--gradient-card-bg);
-    box-shadow: var(--shadow-elevated);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-webapp);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
   }
 
-  /* Icon containers with high contrast */
+  /* Refined icon containers */
   .icon-container {
     background: var(--gradient-glass-strong);
     box-shadow: var(--shadow-icon);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
   }
 
   /* Tesla gradients */
@@ -195,8 +198,8 @@
 
   .elevated-card:hover {
     box-shadow: var(--shadow-intense);
-    transform: translateY(-4px) scale(1.02);
-    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px) scale(1.01);
+    border-color: rgba(59, 130, 246, 0.2);
   }
 
   /* Text effects */

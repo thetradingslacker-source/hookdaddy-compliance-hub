@@ -56,19 +56,19 @@ const ViralHooks = () => {
               
               <ul className="space-y-4">
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>Data-driven hook formulas</span>
                 </li>
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>A/B tested for maximum impact</span>
                 </li>
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>Cross-platform optimization</span>
                 </li>
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>Conversion rate optimization</span>
                 </li>
               </ul>
@@ -87,19 +87,19 @@ const ViralHooks = () => {
               
               <ul className="space-y-4">
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>Instant implementation</span>
                 </li>
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>Easy customization guide</span>
                 </li>
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>Multiple format options</span>
                 </li>
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>Platform-specific versions</span>
                 </li>
               </ul>
@@ -118,19 +118,19 @@ const ViralHooks = () => {
               
               <ul className="space-y-4">
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>Immediate download</span>
                 </li>
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>Lifetime access</span>
                 </li>
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>Free updates included</span>
                 </li>
                 <li className="flex items-center text-white/90">
-                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <CheckCircle className="h-5 w-5 text-tesla-blue mr-3" />
                   <span>Money-back guarantee</span>
                 </li>
               </ul>
