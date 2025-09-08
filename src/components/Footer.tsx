@@ -7,10 +7,10 @@ const Footer = () => {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center">
-                  <span className="text-xl font-bold text-accent-foreground">H</span>
+                  <span className="text-xl font-bold text-accent-foreground font-heading">H</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">HookDaddy</h3>
+                  <h3 className="text-xl font-bold font-heading">HookDaddy</h3>
                   <p className="text-primary-foreground/70 text-sm">Digital Content Solutions</p>
                 </div>
               </div>
@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
+              <h4 className="font-semibold mb-4 font-heading">Company</h4>
               <ul className="space-y-2 text-primary-foreground/80">
                 <li>
                   <a href="#about" className="hover:text-accent transition-colors">About Us</a>
@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
+              <h4 className="font-semibold mb-4 font-heading">Legal</h4>
               <ul className="space-y-2 text-primary-foreground/80">
                 <li>
                   <a href="https://hookdaddy.store/tc/" className="hover:text-accent transition-colors">Privacy Policy</a>

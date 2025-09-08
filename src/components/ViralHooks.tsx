@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Target, TrendingUp, Zap } from "lucide-react";
 
 const ViralHooks = () => {
   return (
@@ -7,7 +8,7 @@ const ViralHooks = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-heading">
               Upgrade Your Marketing with Viral Hooks
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -19,9 +20,9 @@ const ViralHooks = () => {
             <Card className="shadow-medium hover:shadow-strong transition-all duration-300">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-accent rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎯</span>
+                  <Target className="w-8 h-8 text-accent-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Proven to Convert</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3 font-heading">Proven to Convert</h3>
                 <p className="text-muted-foreground">Hooks crafted from top-performing campaigns to maximize ROI.</p>
               </CardContent>
             </Card>
@@ -29,9 +30,9 @@ const ViralHooks = () => {
             <Card className="shadow-medium hover:shadow-strong transition-all duration-300">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-gold rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📈</span>
+                  <TrendingUp className="w-8 h-8 text-gold-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Ready-to-Use</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3 font-heading">Ready-to-Use</h3>
                 <p className="text-muted-foreground">Plug directly into your ads and start seeing results immediately.</p>
               </CardContent>
             </Card>
@@ -39,9 +40,9 @@ const ViralHooks = () => {
             <Card className="shadow-medium hover:shadow-strong transition-all duration-300">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-success rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⚡</span>
+                  <Zap className="w-8 h-8 text-success-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Instant Download</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3 font-heading">Instant Download</h3>
                 <p className="text-muted-foreground">Secure checkout and immediate access to your hooks pack.</p>
               </CardContent>
             </Card>
@@ -53,7 +54,7 @@ const ViralHooks = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="text-lg px-12 py-4">
+              <Button size="lg" className="text-lg px-12 py-4 shadow-glow">
                 Buy the Viral Hooks Pack Now
               </Button>
             </a>

@@ -2,120 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-/* HookDaddy - Andrew Tate University Style Theme */
+/* HookDaddy - Corporate Premium Theme (Hormozi x Tesla x Professional) */
 
 @layer base {
   :root {
-    /* Dark Background System */
-    --background: 240 6% 10%;
-    --foreground: 48 100% 88%;
+    /* Clean Corporate Background */
+    --background: 0 0% 98%;
+    --foreground: 240 10% 8%;
 
-    /* Card System */
-    --card: 240 6% 12%;
-    --card-foreground: 48 100% 88%;
+    /* Card System - Clean White */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 8%;
 
     /* Popover */
-    --popover: 240 6% 12%;
-    --popover-foreground: 48 100% 88%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 8%;
 
-    /* Brand Primary - Deep Black */
-    --primary: 240 6% 8%;
-    --primary-foreground: 48 100% 88%;
+    /* Brand Primary - Tesla Dark */
+    --primary: 240 10% 8%;
+    --primary-foreground: 0 0% 98%;
 
-    /* Secondary - Bright Gold */
-    --secondary: 48 100% 67%;
-    --secondary-foreground: 240 6% 8%;
+    /* Secondary - Electric Blue */
+    --secondary: 210 100% 50%;
+    --secondary-foreground: 0 0% 98%;
 
     /* Muted Elements */
-    --muted: 240 4% 16%;
-    --muted-foreground: 48 20% 70%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
 
-    /* Accent - Bright Gold */
-    --accent: 48 100% 67%;
-    --accent-foreground: 240 6% 8%;
+    /* Accent - Premium Electric Blue */
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 98%;
 
-    /* Success/Trust Green */
+    /* Success - Clean Green */
     --success: 142 76% 36%;
-    --success-foreground: 48 100% 88%;
+    --success-foreground: 0 0% 98%;
 
-    /* Professional Gold */
-    --gold: 48 100% 67%;
-    --gold-foreground: 240 6% 8%;
+    /* Professional Gold Accent */
+    --gold: 45 93% 47%;
+    --gold-foreground: 0 0% 98%;
 
-    /* Destructive - Bold Red */
+    /* Destructive - Clean Red */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 48 100% 88%;
+    --destructive-foreground: 0 0% 98%;
 
-    /* Borders and Inputs */
-    --border: 240 4% 20%;
-    --input: 240 4% 16%;
-    --ring: 48 100% 67%;
+    /* Borders and Inputs - Subtle */
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 210 100% 50%;
 
-    /* Border Radius */
-    --radius: 12px;
+    /* Border Radius - Modern */
+    --radius: 8px;
 
-    /* Premium Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(240 6% 8%) 0%, hsl(240 8% 12%) 50%, hsl(240 6% 8%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(48 100% 67%) 0%, hsl(45 100% 60%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(48 100% 67%) 0%, hsl(42 100% 50%) 100%);
-    --gradient-premium: linear-gradient(135deg, hsl(48 100% 67%) 0%, hsl(240 6% 8%) 50%, hsl(48 100% 67%) 100%);
+    /* Corporate Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 8%) 0%, hsl(240 10% 12%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(210 100% 45%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 93% 47%) 0%, hsl(45 93% 40%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(240 5% 96%) 100%);
     
-    /* Premium Shadows */
-    --shadow-soft: 0 2px 10px -3px hsla(240, 6%, 8%, 0.3);
-    --shadow-medium: 0 4px 20px -4px hsla(240, 6%, 8%, 0.4);
-    --shadow-strong: 0 10px 40px -10px hsla(240, 6%, 8%, 0.5);
-    --shadow-glow: 0 0 30px hsla(48, 100%, 67%, 0.3);
+    /* Professional Shadows */
+    --shadow-soft: 0 1px 3px 0 hsla(240, 10%, 8%, 0.1), 0 1px 2px 0 hsla(240, 10%, 8%, 0.06);
+    --shadow-medium: 0 4px 6px -1px hsla(240, 10%, 8%, 0.1), 0 2px 4px -1px hsla(240, 10%, 8%, 0.06);
+    --shadow-strong: 0 20px 25px -5px hsla(240, 10%, 8%, 0.1), 0 10px 10px -5px hsla(240, 10%, 8%, 0.04);
+    --shadow-glow: 0 0 20px hsla(210, 100%, 50%, 0.15);
 
     /* Smooth Transitions */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 240 6% 12%;
-    --sidebar-foreground: 48 100% 88%;
-    --sidebar-primary: 48 100% 67%;
-    --sidebar-primary-foreground: 240 6% 8%;
-    --sidebar-accent: 240 4% 16%;
-    --sidebar-accent-foreground: 48 100% 88%;
-    --sidebar-border: 240 4% 20%;
-    --sidebar-ring: 48 100% 67%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 10% 8%;
+    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 10% 8%;
+    --sidebar-border: 240 6% 90%;
+    --sidebar-ring: 210 100% 50%;
   }
 
   .dark {
-    /* Same as root since we're going dark by default */
-    --background: 240 6% 10%;
-    --foreground: 48 100% 88%;
-    --card: 240 6% 12%;
-    --card-foreground: 48 100% 88%;
-    --popover: 240 6% 12%;
-    --popover-foreground: 48 100% 88%;
-    --primary: 240 6% 8%;
-    --primary-foreground: 48 100% 88%;
-    --secondary: 48 100% 67%;
-    --secondary-foreground: 240 6% 8%;
-    --muted: 240 4% 16%;
-    --muted-foreground: 48 20% 70%;
-    --accent: 48 100% 67%;
-    --accent-foreground: 240 6% 8%;
+    /* Professional Dark Mode */
+    --background: 240 10% 8%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 10% 8%;
+    --secondary: 210 100% 50%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 8% 15%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 98%;
     --success: 142 76% 36%;
-    --success-foreground: 48 100% 88%;
-    --gold: 48 100% 67%;
-    --gold-foreground: 240 6% 8%;
+    --success-foreground: 0 0% 98%;
+    --gold: 45 93% 47%;
+    --gold-foreground: 240 10% 8%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 48 100% 88%;
-    --border: 240 4% 20%;
-    --input: 240 4% 16%;
-    --ring: 48 100% 67%;
-    --gradient-hero: linear-gradient(135deg, hsl(240 6% 8%) 0%, hsl(240 8% 12%) 50%, hsl(240 6% 8%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(48 100% 67%) 0%, hsl(45 100% 60%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(48 100% 67%) 0%, hsl(42 100% 50%) 100%);
-    --gradient-premium: linear-gradient(135deg, hsl(48 100% 67%) 0%, hsl(240 6% 8%) 50%, hsl(48 100% 67%) 100%);
-    --sidebar-background: 240 6% 12%;
-    --sidebar-foreground: 48 100% 88%;
-    --sidebar-primary: 48 100% 67%;
-    --sidebar-primary-foreground: 240 6% 8%;
-    --sidebar-accent: 240 4% 16%;
-    --sidebar-accent-foreground: 48 100% 88%;
-    --sidebar-border: 240 4% 20%;
-    --sidebar-ring: 48 100% 67%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 8% 20%;
+    --input: 240 8% 15%;
+    --ring: 210 100% 50%;
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 8%) 0%, hsl(240 10% 5%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(210 100% 45%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 93% 47%) 0%, hsl(45 93% 40%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(240 10% 10%) 0%, hsl(240 8% 15%) 100%);
+    --sidebar-background: 240 10% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 8% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 8% 20%;
+    --sidebar-ring: 210 100% 50%;
   }
 }
 
@@ -125,6 +125,9 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
+
+/* Professional Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');

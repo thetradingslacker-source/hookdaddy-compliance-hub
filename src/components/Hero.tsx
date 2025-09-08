@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Target, TrendingUp, Shield } from "lucide-react";
 
 const Hero = () => {
   return (
     <section className="bg-gradient-hero text-primary-foreground py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight font-heading">
             Unlock the Power of
             <span className="bg-gradient-accent bg-clip-text text-transparent"> Viral Content</span>
           </h1>
@@ -29,32 +30,32 @@ const Hero = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mt-16">
-            <Card className="bg-card/10 border-primary-foreground/20 backdrop-blur-sm">
+            <Card className="bg-card/10 border-primary-foreground/20 backdrop-blur-sm shadow-medium">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-gradient-accent rounded-lg mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl">🎯</span>
+                  <Target className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-primary-foreground">Targeted Solutions</h3>
+                <h3 className="text-lg font-semibold mb-2 text-primary-foreground font-heading">Targeted Solutions</h3>
                 <p className="text-primary-foreground/70">Custom content strategies tailored to your business needs</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card/10 border-primary-foreground/20 backdrop-blur-sm">
+            <Card className="bg-card/10 border-primary-foreground/20 backdrop-blur-sm shadow-medium">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-gradient-gold rounded-lg mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl">📈</span>
+                  <TrendingUp className="w-6 h-6 text-gold-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-primary-foreground">Proven Results</h3>
+                <h3 className="text-lg font-semibold mb-2 text-primary-foreground font-heading">Proven Results</h3>
                 <p className="text-primary-foreground/70">Data-driven approaches with measurable outcomes</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card/10 border-primary-foreground/20 backdrop-blur-sm">
+            <Card className="bg-card/10 border-primary-foreground/20 backdrop-blur-sm shadow-medium">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-success rounded-lg mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl">🔒</span>
+                  <Shield className="w-6 h-6 text-success-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-primary-foreground">Secure & Compliant</h3>
+                <h3 className="text-lg font-semibold mb-2 text-primary-foreground font-heading">Secure & Compliant</h3>
                 <p className="text-primary-foreground/70">Full compliance with international payment standards</p>
               </CardContent>
             </Card>

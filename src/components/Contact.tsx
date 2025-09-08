@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Building2, Mail, Clock, Shield } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -9,7 +10,7 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-heading">
               Get in Touch
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -21,54 +22,54 @@ const Contact = () => {
             <div>
               <Card className="shadow-medium mb-8">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-foreground">Business Information</CardTitle>
+                  <CardTitle className="text-2xl text-foreground font-heading">Business Information</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-xl">🏢</span>
+                      <Building2 className="w-6 h-6 text-accent-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">Company</h4>
+                      <h4 className="font-semibold text-foreground mb-1 font-heading">Company</h4>
                       <p className="text-muted-foreground">HookDaddy Digital Solutions</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-gold rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-xl">📧</span>
+                      <Mail className="w-6 h-6 text-gold-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">Email</h4>
+                      <h4 className="font-semibold text-foreground mb-1 font-heading">Email</h4>
                       <p className="text-muted-foreground">contact@hookdaddy.store</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-success rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-xl">🌐</span>
+                      <Clock className="w-6 h-6 text-success-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">Business Hours</h4>
+                      <h4 className="font-semibold text-foreground mb-1 font-heading">Business Hours</h4>
                       <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM UTC</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-xl text-primary-foreground">🔒</span>
+                      <Shield className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">Compliance</h4>
+                      <h4 className="font-semibold text-foreground mb-1 font-heading">Compliance</h4>
                       <p className="text-muted-foreground">Fully compliant with international business standards</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-accent/5 to-gold/5 border-accent/20 shadow-medium">
+              <Card className="bg-gradient-premium border-accent/20 shadow-medium">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-foreground mb-4">Professional Partnership</h3>
+                  <h3 className="text-lg font-semibold text-foreground mb-4 font-heading">Professional Partnership</h3>
                   <p className="text-muted-foreground mb-4">
                     We work with businesses of all sizes to deliver comprehensive digital content solutions. 
                     Our team is committed to maintaining the highest standards of professionalism and compliance.
@@ -82,7 +83,7 @@ const Contact = () => {
 
             <Card className="shadow-medium">
               <CardHeader>
-                <CardTitle className="text-2xl text-foreground">Send us a Message</CardTitle>
+                <CardTitle className="text-2xl text-foreground font-heading">Send us a Message</CardTitle>
               </CardHeader>
               <CardContent>
                 <form className="space-y-6">
@@ -125,7 +126,7 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button size="lg" className="w-full bg-gradient-accent text-accent-foreground hover:opacity-90">
+                  <Button size="lg" className="w-full bg-gradient-accent text-accent-foreground hover:opacity-90 shadow-glow">
                     Send Message
                   </Button>
                 </form>
