@@ -14,12 +14,10 @@ const CallToAction = () => {
       
       <div className="container-width relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Premium badge */}
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-effect text-sm font-semibold text-white/90 border border-white/20 mb-10">
-            <Sparkles className="w-5 h-5 text-warning animate-pulse" />
-            <span>Limited Time Offer</span>
-            <Zap className="w-4 h-4 text-tesla-blue" />
-          </div>
+        {/* Limited Time Badge */}
+        <div className="inline-flex items-center px-6 py-3 mb-6 bg-gradient-to-r from-tesla-red to-tesla-purple rounded-full shadow-lg">
+          <span className="text-sm text-white font-bold">⚡ Limited Time Offer</span>
+        </div>
           
           <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-[0.9] tracking-tighter">
             Ready to
@@ -33,23 +31,17 @@ const CallToAction = () => {
             <span className="text-success font-bold"> 300%</span> using our proven viral hooks system.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-              <Button 
-                size="lg" 
-                className="magnetic-button bg-white text-black hover:bg-white/90 text-2xl px-16 py-10 rounded-2xl font-black shadow-intense group min-w-[320px]"
-              >
-              Get Started Today
-              <ArrowRight className="ml-4 h-7 w-7 group-hover:translate-x-2 transition-transform duration-300" />
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-xl px-12 py-8 rounded-2xl border-2 border-white/30 text-white hover:border-tesla-blue hover:bg-tesla-blue/10 hover:text-tesla-blue transition-all duration-500 font-bold backdrop-blur-sm"
-            >
-              Learn More
-            </Button>
-          </div>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-6 mb-12">
+          <Button size="lg" variant="default" className="text-lg font-bold px-12 py-6">
+            Get Started Today
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+          <Button size="lg" variant="outline" className="text-lg font-semibold px-12 py-6">
+            Learn More
+            <ExternalLink className="ml-2 h-5 w-5" />
+          </Button>
+        </div>
           
           {/* Trust indicators */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">

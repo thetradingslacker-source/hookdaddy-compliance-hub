@@ -11,10 +11,10 @@ const ViralHooks = () => {
       
       <div className="container-width relative z-10">
         <div className="text-center mb-20 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect text-sm font-medium mb-6 text-white/90 border border-white/20">
-            <Star className="w-4 h-4 text-warning" />
-            <span>Bestseller Pack</span>
-          </div>
+        {/* Bestseller Badge */}
+        <div className="inline-flex items-center px-6 py-3 mb-6 bg-gradient-to-r from-tesla-orange to-tesla-red rounded-full shadow-lg">
+          <span className="text-sm text-white font-bold">🏆 Bestseller Pack</span>
+        </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Viral Hooks Pack
@@ -45,84 +45,96 @@ const ViralHooks = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <Card className="group elevated-card hover:shadow-tesla transition-all duration-500 border-0 bg-black/40 backdrop-blur-xl overflow-hidden relative border border-white/10">
-            <div className="absolute inset-0 bg-gradient-to-br from-tesla-blue/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <CardContent className="p-8 text-center relative z-10">
-              <div className="w-20 h-20 bg-gradient-blue rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Target className="w-10 h-10 text-white" />
+          <Card className="p-8 bg-white/5 border-white/10 backdrop-blur-xl glass-effect tesla-hover group">
+            <CardContent className="p-0">
+              <div className="w-16 h-16 bg-gradient-to-r from-tesla-green to-tesla-blue rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Target className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Proven to Convert</h3>
-              <p className="text-white/70 mb-6 leading-relaxed">
-                Hooks crafted from analyzing 10,000+ top-performing campaigns across all industries to maximize your ROI.
+              <p className="text-white/80 mb-6 leading-relaxed text-lg">
+                Every hook in our collection has been tested and proven to drive engagement across multiple platforms and niches.
               </p>
-              <div className="space-y-2 text-sm text-left text-white/80">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-tesla-blue rounded-full"></div>
-                  <span>50+ proven hook formulas</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-tesla-blue rounded-full"></div>
-                  <span>3-second attention capture</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-tesla-blue rounded-full"></div>
-                  <span>Cross-platform optimized</span>
-                </div>
-              </div>
+              
+              <ul className="space-y-4">
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>Data-driven hook formulas</span>
+                </li>
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>A/B tested for maximum impact</span>
+                </li>
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>Cross-platform optimization</span>
+                </li>
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>Conversion rate optimization</span>
+                </li>
+              </ul>
             </CardContent>
           </Card>
 
-          <Card className="group elevated-card hover:shadow-tesla transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-success/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <CardContent className="p-8 text-center relative z-10">
-              <div className="w-20 h-20 bg-gradient-to-br from-success to-success/80 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <TrendingUp className="w-10 h-10 text-white" />
+          <Card className="p-8 bg-white/5 border-white/10 backdrop-blur-xl glass-effect tesla-hover group">
+            <CardContent className="p-0">
+              <div className="w-16 h-16 bg-gradient-to-r from-tesla-blue to-tesla-purple rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Rocket className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Ready-to-Use</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Copy, paste, and start seeing results immediately. No editing required—just plug directly into your campaigns.
+              <h3 className="text-2xl font-bold text-white mb-4">Ready-to-Use</h3>
+              <p className="text-white/80 mb-6 leading-relaxed text-lg">
+                Copy, paste, and customize these hooks for your content. No guesswork, just proven templates that work immediately.
               </p>
-              <div className="space-y-2 text-sm text-left">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-success rounded-full"></div>
-                  <span>Industry-specific templates</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-success rounded-full"></div>
-                  <span>Multiple format variations</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-success rounded-full"></div>
-                  <span>Performance guidelines included</span>
-                </div>
-              </div>
+              
+              <ul className="space-y-4">
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>Instant implementation</span>
+                </li>
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>Easy customization guide</span>
+                </li>
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>Multiple format options</span>
+                </li>
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>Platform-specific versions</span>
+                </li>
+              </ul>
             </CardContent>
           </Card>
 
-          <Card className="group elevated-card hover:shadow-tesla transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-warning/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <CardContent className="p-8 text-center relative z-10">
-              <div className="w-20 h-20 bg-gradient-to-br from-warning to-warning/80 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-10 h-10 text-white" />
+          <Card className="p-8 bg-white/5 border-white/10 backdrop-blur-xl glass-effect tesla-hover group">
+            <CardContent className="p-0">
+              <div className="w-16 h-16 bg-gradient-to-r from-tesla-electric to-tesla-blue rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Download className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Instant Access</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Secure checkout with immediate download. Start transforming your content marketing in minutes, not days.
+              <h3 className="text-2xl font-bold text-white mb-4">Instant Access</h3>
+              <p className="text-white/80 mb-6 leading-relaxed text-lg">
+                Download immediately after purchase. Start creating viral content within minutes of your order.
               </p>
-              <div className="space-y-2 text-sm text-left">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-warning rounded-full"></div>
-                  <span>Instant PDF download</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-warning rounded-full"></div>
-                  <span>Lifetime access guarantee</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-warning rounded-full"></div>
-                  <span>30-day money-back guarantee</span>
-                </div>
-              </div>
+              
+              <ul className="space-y-4">
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>Immediate download</span>
+                </li>
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>Lifetime access</span>
+                </li>
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>Free updates included</span>
+                </li>
+                <li className="flex items-center text-white/90">
+                  <CheckCircle className="h-5 w-5 text-tesla-green mr-3" />
+                  <span>Money-back guarantee</span>
+                </li>
+              </ul>
             </CardContent>
           </Card>
         </div>
@@ -161,13 +173,9 @@ const ViralHooks = () => {
               rel="noopener noreferrer"
               className="inline-block"
             >
-              <Button 
-                size="lg" 
-                className="magnetic-button bg-white text-black hover:bg-white/90 text-xl px-12 py-6 rounded-xl shadow-tesla hover:shadow-elevated transition-all duration-300 group font-semibold"
-              >
-                Get Viral Hooks Pack Now
-                <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-              </Button>
+          <Button size="lg" variant="default" className="text-lg font-bold px-12 py-6" asChild>
+            <a href="/checkout">Get Viral Hooks Pack Now</a>
+          </Button>
             </a>
             
             <p className="text-sm text-white/70 mt-4">

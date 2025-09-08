@@ -15,55 +15,51 @@ const Testimonials = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="shadow-tesla bg-black/40 backdrop-blur-xl border border-white/10">
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <div className="flex text-gold mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-xl">⭐</span>
-                    ))}
-                  </div>
-                  <p className="text-lg text-white/80 leading-relaxed mb-4">
-                    "HookDaddy transformed our marketing campaigns and boosted engagement beyond expectations."
-                  </p>
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <Card className="p-10 bg-white/5 border-white/10 backdrop-blur-xl glass-effect tesla-hover group">
+            <CardContent className="p-0">
+              <div className="flex items-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-xl text-white/90 mb-8 italic leading-relaxed font-medium">
+                "HookDaddy's viral hooks transformed our content strategy. We saw a 300% increase in engagement within the first month of using their templates."
+              </blockquote>
+              <div className="flex items-center">
+                <div className="w-14 h-14 bg-gradient-to-r from-tesla-blue to-tesla-purple rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-lg">SM</span>
                 </div>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center mr-4">
-                    <span className="text-accent-foreground font-bold">JD</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">Jane D.</p>
-                    <p className="text-white/70 text-sm">CEO</p>
-                  </div>
+                <div>
+                  <p className="font-bold text-white text-lg">Sarah Martinez</p>
+                  <p className="text-white/80 text-sm">Content Creator, 2M+ followers</p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="shadow-tesla bg-black/40 backdrop-blur-xl border border-white/10">
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <div className="flex text-gold mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-xl">⭐</span>
-                    ))}
-                  </div>
-                  <p className="text-lg text-white/80 leading-relaxed mb-4">
-                    "Professional, innovative, and compliant. Exactly what we needed."
-                  </p>
+          <Card className="p-10 bg-white/5 border-white/10 backdrop-blur-xl glass-effect tesla-hover group">
+            <CardContent className="p-0">
+              <div className="flex items-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-xl text-white/90 mb-8 italic leading-relaxed font-medium">
+                "The educational content and custom solutions helped our agency scale to 7 figures. The ROI has been incredible - highly recommend!"
+              </blockquote>
+              <div className="flex items-center">
+                <div className="w-14 h-14 bg-gradient-to-r from-tesla-green to-tesla-electric rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-lg">MJ</span>
                 </div>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-warning to-warning/80 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">JS</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">John S.</p>
-                    <p className="text-white/70 text-sm">Marketing Director</p>
-                  </div>
+                <div>
+                  <p className="font-bold text-white text-lg">Marcus Johnson</p>
+                  <p className="text-white/80 text-sm">Agency Owner, Digital Marketing</p>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
         </div>
       </div>
     </section>
