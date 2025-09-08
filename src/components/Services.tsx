@@ -6,19 +6,23 @@ const Services = () => {
   return (
     <section id="services" className="section-padding bg-secondary/50">
       <div className="container-width">
-        <div className="text-center mb-20 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect text-sm font-medium mb-6">
-            <TrendingUp className="w-4 h-4 text-tesla-blue" />
-            <span>Solutions That Scale</span>
+        <div className="text-center mb-24 animate-fade-in">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-effect text-sm font-semibold mb-8 border border-border/20">
+            <TrendingUp className="w-5 h-5 text-tesla-blue" />
+            <span>Enterprise-Grade Solutions</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-5xl md:text-7xl font-black text-foreground mb-8 leading-[0.9] tracking-tighter">
             Everything You Need
-            <span className="block text-tesla-blue">To Go Viral</span>
+            <span className="block bg-gradient-to-r from-tesla-blue via-success to-warning bg-clip-text text-transparent">
+              To Dominate
+            </span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Professional content solutions designed to capture attention, increase engagement, and drive measurable results.
+          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+            Professional content solutions engineered to capture attention, maximize engagement, 
+            and deliver <span className="text-foreground font-semibold">measurable ROI</span>. 
+            Join the elite tier of content creators.
           </p>
         </div>
 
@@ -141,11 +145,22 @@ const Services = () => {
           </Card>
         </div>
 
-        {/* Bottom CTA */}
+        {/* Premium bottom CTA */}
         <div className="text-center">
-          <Button size="lg" className="tesla-gradient text-white px-12 py-6 text-lg font-semibold rounded-xl shadow-tesla hover:shadow-elevated transition-all duration-300">
-            Start Your Journey Today
-          </Button>
+          <div className="glass-effect rounded-3xl p-12 lg:p-16 border border-border/20">
+            <h3 className="text-3xl md:text-5xl font-black text-foreground mb-6">
+              Ready to <span className="text-tesla-blue">Scale?</span>
+            </h3>
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+              Join thousands of successful creators who've transformed their content strategy with our proven systems.
+            </p>
+            <Button 
+              size="lg" 
+              className="magnetic-button tesla-gradient text-white px-16 py-8 text-xl font-bold rounded-2xl shadow-intense hover:shadow-tesla transition-all duration-500"
+            >
+              Start Your Journey Today
+            </Button>
+          </div>
         </div>
       </div>
     </section>

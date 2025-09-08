@@ -6,19 +6,19 @@
 
 @layer base {
   :root {
-    /* Tesla-inspired light theme */
+    /* Tesla-inspired light theme with perfect contrast */
     --background: 255 255 255;
-    --foreground: 23 23 23;
+    --foreground: 15 15 15;
     --card: 255 255 255;
-    --card-foreground: 23 23 23;
+    --card-foreground: 15 15 15;
     --popover: 255 255 255;
-    --popover-foreground: 23 23 23;
-    --primary: 23 23 23;
+    --popover-foreground: 15 15 15;
+    --primary: 15 15 15;
     --primary-foreground: 255 255 255;
     --secondary: 248 250 252;
-    --secondary-foreground: 71 85 105;
-    --muted: 248 250 252;
-    --muted-foreground: 100 116 139;
+    --secondary-foreground: 15 15 15;
+    --muted: 241 245 249;
+    --muted-foreground: 71 85 105;
     --accent: 59 130 246;
     --accent-foreground: 255 255 255;
     --destructive: 239 68 68;
@@ -26,40 +26,42 @@
     --border: 226 232 240;
     --input: 248 250 252;
     --ring: 59 130 246;
-    --radius: 8px;
+    --radius: 12px;
 
-    /* Tesla-inspired colors */
+    /* Tesla-inspired colors with high contrast */
     --tesla-blue: 59 130 246;
     --tesla-red: 220 38 127;
-    --tesla-silver: 148 163 184;
+    --tesla-silver: 100 116 139;
     --success: 34 197 94;
     --warning: 251 146 60;
 
     /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(71 85 105) 100%);
-    --gradient-blue: linear-gradient(135deg, hsl(var(--tesla-blue)) 0%, hsl(147 197 253) 100%);
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(15 15 15) 0%, hsl(51 51 51) 100%);
+    --gradient-blue: linear-gradient(135deg, hsl(59 130 246) 0%, hsl(99 102 241) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(15 15 15) 0%, hsl(0 0 0) 100%);
     
-    /* Shadows */
-    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    --shadow-tesla: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    --shadow-elevated: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    /* Enhanced shadows for depth */
+    --shadow-glass: 0 8px 32px 0 rgba(15, 15, 15, 0.1), 0 2px 16px 0 rgba(15, 15, 15, 0.08);
+    --shadow-tesla: 0 25px 50px -12px rgba(15, 15, 15, 0.25), 0 8px 16px -8px rgba(15, 15, 15, 0.1);
+    --shadow-elevated: 0 20px 25px -5px rgba(15, 15, 15, 0.1), 0 10px 10px -5px rgba(15, 15, 15, 0.04);
+    --shadow-intense: 0 32px 64px -12px rgba(15, 15, 15, 0.4);
   }
 
   .dark {
-    /* Tesla-inspired dark theme */
+    /* Tesla-inspired dark theme with perfect contrast */
     --background: 0 0 0;
     --foreground: 255 255 255;
-    --card: 9 9 11;
-    --card-foreground: 250 250 250;
-    --popover: 9 9 11;
-    --popover-foreground: 250 250 250;
+    --card: 15 15 15;
+    --card-foreground: 255 255 255;
+    --popover: 15 15 15;
+    --popover-foreground: 255 255 255;
     --primary: 255 255 255;
-    --primary-foreground: 9 9 11;
+    --primary-foreground: 0 0 0;
     --secondary: 24 24 27;
-    --secondary-foreground: 161 161 170;
+    --secondary-foreground: 255 255 255;
     --muted: 24 24 27;
-    --muted-foreground: 113 113 122;
+    --muted-foreground: 163 163 163;
     --accent: 59 130 246;
     --accent-foreground: 255 255 255;
     --destructive: 220 38 127;
@@ -69,8 +71,10 @@
     --ring: 59 130 246;
 
     /* Dark theme gradients */
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
-    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0 0) 0%, hsl(15 15 15) 100%);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.9), 0 2px 16px 0 rgba(0, 0, 0, 0.5);
+    --shadow-intense: 0 32px 64px -12px rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -100,32 +104,85 @@
 
 @layer components {
   .glass-effect {
-    @apply backdrop-blur-xl bg-white/80 dark:bg-black/80;
+    @apply backdrop-blur-2xl;
+    background: var(--gradient-glass);
     box-shadow: var(--shadow-glass);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
   .tesla-gradient {
     background: var(--gradient-blue);
+    box-shadow: var(--shadow-tesla);
+  }
+
+  .tesla-hero-gradient {
+    background: var(--gradient-hero);
   }
 
   .elevated-card {
     box-shadow: var(--shadow-elevated);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .elevated-card:hover {
+    box-shadow: var(--shadow-intense);
+    transform: translateY(-8px);
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-foreground via-muted-foreground to-foreground bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-foreground via-tesla-blue to-foreground bg-clip-text text-transparent;
   }
 
   .hero-text {
-    @apply text-4xl md:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight;
+    @apply text-5xl md:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tighter;
   }
 
   .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-20 md:py-32 lg:py-40;
   }
 
   .container-width {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+
+  /* Premium hover effects */
+  .tesla-hover {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .tesla-hover:hover {
+    @apply transform -translate-y-2 scale-[1.02];
+  }
+
+  /* Advanced animations */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(1deg); }
+  }
+
+  /* Magnetic button effect */
+  .magnetic-button {
+    @apply relative overflow-hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .magnetic-button::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent;
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+  }
+
+  .magnetic-button:hover::before {
+    transform: translateX(100%);
+  }
+
+  .magnetic-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-intense);
   }
 }
