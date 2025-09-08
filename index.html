@@ -641,71 +641,45 @@
             .pt-20 { padding-top: 50px !important; }
         }
 
-        /* Footer mobile fixes - match React version exactly */
-        .footer-mobile-padding { 
-            padding-top: 3rem; 
-            padding-bottom: 3rem; 
-        }
-        @media (min-width: 640px) {
-            .footer-mobile-padding { 
-                padding-top: 4rem; 
-                padding-bottom: 4rem; 
-            }
+        /* Mobile header padding - exactly 50px */
+        @media (max-width: 767px) {
+            .pt-20 { padding-top: 50px !important; }
         }
 
-        .footer-brand-title { 
-            font-size: 1.25rem; 
-            font-weight: 900;
+        /* Uniform paragraph and text sizing */
+        .hero-subtitle { 
+            font-size: 1.125rem; /* text-lg */
         }
-        @media (min-width: 640px) {
-            .footer-brand-title { 
-                font-size: 1.5rem; 
-            }
-        }
-        
-        .footer-brand-subtitle { 
-            font-size: 0.875rem; 
-            font-weight: 500;
-        }
-        
-        .footer-description { 
-            font-size: 0.875rem; 
-            font-weight: 300;
-            line-height: 1.6;
-        }
-        @media (min-width: 640px) {
-            .footer-description { 
-                font-size: 1rem; 
-            }
-        }
-        
-        .footer-section-title { 
-            font-size: 1.125rem; 
-            font-weight: 700;
-        }
-        
-        .footer-link { 
-            font-size: 0.875rem; 
-            font-weight: 500;
-        }
-        
-        .footer-copyright { 
-            font-size: 0.875rem; 
-            font-weight: 400;
-        }
-        
-        .footer-small { 
-            font-size: 0.75rem; 
+        @media (min-width: 768px) {
+            .hero-subtitle { font-size: 1.25rem; } /* text-xl */
         }
 
-        .footer-support-title {
-            font-size: 0.875rem;
-            font-weight: 600;
+        .section-title {
+            font-size: 2.25rem; /* text-4xl */
+        }
+        @media (min-width: 768px) {
+            .section-title { font-size: 3rem; } /* text-5xl */
         }
 
-        .footer-support-text {
-            font-size: 0.75rem;
-            font-weight: 300;
+        .section-description {
+            font-size: 1.25rem; /* text-xl */
+        }
+
+        .card-title {
+            font-size: 1.125rem; /* text-lg */
+        }
+
+        .card-text {
+            font-size: 0.875rem; /* text-sm */
+        }
+
+        .stat-number {
+            font-size: 1.875rem; /* text-3xl */
+        }
+
+        /* Tesla Hero Gradient - Premium Tesla/Apple style */
+        .tesla-hero-gradient {
+            background: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(240 3% 11%) 25%, hsl(0 0% 6%) 50%, hsl(240 3% 11%) 75%, hsl(0 0% 0%) 100%);
         }
 
         /* Uniform paragraph and text sizing */
@@ -1369,8 +1343,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="tesla-hero-gradient text-white relative overflow-hidden footer-mobile-padding">
-        <!-- Premium background effects -->
+    <footer class="tesla-hero-gradient text-white relative overflow-hidden py-12 sm:py-16">
+        <!-- Background effects -->
         <div class="absolute inset-0">
             <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         </div>
@@ -1378,21 +1352,21 @@
         <div class="absolute top-0 left-0 w-96 h-96 bg-tesla-blue/10 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 right-0 w-80 h-80 bg-success/10 rounded-full blur-3xl"></div>
         
-        <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12 relative z-10">
+        <div class="container-width relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <!-- Premium Brand Section -->
+                <!-- Brand Section -->
                 <div class="md:col-span-2">
                     <div class="flex items-center space-x-3 mb-6">
                         <div class="w-12 h-12 bg-transparent border border-white/20 rounded-xl flex items-center justify-center">
                             <i data-lucide="zap" class="w-6 h-6 text-white"></i>
                         </div>
                         <div>
-                            <h3 class="footer-brand-title text-white">HookDaddy</h3>
-                            <p class="text-white/60 footer-brand-subtitle">Digital Content Solutions</p>
+                            <h3 class="text-xl sm:text-2xl font-black">HookDaddy</h3>
+                            <p class="text-white/60 text-sm font-medium">Digital Content Solutions</p>
                         </div>
                     </div>
                     
-                    <p class="text-white/80 mb-6 max-w-lg footer-description leading-relaxed">
+                    <p class="text-white/80 mb-6 max-w-lg text-sm sm:text-base leading-relaxed font-light">
                         Premium digital content solutions engineered for modern businesses. 
                         We deliver innovative strategies that drive measurable results.
                     </p>
@@ -1400,9 +1374,9 @@
                     <div class="glass-effect rounded-xl p-4 border border-white/10">
                         <div class="flex items-center gap-3 mb-2">
                             <i data-lucide="mail" class="w-4 h-4 text-tesla-blue"></i>
-                            <span class="footer-support-title text-white">Professional Support</span>
+                            <span class="font-semibold text-sm">Professional Support</span>
                         </div>
-                        <p class="text-white/70 footer-support-text">
+                        <p class="text-white/70 text-xs">
                             Licensed digital content provider • Fully compliant with international standards
                         </p>
                     </div>
@@ -1410,28 +1384,28 @@
 
                 <!-- Company Links -->
                 <div>
-                    <h4 class="footer-section-title text-white mb-6">Company</h4>
+                    <h4 class="font-bold mb-6 text-lg text-white">Company</h4>
                     <ul class="space-y-3">
                         <li>
-                            <a href="#about" class="text-white/70 hover:text-tesla-blue transition-all duration-300 footer-link group flex items-center">
+                            <a href="#about" class="text-white/70 hover:text-tesla-blue transition-all duration-300 text-sm font-medium group flex items-center">
                                 About Us
                                 <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#services" class="text-white/70 hover:text-tesla-blue transition-all duration-300 footer-link group flex items-center">
+                            <a href="#services" class="text-white/70 hover:text-tesla-blue transition-all duration-300 text-sm font-medium group flex items-center">
                                 Our Services
                                 <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#contact" class="text-white/70 hover:text-tesla-blue transition-all duration-300 footer-link group flex items-center">
+                            <a href="#contact" class="text-white/70 hover:text-tesla-blue transition-all duration-300 text-sm font-medium group flex items-center">
                                 Contact
                                 <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:admin@hookdaddy.store" class="text-white/70 hover:text-success transition-all duration-300 footer-link group flex items-center">
+                            <a href="mailto:admin@hookdaddy.store" class="text-white/70 hover:text-success transition-all duration-300 text-sm font-medium group flex items-center">
                                 Careers
                                 <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </a>
@@ -1441,28 +1415,28 @@
 
                 <!-- Legal Links -->
                 <div>
-                    <h4 class="footer-section-title text-white mb-6">Legal & Support</h4>
+                    <h4 class="font-bold mb-6 text-lg text-white">Legal & Support</h4>
                     <ul class="space-y-3">
                         <li>
-                            <a href="https://hookdaddy.store/tc/" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-warning transition-all duration-300 footer-link group flex items-center">
+                            <a href="https://hookdaddy.store/tc/" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-warning transition-all duration-300 text-sm font-medium group flex items-center">
                                 Privacy Policy
                                 <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://hookdaddy.store/tc/" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-warning transition-all duration-300 footer-link group flex items-center">
+                            <a href="https://hookdaddy.store/tc/" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-warning transition-all duration-300 text-sm font-medium group flex items-center">
                                 Terms & Conditions
                                 <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://hookdaddy.store/tc/#refund" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-warning transition-all duration-300 footer-link group flex items-center">
+                            <a href="https://hookdaddy.store/tc/#refund" target="_blank" rel="no refe noreferrer" class="text-white/70 hover:text-warning transition-all duration-300 text-sm font-medium group flex items-center">
                                 Return & Refund
                                 <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:contact@hookdaddy.store" class="text-white/70 hover:text-tesla-blue transition-all duration-300 footer-link group flex items-center">
+                            <a href="mailto:contact@hookdaddy.store" class="text-white/70 hover:text-tesla-blue transition-all duration-300 text-sm font-medium group flex items-center">
                                 Support Center
                                 <i data-lucide="mail" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </a>
@@ -1471,14 +1445,14 @@
                 </div>
             </div>
 
-            <!-- Premium Bottom Section -->
+            <!-- Bottom Section -->
             <div class="border-t border-white/10 pt-8">
                 <div class="flex flex-col lg:flex-row justify-between items-center gap-6">
                     <div class="text-center lg:text-left">
-                        <p class="text-white/60 footer-copyright mb-2">
+                        <p class="text-white/60 text-sm mb-2">
                             © 2025 HookDaddy. All rights reserved.
                         </p>
-                        <p class="text-white/40 footer-small">
+                        <p class="text-white/40 text-xs">
                             Professional digital solutions • International compliance • Secure transactions
                         </p>
                     </div>
@@ -1487,7 +1461,7 @@
                         <div class="glass-effect rounded-lg px-4 py-2 border border-white/10">
                             <div class="flex items-center gap-2">
                                 <div class="w-2 h-2 bg-gradient-to-r from-pink-500 via-blue-500 to-green-500 rounded-full animate-pulse"></div>
-                                <span class="text-white/80 font-medium footer-small">All Operational</span>
+                                <span class="text-white/80 font-medium text-xs">All Operational</span>
                             </div>
                         </div>
                     </div>
