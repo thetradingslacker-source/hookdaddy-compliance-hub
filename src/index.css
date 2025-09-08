@@ -49,8 +49,8 @@
       linear-gradient(135deg, hsl(217 91% 60% / 0.15) 0%, transparent 50%, hsl(258 90% 66% / 0.12) 100%),
       linear-gradient(45deg, hsl(270 100% 70% / 0.08) 0%, transparent 60%, hsl(188 100% 50% / 0.10) 100%);
     --grid-pattern: 
-      linear-gradient(hsl(255 255% 255% / 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(255 255% 255% / 0.08) 1px, transparent 1px);
+      linear-gradient(hsl(255 255% 255% / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(255 255% 255% / 0.03) 1px, transparent 1px);
     --gradient-section: radial-gradient(ellipse 100% 60% at 50% 50%, hsl(217 91% 10% / 0.08) 0%, transparent 70%);
     --gradient-blue: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(258 90% 66%) 100%);
     --gradient-electric: linear-gradient(135deg, hsl(188 100% 50%) 0%, hsl(217 91% 60%) 100%);
@@ -123,12 +123,12 @@
   /* Enhanced Apple-style background with animated grid */
   .master-bg {
     background: 
-      var(--grid-pattern),
-      var(--gradient-master);
+      var(--gradient-master),
+      var(--grid-pattern);
     background-size: 
+      100% 100%,
       40px 40px,
-      40px 40px, 
-      100% 100%;
+      40px 40px;
     background-position: 0 0, 0 0, 0 0;
     position: relative;
     overflow: hidden;
@@ -137,7 +137,7 @@
 
   @keyframes grid-move {
     0% { background-position: 0 0, 0 0, 0 0; }
-    100% { background-position: 40px 40px, 40px 40px, 0 0; }
+    100% { background-position: 0 0, 40px 40px, 40px 40px; }
   }
   
   .master-bg > * {
