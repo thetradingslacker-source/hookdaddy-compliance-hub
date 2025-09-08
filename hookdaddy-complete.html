@@ -27,8 +27,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
 
     <style>
         :root {
@@ -857,183 +857,168 @@
             .hero-text { font-size: 3.75rem; } 
         }
 
-        /* Mobile header padding - exactly 50px */
-        @media (max-width: 767px) {
-            .pt-20 { padding-top: 50px !important; }
+        @media (min-width: 1280px) {
+            .hero-text { font-size: 4.5rem; } 
         }
-
-        /* Uniform text sizing - Mobile First */
-        .hero-subtitle { 
-            font-size: 1rem; 
-        }
-        @media (min-width: 640px) {
-            .hero-subtitle { font-size: 1.125rem; } 
-        }
-        @media (min-width: 768px) {
-            .hero-subtitle { font-size: 1.25rem; } 
-        }
-
+        
+        /* Section Title Fixes - Mobile First */
         .section-title {
-            font-size: 1.875rem; 
+            font-size: 1.875rem; /* 30px mobile */
+            line-height: 1.2;
+            letter-spacing: -0.025em;
         }
+
         @media (min-width: 640px) {
-            .section-title { font-size: 2.25rem; } 
+            .section-title { font-size: 2.25rem; } /* 36px */
         }
+
         @media (min-width: 768px) {
-            .section-title { font-size: 2.75rem; } 
+            .section-title { font-size: 3rem; } /* 48px */
         }
-
+        
+        /* Section description - Fixed for mobile */
         .section-description {
-            font-size: 1rem; 
-        }
-        @media (min-width: 640px) {
-            .section-description { font-size: 1.125rem; } 
+            font-size: 1rem; /* 16px mobile */
+            line-height: 1.6;
         }
 
+        @media (min-width: 640px) {
+            .section-description { font-size: 1.125rem; } /* 18px */
+        }
+        
+        /* Card Title - Fixed */
         .card-title {
-            font-size: 1rem; 
+            font-size: 1.125rem; /* 18px mobile */
         }
+        
         @media (min-width: 640px) {
-            .card-title { font-size: 1.125rem; } 
+            .card-title { font-size: 1.25rem; } /* 20px tablet+ */
         }
-
+        
+        /* Card text - smaller mobile */
         .card-text {
-            font-size: 0.875rem; 
+            font-size: 0.875rem; /* 14px mobile */
+            line-height: 1.5;
         }
-
+        
+        @media (min-width: 640px) {
+            .card-text { font-size: 1rem; } /* 16px tablet+ */
+        }
+        
+        /* Stat number - smaller mobile */
         .stat-number {
-            font-size: 1.5rem; 
+            font-size: 1.5rem; /* 24px mobile */
         }
+        
         @media (min-width: 640px) {
-            .stat-number { font-size: 1.875rem; } 
+            .stat-number { font-size: 2rem; } /* 32px tablet+ */
         }
-
-        .stat-label {
-            font-size: 0.875rem; 
-        }
-
-        @media (min-width: 640px) {
-            .sm\\:flex-row { flex-direction: row; }
-            .sm\\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+        
+        /* All the above fixes mobile responsive typography issues */
+        
+        /* One more font responsive fix for smaller cards */
+        @media (max-width: 640px) {
+            .widget-glass p { font-size: 0.875rem !important; }
+            .widget-glass .text-sm { font-size: 0.75rem !important; }
+            .widget-glass .text-2xl { font-size: 1.5rem !important; }
+            .widget-glass .text-xl { font-size: 1.125rem !important; }
         }
     </style>
 </head>
-
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 icon-container rounded-lg flex items-center justify-center">
-                        <i data-lucide="zap" class="w-5 h-5"></i>
-                    </div>
-                    <span class="font-bold text-xl">HookDaddy</span>
+<body class="master-bg">
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="container flex items-center justify-between h-16">
+                <div>
+                    <a href="#" class="font-bold text-xl">HookDaddy</a>
                 </div>
-
-                <!-- Desktop Navigation -->
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#viral-hooks">Viral Hooks</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                
+                <nav class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#viral-hooks">Hooks Pack</a>
+                    <a href="#contact">Contact</a>
                 </nav>
-
-                <!-- Desktop CTA -->
+                
                 <div class="flex items-center gap-4">
-                    <a href="#services" class="btn btn-primary btn-sm hidden md:inline-flex">Get Started</a>
-                    
-                    <!-- Mobile Menu Toggle -->
-                    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <a href="#viral-hooks" class="btn btn-primary">Get Started</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="mobile-menu">
+                    <div class="flex flex-col space-y-4 pt-8">
+                        <a href="#about" class="nav-link text-xl">About</a>
+                        <a href="#services" class="nav-link text-xl">Services</a>
+                        <a href="#viral-hooks" class="nav-link text-xl">Hooks Pack</a>
+                        <a href="#contact" class="nav-link text-xl">Contact</a>
+                        <a href="#viral-hooks" class="btn btn-primary w-full mt-4">Get Started</a>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <div class="flex justify-between items-center mb-8">
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 icon-container rounded-lg flex items-center justify-center">
-                        <i data-lucide="zap" class="w-5 h-5"></i>
-                    </div>
-                    <span class="font-bold text-xl">HookDaddy</span>
-                </div>
-                <button onclick="toggleMobileMenu()" style="background: none; border: none; color: hsl(var(--foreground)); font-size: 1.5rem; cursor: pointer;">&times;</button>
-            </div>
-            <nav>
-                <div class="flex flex-col gap-6">
-                    <a href="#about" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500; font-size: 1.125rem;">About</a>
-                    <a href="#services" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500; font-size: 1.125rem;">Services</a>
-                    <a href="#viral-hooks" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500; font-size: 1.125rem;">Viral Hooks</a>
-                    <a href="#contact" onclick="toggleMobileMenu()" style="color: hsl(var(--foreground)); text-decoration: none; font-weight: 500; font-size: 1.125rem;">Contact</a>
-                </div>
-                <a href="#services" class="btn btn-primary mt-8 w-full" onclick="toggleMobileMenu()">Get Started</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="master-bg pt-20">
-        <!-- Floating Glass Orbs -->
-        <div class="floating-orb orb-1"></div>
-        <div class="floating-orb orb-2"></div>
-        <div class="floating-orb orb-3"></div>
-        
-        <!-- Background Orbs -->
-        <div class="bg-orb" style="width: 600px; height: 600px; top: 10%; left: -10%;"></div>
-        <div class="bg-orb-secondary" style="width: 400px; height: 400px; top: 60%; right: -5%;"></div>
-        <div class="bg-orb-tertiary" style="width: 300px; height: 300px; bottom: 20%; left: 50%;"></div>
+        </header>
 
         <!-- Hero Section -->
-        <section class="py-16 md:py-24 lg:py-32 relative">
-            <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
-                <div class="text-center max-w-4xl mx-auto">
+        <section class="tesla-hero-gradient min-h-screen flex items-center relative overflow-hidden">
+            <!-- Enhanced floating orbs -->
+            <div class="bg-orb w-64 h-64" style="top: 10%; right: 15%;"></div>
+            <div class="bg-orb-secondary w-48 h-48" style="bottom: 20%; left: 10%;"></div>
+            <div class="bg-orb-tertiary w-32 h-32" style="top: 50%; left: 5%;"></div>
+            
+            <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12 relative z-10">
+                <div class="text-center">
                     <div class="badge mb-6">
-                        <i data-lucide="users" class="w-4 h-4"></i>
+                        <i class="fas fa-users"></i>
                         Trusted by 10,000+ Creators Worldwide
                     </div>
                     
-                    <h1 class="hero-text mb-6 leading-none tracking-tighter">
-                        Create Content That 
-                        <span class="text-gradient">Converts</span>
+                    <h1 class="hero-text font-black mb-6 leading-none tracking-tighter text-gradient">
+                        Create Content That Converts
                     </h1>
                     
-                    <p class="hero-subtitle text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-                        Transform your content strategy with our proven viral hooks, educational resources, and custom solutions. 
-                        Get 10x more engagement in 24 hours with our enterprise-grade digital content services.
+                    <p class="section-description text-muted-foreground max-w-3xl mx-auto mb-8">
+                        Professional viral hooks and digital content solutions that transform your engagement rates. 
+                        Proven strategies backed by data from millions of views and enterprise-grade compliance.
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                        <a href="#services" class="btn btn-primary btn-lg">
-                            <i data-lucide="rocket" class="w-5 h-5"></i>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <a href="#viral-hooks" class="btn btn-primary btn-lg">
+                            <i class="fas fa-bolt"></i>
                             Start Creating Now
                         </a>
-                        <a href="#viral-hooks" class="btn btn-secondary btn-lg">
-                            <i data-lucide="play" class="w-5 h-5"></i>
+                        <a href="#contact" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-play"></i>
                             Watch Demo
                         </a>
                     </div>
                     
-                    <!-- Social Proof Stats -->
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number font-bold mb-2">10,000+</div>
-                            <div class="text-muted-foreground stat-label">Active Creators</div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                        <div class="widget-glass p-4" style="padding-top: calc(1rem + 5px); padding-bottom: calc(1rem + 5px);">
+                            <div class="w-8 h-8 icon-container rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="text-lg font-bold mb-1">25M+</div>
+                            <div class="text-muted-foreground text-sm">Active Creators</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number font-bold mb-2">50M+</div>
-                            <div class="text-muted-foreground stat-label">Views Generated</div>
+                        <div class="widget-glass p-4" style="padding-top: calc(1rem + 5px); padding-bottom: calc(1rem + 5px);">
+                            <div class="w-8 h-8 icon-container rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="text-lg font-bold mb-1">1B+</div>
+                            <div class="text-muted-foreground text-sm">Views Generated</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number font-bold mb-2">300%</div>
-                            <div class="text-muted-foreground stat-label">Avg. Boost</div>
+                        <div class="widget-glass p-4" style="padding-top: calc(1rem + 5px); padding-bottom: calc(1rem + 5px);">
+                            <div class="w-8 h-8 icon-container rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="text-lg font-bold mb-1">300%</div>
+                            <div class="text-muted-foreground text-sm">Avg. Boost</div>
                         </div>
                     </div>
                 </div>
@@ -1043,71 +1028,50 @@
         <!-- About Section -->
         <section id="about" class="py-16 md:py-24 lg:py-32 relative">
             <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
-                <div class="section-glass p-8 mb-8">
-                    <div class="text-center mb-12">
-                        <h2 class="section-title font-bold mb-4 tracking-tighter text-gradient">Why Choose HookDaddy?</h2>
-                        <p class="section-description text-muted-foreground max-w-3xl mx-auto">
-                            We deliver enterprise-grade digital content solutions with proven results. 
-                            Our comprehensive approach combines viral marketing strategies with educational excellence.
-                        </p>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                        <div class="widget-glass p-6 text-center">
-                            <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="award" class="w-6 h-6"></i>
-                            </div>
-                            <h3 class="card-title font-semibold mb-2 text-gradient">Proven Expertise</h3>
-                            <p class="text-muted-foreground card-text">5+ years of proven success in digital content strategy and viral marketing</p>
-                        </div>
-                        
-                        <div class="widget-glass p-6 text-center">
-                            <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="zap" class="w-6 h-6"></i>
-                            </div>
-                            <h3 class="card-title font-semibold mb-2 text-electric">Rapid Results</h3>
-                            <p class="text-muted-foreground card-text">See immediate impact with our tested hooks and strategies within 24 hours</p>
-                        </div>
-                        
-                        <div class="widget-glass p-6 text-center">
-                            <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="shield-check" class="w-6 h-6"></i>
-                            </div>
-                            <h3 class="card-title font-semibold mb-2 text-gradient">Secure & Compliant</h3>
-                            <p class="text-muted-foreground card-text">All our solutions are fully compliant with international business standards</p>
-                        </div>
-                        
-                        <div class="widget-glass p-6 text-center">
-                            <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="lightbulb" class="w-6 h-6"></i>
-                            </div>
-                            <h3 class="card-title font-semibold mb-2 text-electric">Innovation First</h3>
-                            <p class="text-muted-foreground card-text">Cutting-edge strategies that keep you ahead of the competition</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Stats -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="section-title font-bold mb-6 tracking-tighter text-electric">
+                        Professional Digital Solutions
+                    </h2>
+                    <p class="section-description text-muted-foreground max-w-4xl mx-auto">
+                        HookDaddy delivers enterprise-level digital content services with full regulatory compliance and proven results across global markets.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
                         <div class="widget-glass p-4" style="padding-top: calc(1rem + 5px); padding-bottom: calc(1rem + 5px);">
                             <div class="w-8 h-8 icon-container rounded-full flex items-center justify-center mx-auto mb-3">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                            </div>
-                            <div class="text-lg font-bold mb-1">2019</div>
-                            <div class="text-muted-foreground text-sm">Founded</div>
-                        </div>
-                        <div class="widget-glass p-4" style="padding-top: calc(1rem + 5px); padding-bottom: calc(1rem + 5px);">
-                            <div class="w-8 h-8 icon-container rounded-full flex items-center justify-center mx-auto mb-3">
-                                <i data-lucide="globe" class="w-4 h-4"></i>
+                                <i class="fas fa-globe"></i>
                             </div>
                             <div class="text-lg font-bold mb-1">50+</div>
                             <div class="text-muted-foreground text-sm">Countries Served</div>
                         </div>
+                    </div>
+                    <div class="text-center">
                         <div class="widget-glass p-4" style="padding-top: calc(1rem + 5px); padding-bottom: calc(1rem + 5px);">
                             <div class="w-8 h-8 icon-container rounded-full flex items-center justify-center mx-auto mb-3">
-                                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                <i class="fas fa-shield-alt"></i>
                             </div>
                             <div class="text-lg font-bold mb-1">100%</div>
                             <div class="text-muted-foreground text-sm">Compliance Rate</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="widget-glass p-4" style="padding-top: calc(1rem + 5px); padding-bottom: calc(1rem + 5px);">
+                            <div class="w-8 h-8 icon-container rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="text-lg font-bold mb-1">ISO</div>
+                            <div class="text-muted-foreground text-sm">Certified</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="widget-glass p-4" style="padding-top: calc(1rem + 5px); padding-bottom: calc(1rem + 5px);">
+                            <div class="w-8 h-8 icon-container rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="text-lg font-bold mb-1">24/7</div>
+                            <div class="text-muted-foreground text-sm">Support</div>
                         </div>
                     </div>
                 </div>
@@ -1129,7 +1093,7 @@
                         <!-- Viral Hooks Pack -->
                         <div class="widget-glass p-6">
                             <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="trending-up" class="w-6 h-6"></i>
+                                <i class="fas fa-chart-line"></i>
                             </div>
                             <h3 class="card-title font-semibold mb-3 text-gradient">Viral Hooks Packs</h3>
                             <p class="text-muted-foreground mb-4 card-text">Ready-to-use viral hooks that guarantee engagement. Tested on millions of views.</p>
@@ -1141,25 +1105,25 @@
                             
                             <div class="space-y-2 mb-6">
                                 <div class="flex items-center gap-2 card-text">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     100+ Proven Hooks
                                 </div>
                                 <div class="flex items-center gap-2 card-text">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     Industry Specific
                                 </div>
                                 <div class="flex items-center gap-2 card-text">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     Instant Download
                                 </div>
                                 <div class="flex items-center gap-2 card-text">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     Regular Updates
                                 </div>
                             </div>
                             
                             <a href="#viral-hooks" class="btn btn-primary w-full">
-                                <i data-lucide="download" class="w-4 h-4"></i>
+                                <i class="fas fa-download"></i>
                                 Get Hooks Pack
                             </a>
                         </div>
@@ -1167,7 +1131,7 @@
                         <!-- Educational Content -->
                         <div class="widget-glass p-6">
                             <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                                <i class="fas fa-graduation-cap"></i>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-electric">Educational Content</h3>
                             <p class="text-muted-foreground mb-4">Comprehensive courses and resources to master digital content creation.</p>
@@ -1179,25 +1143,25 @@
                             
                             <div class="space-y-2 mb-6">
                                 <div class="flex items-center gap-2 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     Expert-Led Courses
                                 </div>
                                 <div class="flex items-center gap-2 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     Practical Exercises
                                 </div>
                                 <div class="flex items-center gap-2 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     Community Access
                                 </div>
                                 <div class="flex items-center gap-2 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     Certificate
                                 </div>
                             </div>
                             
                             <a href="#contact" class="btn btn-secondary w-full">
-                                <i data-lucide="book-open" class="w-4 h-4"></i>
+                                <i class="fas fa-book-open"></i>
                                 Learn More
                             </a>
                         </div>
@@ -1205,7 +1169,7 @@
                         <!-- Custom Solutions -->
                         <div class="widget-glass p-6">
                             <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="settings" class="w-6 h-6"></i>
+                                <i class="fas fa-cogs"></i>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-gradient">Custom Solutions</h3>
                             <p class="text-muted-foreground mb-4">Tailored content strategies and implementations for enterprise clients.</p>
@@ -1217,25 +1181,25 @@
                             
                             <div class="space-y-2 mb-6">
                                 <div class="flex items-center gap-2 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     Strategy Development
                                 </div>
                                 <div class="flex items-center gap-2 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     Content Creation
                                 </div>
                                 <div class="flex items-center gap-2 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     Performance Analytics
                                 </div>
                                 <div class="flex items-center gap-2 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    <i class="fas fa-check text-green-400"></i>
                                     Dedicated Support
                                 </div>
                             </div>
                             
                             <a href="#contact" class="btn btn-secondary w-full">
-                                <i data-lucide="mail" class="w-4 h-4"></i>
+                                <i class="fas fa-envelope"></i>
                                 Get Quote
                             </a>
                         </div>
@@ -1244,7 +1208,7 @@
                     <div class="text-center">
                         <p class="text-lg text-muted-foreground mb-6">Ready to transform your content strategy?</p>
                         <a href="#viral-hooks" class="btn btn-primary btn-lg">
-                            <i data-lucide="rocket" class="w-5 h-5"></i>
+                            <i class="fas fa-rocket"></i>
                             Start Your Journey
                         </a>
                     </div>
@@ -1257,7 +1221,7 @@
             <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
                 <div class="text-center mb-12">
                     <div class="badge badge-success mb-4">
-                        <i data-lucide="star" class="w-4 h-4"></i>
+                        <i class="fas fa-star"></i>
                         Bestseller Pack
                     </div>
                     <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter text-electric">Get Our Viral Hooks Pack</h2>
@@ -1268,23 +1232,23 @@
                     
                     <div class="flex items-center justify-center gap-4 mb-6">
                         <div class="flex items-center gap-1">
-                            <i data-lucide="star" class="w-5 h-5 text-yellow-400" style="fill: currentColor;"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-yellow-400" style="fill: currentColor;"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-yellow-400" style="fill: currentColor;"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-yellow-400" style="fill: currentColor;"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-yellow-400" style="fill: currentColor;"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
                             <span class="font-semibold ml-2">4.9/5</span>
                         </div>
                         <div class="text-muted-foreground">|</div>
                         <div>
-                            <i data-lucide="download" class="w-5 h-5 inline mr-1"></i>
+                            <i class="fas fa-download inline mr-1"></i>
                             <span class="font-semibold">50,000+ Downloads</span>
                         </div>
                     </div>
                     
                     <div class="mb-8">
                         <a href="https://hookdaddy.gumroad.com/l/hookpack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg float-animation">
-                            <i data-lucide="zap" class="w-5 h-5"></i>
+                            <i class="fas fa-bolt"></i>
                             Get Hooks Pack Now
                         </a>
                     </div>
@@ -1294,7 +1258,7 @@
                     <!-- Proven to Convert -->
                     <div class="widget-glass p-6 text-center">
                         <div class="w-16 h-16 icon-container rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="trending-up" class="w-8 h-8"></i>
+                            <i class="fas fa-chart-line fa-2x"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Proven to Convert</h3>
                         <p class="text-muted-foreground mb-6">
@@ -1302,19 +1266,19 @@
                         </p>
                         <div class="space-y-3 text-left">
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">Tested on 50M+ views</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">300% average engagement boost</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">Multi-platform optimized</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">Industry-specific variations</span>
                             </div>
                         </div>
@@ -1323,7 +1287,7 @@
                     <!-- Ready-to-Use -->
                     <div class="widget-glass p-6 text-center">
                         <div class="w-16 h-16 icon-container rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="clock" class="w-8 h-8"></i>
+                            <i class="fas fa-clock fa-2x"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Ready-to-Use</h3>
                         <p class="text-muted-foreground mb-6">
@@ -1331,19 +1295,19 @@
                         </p>
                         <div class="space-y-3 text-left">
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">100+ hooks included</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">Categorized by industry</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">Easy customization guide</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">Multiple format options</span>
                             </div>
                         </div>
@@ -1352,7 +1316,7 @@
                     <!-- Instant Access -->
                     <div class="widget-glass p-6 text-center">
                         <div class="w-16 h-16 icon-container rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="download" class="w-8 h-8"></i>
+                            <i class="fas fa-download fa-2x"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Instant Access</h3>
                         <p class="text-muted-foreground mb-6">
@@ -1360,19 +1324,19 @@
                         </p>
                         <div class="space-y-3 text-left">
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">Instant digital delivery</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">Lifetime access included</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">Free updates forever</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle text-green-400"></i>
                                 <span class="text-sm">30-day money-back guarantee</span>
                             </div>
                         </div>
@@ -1386,60 +1350,47 @@
             <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
                 <div class="text-center max-w-4xl mx-auto">
                     <div class="badge mb-6">
-                        <i data-lucide="clock" class="w-4 h-4"></i>
+                        <i class="fas fa-clock"></i>
                         Limited Time Offer
                     </div>
-                    
-                    <h2 class="section-title font-bold mb-6 tracking-tighter text-gradient">
-                        Transform Your Content Today
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6 tracking-tighter text-gradient">
+                        Ready to Go Viral?
                     </h2>
-                    
-                    <p class="section-description text-muted-foreground mb-8 leading-relaxed">
-                        Join thousands of successful creators who've revolutionized their content strategy. 
-                        Get instant access to our proven viral hooks and start seeing results within 24 hours. 
-                        Trusted by industry leaders worldwide.
+                    <p class="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                        Join thousands of creators who've transformed their content strategy with our viral hooks. 
+                        Don't miss out on this opportunity to supercharge your engagement.
                     </p>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                        <div class="text-center">
-                            <div class="stat-number font-bold mb-2">300%</div>
-                            <div class="text-muted-foreground stat-label">Engagement Boost</div>
+                    <div class="stats-grid mb-12">
+                        <div class="stat-item">
+                            <div class="text-4xl font-bold mb-2 text-electric">97%</div>
+                            <div class="text-muted-foreground">Engagement Boost</div>
                         </div>
-                        <div class="text-center">
-                            <div class="stat-number font-bold mb-2">10,000+</div>
-                            <div class="text-muted-foreground stat-label">Happy Customers</div>
+                        <div class="stat-item">
+                            <div class="text-4xl font-bold mb-2 text-electric">50,000+</div>
+                            <div class="text-muted-foreground">Happy Customers</div>
                         </div>
-                        <div class="text-center">
-                            <div class="stat-number font-bold mb-2">4.9/5</div>
-                            <div class="text-muted-foreground stat-label">Rating</div>
+                        <div class="stat-item">
+                            <div class="text-4xl font-bold mb-2 text-electric">4.9★</div>
+                            <div class="text-muted-foreground">Average Rating</div>
                         </div>
                     </div>
                     
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                        <a href="https://hookdaddy.gumroad.com/l/hookpack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                            <i data-lucide="zap" class="w-5 h-5"></i>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://hookdaddy.gumroad.com/l/hookpack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg float-animation">
+                            <i class="fas fa-bolt"></i>
                             Get Viral Hooks Pack Now
                         </a>
-                        <a href="#services" class="btn btn-secondary btn-lg">
-                            <i data-lucide="info" class="w-5 h-5"></i>
+                        <a href="#contact" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-info-circle"></i>
                             Learn More
                         </a>
                     </div>
                     
-                    <div class="flex items-center justify-center gap-6 text-sm text-muted-foreground">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="credit-card" class="w-4 h-4"></i>
-                            Secure Payment
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="shield" class="w-4 h-4"></i>
-                            30-Day Guarantee
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="download" class="w-4 h-4"></i>
-                            Instant Access
-                        </div>
-                    </div>
+                    <p class="text-sm text-muted-foreground mt-6">
+                        <i class="fas fa-lock mr-2"></i>
+                        Secure Payment • 30-Day Money Back Guarantee • Instant Download
+                    </p>
                 </div>
             </div>
         </section>
@@ -1447,228 +1398,174 @@
         <!-- Contact Section -->
         <section id="contact" class="py-16 md:py-24 lg:py-32 relative">
             <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
-                <div class="section-glass p-8">
-                    <div class="text-center mb-12">
-                        <div class="badge mb-4">
-                            <i data-lucide="headphones" class="w-4 h-4"></i>
-                            Professional Support
-                        </div>
-                        <h2 class="section-title font-bold mb-4 tracking-tighter text-electric">Get in Touch</h2>
-                        <p class="section-description text-muted-foreground max-w-3xl mx-auto">
-                            Ready to transform your content strategy? Contact our team of experts for personalized solutions 
-                            and enterprise-grade support.
-                        </p>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                        <!-- Contact Information -->
-                        <div class="space-y-6">
-                            <div class="widget-glass p-6">
-                                <h3 class="card-title font-semibold mb-6">Business Information</h3>
-                                
-                                <div class="space-y-4">
-                                    <div class="flex items-start gap-4">
-                                        <i data-lucide="building" class="w-5 h-5 mt-1 text-primary"></i>
-                                        <div>
-                                            <div class="font-medium card-text">HookDaddy Digital Solutions</div>
-                                            <div class="text-muted-foreground text-xs">Professional Content Services</div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex items-start gap-4">
-                                        <i data-lucide="mail" class="w-5 h-5 mt-1 text-primary"></i>
-                                        <div>
-                                            <div class="font-medium card-text">hello@hookdaddy.store</div>
-                                            <div class="text-muted-foreground text-xs">Business Inquiries & Support</div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex items-start gap-4">
-                                        <i data-lucide="clock" class="w-5 h-5 mt-1 text-primary"></i>
-                                        <div>
-                                            <div class="font-medium card-text">Monday - Friday: 9 AM - 6 PM EST</div>
-                                            <div class="text-muted-foreground text-xs">Response within 24 hours</div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex items-start gap-4">
-                                        <i data-lucide="shield-check" class="w-5 h-5 mt-1 text-primary"></i>
-                                        <div>
-                                            <div class="font-medium card-text">Fully Compliant & Secure</div>
-                                            <div class="text-muted-foreground text-xs">International business standards</div>
-                                        </div>
-                                    </div>
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter text-electric">Get In Touch</h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                        Ready to take your content to the next level? Contact us for custom solutions and enterprise packages.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div class="widget-glass p-6">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope"></i>
                                 </div>
-                            </div>
-                            
-                            <div class="widget-glass p-6">
-                                <h3 class="card-title font-semibold mb-4">Enterprise Partnerships</h3>
-                                <p class="text-muted-foreground card-text mb-4">
-                                    Looking for custom solutions or enterprise partnerships? 
-                                    We offer tailored content strategies for large organizations.
-                                </p>
-                                <a href="mailto:partnerships@hookdaddy.store" class="btn btn-secondary">
-                                    <i data-lucide="mail" class="w-4 h-4"></i>
-                                    Inquire About Partnership
-                                </a>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Email Us</h3>
+                                    <p class="text-muted-foreground">hello@hookdaddy.store</p>
+                                </div>
                             </div>
                         </div>
                         
-                        <!-- Contact Form -->
                         <div class="widget-glass p-6">
-                            <h3 class="text-xl font-semibold mb-6">Send us a Message</h3>
-                            
-                            <form onsubmit="handleSubmit(event)" class="space-y-4">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label class="block text-sm font-medium mb-2">First Name *</label>
-                                        <input type="text" name="firstName" required class="form-input" placeholder="John">
-                                    </div>
-                                    <div>
-                                        <label class="block text-sm font-medium mb-2">Last Name *</label>
-                                        <input type="text" name="lastName" required class="form-input" placeholder="Doe">
-                                    </div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone"></i>
                                 </div>
-                                
                                 <div>
-                                    <label class="block text-sm font-medium mb-2">Email Address *</label>
-                                    <input type="email" name="email" required class="form-input" placeholder="john@example.com">
+                                    <h3 class="font-semibold mb-1">Call Us</h3>
+                                    <p class="text-muted-foreground">+1 (555) 123-4567</p>
                                 </div>
-                                
-                                <div>
-                                    <label class="block text-sm font-medium mb-2">Company (Optional)</label>
-                                    <input type="text" name="company" class="form-input" placeholder="Your Company">
-                                </div>
-                                
-                                <div>
-                                    <label class="block text-sm font-medium mb-2">Message *</label>
-                                    <textarea name="message" required class="form-textarea" rows="5" placeholder="Tell us about your project or inquiry..."></textarea>
-                                </div>
-                                
-                                <button type="submit" class="btn btn-primary w-full">
-                                    <i data-lucide="send" class="w-4 h-4"></i>
-                                    Send Message
-                                </button>
-                            </form>
+                            </div>
                         </div>
+                        
+                        <div class="widget-glass p-6">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Business Hours</h3>
+                                    <p class="text-muted-foreground">Mon-Fri: 9AM-6PM EST</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="widget-glass p-6">
+                        <form onsubmit="handleSubmit(event)" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" required class="form-input" placeholder="Your name">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" required class="form-input" placeholder="your@email.com">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" required class="form-input" placeholder="How can we help?">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" required class="form-textarea" placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-full">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="tesla-hero-gradient py-12 md:py-16 relative overflow-hidden">
-        <!-- Background effects -->
-        <div class="absolute inset-0">
-            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 40px 40px;"></div>
-        </div>
-        
-        <div class="absolute top-0 left-0 w-96 h-96" style="background: hsl(217 91% 60% / 0.1); border-radius: 50%; filter: blur(3rem);"></div>
-        <div class="absolute bottom-0 right-0 w-80 h-80" style="background: hsl(188 100% 50% / 0.1); border-radius: 50%; filter: blur(3rem);"></div>
-        
-        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" style="z-index: 10;">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-                <!-- Brand Section -->
-                <div class="md:col-span-2">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 glass-effect rounded-xl flex items-center justify-center" style="background: transparent; border: 1px solid rgba(255,255,255,0.2);">
-                            <i data-lucide="zap" class="w-6 h-6" style="color: hsl(var(--primary));"></i>
-                        </div>
-                        <div>
-                            <h3 class="footer-brand-title" style="color: hsl(var(--primary));">HookDaddy</h3>
-                            <p class="text-muted-foreground footer-small font-medium">Digital Content Solutions</p>
+        <!-- Footer -->
+        <footer class="footer py-16">
+            <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                    <!-- Brand -->
+                    <div>
+                        <h3 class="footer-brand-title mb-4 text-gradient">HookDaddy</h3>
+                        <p class="footer-description text-muted-foreground mb-4">
+                            Professional digital content solutions for businesses worldwide. Enterprise-grade compliance and proven results.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
                         </div>
                     </div>
                     
-                    <p class="text-muted-foreground mb-6 max-w-lg footer-description leading-relaxed font-light">
-                        Premium digital content solutions engineered for modern businesses. 
-                        We deliver innovative strategies that drive measurable results.
-                    </p>
-                    
-                    <div class="glass-effect p-6" style="border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; width: 100%; max-width: 400px;">
-                        <div class="flex items-center gap-4 mb-3">
-                            <i data-lucide="mail" class="w-5 h-5" style="color: hsl(var(--tesla-blue));"></i>
-                            <span class="font-semibold card-text">Professional Support</span>
-                        </div>
-                        <p class="text-muted-foreground text-xs leading-relaxed">
-                            Licensed digital content provider • Fully compliant with international standards
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Company Links -->
-                <div>
-                    <h4 class="font-bold mb-6 footer-section-title" style="color: hsl(var(--primary));">Company</h4>
-                    <div class="space-y-3">
-                        <div><a href="#about" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium" style="text-decoration: none;">
-                            About Us
-                        </a></div>
-                        <div><a href="#services" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium" style="text-decoration: none;">
-                            Our Services
-                        </a></div>
-                        <div><a href="#contact" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium" style="text-decoration: none;">
-                            Contact
-                        </a></div>
-                        <div><a href="mailto:admin@hookdaddy.store" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium" style="text-decoration: none;">
-                            Careers
-                        </a></div>
-                    </div>
-                </div>
-
-                <!-- Legal Links -->
-                <div>
-                    <h4 class="font-bold mb-6 footer-section-title" style="color: hsl(var(--primary));">Legal & Support</h4>
-                    <div class="space-y-3">
-                        <div><a href="https://hookdaddy.store/tc/" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium" style="text-decoration: none;">
-                            Privacy Policy
-                        </a></div>
-                        <div><a href="https://hookdaddy.store/tc/" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium" style="text-decoration: none;">
-                            Terms & Conditions
-                        </a></div>
-                        <div><a href="https://hookdaddy.store/tc/#refund" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium" style="text-decoration: none;">
-                            Return & Refund
-                        </a></div>
-                        <div><a href="mailto:contact@hookdaddy.store" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium" style="text-decoration: none;">
-                            Support Center
-                        </a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Section -->
-            <div class="border-t pt-8" style="border-color: rgba(255,255,255,0.1);">
-                <div class="flex flex-col lg:flex-row justify-between items-center gap-6">
-                    <div class="text-center lg:text-left">
-                        <p class="text-muted-foreground footer-copyright mb-2">
-                            © 2025 HookDaddy. All rights reserved.
-                        </p>
-                        <p class="text-muted-foreground footer-small">
-                            Professional digital solutions • International compliance • Secure transactions
-                        </p>
+                    <!-- Services -->
+                    <div>
+                        <h4 class="footer-section-title mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#services" class="footer-link text-muted-foreground hover:text-primary transition-colors">Viral Hooks</a></li>
+                            <li><a href="#services" class="footer-link text-muted-foreground hover:text-primary transition-colors">Educational Content</a></li>
+                            <li><a href="#services" class="footer-link text-muted-foreground hover:text-primary transition-colors">Custom Solutions</a></li>
+                            <li><a href="#contact" class="footer-link text-muted-foreground hover:text-primary transition-colors">Enterprise</a></li>
+                        </ul>
                     </div>
                     
-                    <div class="flex items-center">
-                        <div class="glass-effect rounded-lg px-4 py-2" style="border: 1px solid rgba(255,255,255,0.1); padding-top: calc(0.5rem + 1px); padding-bottom: calc(0.5rem + 1px);">
-                            <div class="flex items-center gap-2">
-                                <div class="w-2 h-2 rounded-full animate-pulse" style="background: linear-gradient(to right, #ec4899, #3b82f6, #10b981);"></div>
-                                <span class="text-muted-foreground font-medium footer-small">All Operational</span>
+                    <!-- Company -->
+                    <div>
+                        <h4 class="footer-section-title mb-4">Company</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="footer-link text-muted-foreground hover:text-primary transition-colors">About</a></li>
+                            <li><a href="#contact" class="footer-link text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
+                            <li><a href="/privacy" class="footer-link text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a></li>
+                            <li><a href="/terms" class="footer-link text-muted-foreground hover:text-primary transition-colors">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="footer-section-title mb-4">Contact</h4>
+                        <div class="space-y-2 footer-small">
+                            <div class="flex items-center gap-2 text-muted-foreground">
+                                <i class="fas fa-envelope"></i>
+                                <span>hello@hookdaddy.store</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-muted-foreground">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-muted-foreground">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Global Operations</span>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="border-t border-border pt-8 text-center">
+                    <p class="footer-copyright text-muted-foreground">
+                        &copy; 2024 HookDaddy Digital Solutions. All rights reserved. Fully compliant with international regulations.
+                    </p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Mobile menu toggle
         function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.toggle('active');
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Form submitted:', data);
+            alert('Thank you for your message! We\'ll get back to you soon.');
+            event.target.reset();
         }
 
         // Smooth scrolling for anchor links
@@ -1677,72 +1574,17 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
+                    
+                    // Close mobile menu if open
+                    const menu = document.getElementById('mobileMenu');
+                    if (menu.classList.contains('active')) {
+                        menu.classList.remove('active');
+                    }
                 }
-            });
-        });
-
-        // Form submission handler
-        function handleSubmit(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData);
-            
-            console.log('Form submitted:', data);
-            alert('Thank you for your message! We will get back to you within 24 hours.');
-            event.target.reset();
-        }
-
-        // Header background on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 50) {
-                header.style.background = 'rgba(0, 0, 0, 0.95)';
-                header.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-            } else {
-                header.style.background = 'rgba(0, 0, 0, 0.8)';
-                header.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-            }
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Initialize animations on load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate cards
-            document.querySelectorAll('.card-bg').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-                observer.observe(card);
-            });
-
-            // Animate stat items
-            document.querySelectorAll('.stat-item').forEach(item => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateY(20px)';
-                item.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-                observer.observe(item);
             });
         });
     </script>
