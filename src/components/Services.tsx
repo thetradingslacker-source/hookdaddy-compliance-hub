@@ -9,20 +9,20 @@ const Services = () => {
       <div className="section-glow"></div>
       
       <div className="container-width relative z-10">
-        <div className="text-center mb-24 animate-fade-in">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-medium text-sm font-semibold mb-8 text-white/90">
-            <TrendingUp className="w-5 h-5 text-tesla-blue" />
+        <div className="text-center mb-16 sm:mb-20 animate-fade-in">
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-medium text-sm font-semibold mb-6 text-white/90">
+            <TrendingUp className="w-4 h-4 text-tesla-blue" />
             <span>Enterprise-Grade Solutions</span>
           </div>
           
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-[0.9] tracking-tighter">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight">
             Everything You Need
             <span className="block bg-gradient-to-r from-tesla-blue via-success to-warning bg-clip-text text-transparent">
               To Dominate
             </span>
           </h2>
           
-          <p className="text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed font-light">
             Professional content solutions engineered to capture attention, maximize engagement, 
             and deliver <span className="text-white font-semibold">measurable ROI</span>. 
             Join the elite tier of content creators.
@@ -158,17 +158,17 @@ const Services = () => {
         </div>
 
         {/* Final CTA */}
-        <div className="text-center glass-strong rounded-3xl p-12 lg:p-16">
-          <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="text-center glass-strong rounded-2xl p-8 lg:p-12">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Scale Your Content?
           </h3>
-          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
             Join thousands of creators who have transformed their content and grown their audience with our proven strategies.
           </p>
-          <Button size="lg" variant="default" className="text-lg font-bold px-12 py-6 magnetic-button" asChild>
+          <Button size="default" variant="default" className="text-base font-bold px-6 py-3 magnetic-button" asChild>
             <a href="#contact">
               Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </Button>
         </div>
