@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Video, BookOpen, Target, TrendingUp, Users, Zap } from "lucide-react";
+import { Video, BookOpen, Target, TrendingUp, Users, Zap, Download, Star, CheckCircle, Palette, Award, ArrowRight } from "lucide-react";
 
 const Services = () => {
   return (

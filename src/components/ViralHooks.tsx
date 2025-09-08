@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, TrendingUp, Zap, ArrowRight, Download, Star } from "lucide-react";
+import { Target, TrendingUp, Zap, ArrowRight, Download, Star, CheckCircle, Rocket } from "lucide-react";
 
 const ViralHooks = () => {
   return (
