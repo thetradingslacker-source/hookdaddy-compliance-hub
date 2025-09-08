@@ -43,21 +43,21 @@ const CallToAction = () => {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 mb-12 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center max-w-md sm:max-w-none mx-auto">
             <a 
               href="https://hookdaddy.store/checkouts/checkout-2/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" variant="default" className="text-lg font-bold px-12 py-6 magnetic-button">
+              <Button size="default" variant="default" className="text-base font-bold px-6 py-3 magnetic-button w-full sm:w-auto">
                 Get Viral Hooks Pack Now
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>
-            <Button size="lg" variant="outline" className="text-lg font-semibold px-12 py-6 magnetic-button" asChild>
+            <Button size="default" variant="outline" className="text-base font-semibold px-6 py-3 magnetic-button w-full sm:w-auto" asChild>
               <a href="#about">
                 Learn More
-                <ExternalLink className="ml-2 h-5 w-5" />
+                <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </div>
