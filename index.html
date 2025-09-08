@@ -116,12 +116,22 @@
         body {
             margin: 0;
             line-height: inherit;
-            background-color: hsl(var(--background));
+            background: 
+                var(--grid-pattern),
+                var(--gradient-master);
+            background-size: 
+                40px 40px,
+                40px 40px, 
+                100% 100%;
+            background-position: 0 0, 0 0, 0 0;
             color: hsl(var(--foreground));
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             font-feature-settings: "rlig" 1, "calt" 1;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            animation: grid-move 20s linear infinite;
+            overflow-x: hidden;
+            position: relative;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -154,6 +164,44 @@
         .master-bg > * {
             position: relative;
             z-index: 2;
+        }
+
+        /* Enhanced floating background orbs */
+        .bg-orb {
+            position: absolute;
+            border-radius: 9999px;
+            background: radial-gradient(circle, hsl(var(--tesla-blue) / 0.15) 0%, transparent 70%);
+            filter: blur(40px);
+            animation: float 12s ease-in-out infinite;
+            opacity: 0.6;
+        }
+
+        .bg-orb-secondary {
+            position: absolute;
+            border-radius: 9999px;
+            background: radial-gradient(circle, hsl(var(--tesla-electric) / 0.12) 0%, transparent 70%);
+            filter: blur(35px);
+            animation: float 15s ease-in-out infinite reverse;
+            opacity: 0.4;
+        }
+
+        .bg-orb-tertiary {
+            position: absolute;
+            border-radius: 9999px;
+            background: radial-gradient(circle, hsl(var(--tesla-purple) / 0.08) 0%, transparent 70%);
+            filter: blur(50px);
+            animation: float 18s ease-in-out infinite;
+            opacity: 0.3;
+        }
+
+        .float-delayed {
+            animation: float 8s ease-in-out infinite 2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            33% { transform: translateY(-15px) rotate(2deg) scale(1.05); }
+            66% { transform: translateY(-25px) rotate(-1deg) scale(0.95); }
         }
 
         /* Layout utilities */
@@ -307,6 +355,51 @@
             background-clip: text;
         }
 
+        .tesla-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .tesla-hover:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: var(--shadow-intense);
+        }
+
+        /* Button effects */
+        .magnetic-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+            box-shadow: var(--shadow-button);
+        }
+
+        .magnetic-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            transform: translateX(-100%);
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .magnetic-button:hover::before {
+            transform: translateX(100%);
+        }
+
+        .magnetic-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-intense);
+        }
+
+        /* Color utilities */
+        .text-tesla-blue { color: hsl(var(--tesla-blue)); }
+        .text-tesla-electric { color: hsl(var(--tesla-electric)); }
+        .text-tesla-purple { color: hsl(var(--tesla-purple)); }
+        .text-success { color: hsl(var(--success)); }
+        .text-warning { color: hsl(var(--warning)); }
+
         /* Border radius */
         .rounded-lg { border-radius: var(--radius); }
         .rounded-full { border-radius: 9999px; }
@@ -359,6 +452,30 @@
             border-color: rgba(255, 255, 255, 0.25);
             transform: translateY(-2px);
             box-shadow: var(--shadow-elevated);
+        }
+
+        .glass-subtle {
+            backdrop-filter: blur(24px) saturate(180%);
+            background: var(--gradient-glass-subtle);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: var(--shadow-glass);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-medium {
+            backdrop-filter: blur(24px) saturate(180%);
+            background: var(--gradient-glass-medium);
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            box-shadow: var(--shadow-webapp);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-strong {
+            backdrop-filter: blur(32px) saturate(180%);
+            background: var(--gradient-glass-strong);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: var(--shadow-intense);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* Tesla Hero Gradient - Warmer and more sophisticated */
@@ -850,55 +967,71 @@
     </header>
 
     <!-- Main Content -->
-    <main class="master-bg pt-20">
-        <!-- Background Orbs -->
-        <div class="bg-orb" style="width: 600px; height: 600px; top: 10%; left: -10%;"></div>
-        <div class="bg-orb-secondary" style="width: 400px; height: 400px; top: 60%; right: -5%;"></div>
-        <div class="bg-orb-tertiary" style="width: 300px; height: 300px; bottom: 20%; left: 50%;"></div>
+    <main>
+        <!-- Enhanced floating background orbs -->
+        <div class="bg-orb" style="width: 24rem; height: 24rem; top: -10rem; left: -10rem;"></div>
+        <div class="bg-orb-secondary" style="width: 20rem; height: 20rem; bottom: -10rem; right: -10rem;"></div>
+        <div class="bg-orb-tertiary" style="width: 31.25rem; height: 31.25rem; top: 2.5rem; right: 2.5rem;"></div>
+        <div class="bg-orb float-delayed" style="width: 37.5rem; height: 37.5rem; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
 
         <!-- Hero Section -->
-        <section class="py-16 md:py-24 lg:py-32 relative">
-            <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
-                <div class="text-center max-w-4xl mx-auto">
-                    <div class="badge mb-6">
-                        <i data-lucide="users" class="w-4 h-4"></i>
-                        Trusted by 10,000+ Creators Worldwide
+        <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-8 px-4 sm:px-6 lg:px-8">
+            <div class="w-full max-w-7xl mx-auto relative z-10">
+                <div class="text-center">
+                    <!-- Trusted Badge -->
+                    <div class="inline-flex items-center px-3 py-1.5 mb-4 glass-medium rounded-full">
+                        <span class="text-sm text-primary font-medium">
+                            ✨ Trusted by 10,000+ Creators Worldwide
+                        </span>
                     </div>
                     
-                    <h1 class="hero-text mb-6 leading-none tracking-tighter">
-                        Create Content That 
-                        <span class="text-gradient">Converts</span>
+                    <!-- Main Heading -->
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tighter mb-6">
+                        <span class="text-gradient">
+                            Create Content 
+                        </span>
+                        <br />
+                        <span class="text-electric">
+                            That Converts
+                        </span>
                     </h1>
                     
-                    <p class="hero-subtitle text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-                        Transform your content strategy with our proven viral hooks, educational resources, and custom solutions. 
-                        Get 10x more engagement in 24 hours with our enterprise-grade digital content services.
+                    <p class="text-lg md:text-xl text-primary max-w-3xl mx-auto leading-relaxed font-light mb-10" style="opacity: 0.9;">
+                        Professional video hooks and marketing strategies engineered to capture attention in 
+                        <span class="text-tesla-blue font-semibold"> 3 seconds</span>, boost engagement by 
+                        <span class="text-success font-semibold"> 300%</span>, and drive real business results.
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                        <a href="#services" class="btn btn-primary btn-lg">
-                            <i data-lucide="rocket" class="w-5 h-5"></i>
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12 justify-center max-w-md sm:max-w-none mx-auto">
+                        <a href="#viral-hooks" class="btn-primary text-base font-bold px-8 py-4 magnetic-button">
                             Start Creating Now
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
                         </a>
-                        <a href="#viral-hooks" class="btn btn-secondary btn-lg">
-                            <i data-lucide="play" class="w-5 h-5"></i>
+                        <a href="#about" class="btn-secondary text-base font-semibold px-8 py-4 magnetic-button">
+                            <i data-lucide="play-circle" class="w-4 h-4 mr-2"></i>
                             Watch Demo
                         </a>
                     </div>
                     
-                    <!-- Social Proof Stats -->
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number font-bold mb-2">10,000+</div>
-                            <div class="text-muted-foreground stat-label">Active Creators</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number font-bold mb-2">50M+</div>
-                            <div class="text-muted-foreground stat-label">Views Generated</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number font-bold mb-2">300%</div>
-                            <div class="text-muted-foreground stat-label">Avg. Boost</div>
+                    <!-- Enhanced social proof -->
+                    <div class="pt-8">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                            <div class="glass-medium rounded-lg p-5 text-center tesla-hover">
+                                <div class="text-3xl font-black text-tesla-blue mb-2">10K+</div>
+                                <div class="text-primary font-medium" style="opacity: 0.8;">Active Creators</div>
+                                <div class="text-sm text-primary mt-1" style="opacity: 0.6;">Using our hooks daily</div>
+                            </div>
+                            <div class="glass-medium rounded-lg p-5 text-center tesla-hover">
+                                <div class="text-3xl font-black text-success mb-2">50M+</div>
+                                <div class="text-primary font-medium" style="opacity: 0.8;">Views Generated</div>
+                                <div class="text-sm text-primary mt-1" style="opacity: 0.6;">Across all platforms</div>
+                            </div>
+                            <div class="glass-medium rounded-lg p-5 text-center tesla-hover">
+                                <div class="text-3xl font-black text-warning mb-2">300%</div>
+                                <div class="text-primary font-medium" style="opacity: 0.8;">Avg. Boost</div>
+                                <div class="text-sm text-primary mt-1" style="opacity: 0.6;">In engagement rates</div>
+                            </div>
                         </div>
                     </div>
                 </div>
