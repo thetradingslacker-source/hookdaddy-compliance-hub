@@ -16,12 +16,16 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
-              Get Started Today
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
-              Our Services
-            </Button>
+            <a href="#viral-hooks">
+              <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
+                Get Started Today
+              </Button>
+            </a>
+            <a href="#services">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+                Our Services
+              </Button>
+            </a>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mt-16">

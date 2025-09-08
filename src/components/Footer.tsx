@@ -36,7 +36,7 @@ const Footer = () => {
                   <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-accent transition-colors">Careers</a>
+                  <a href="mailto:admin@hookdaddy.store" className="hover:text-accent transition-colors">Careers</a>
                 </li>
               </ul>
             </div>
