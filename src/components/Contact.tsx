@@ -18,7 +18,7 @@ const Contact = () => {
             <span>Professional Support</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight tracking-tight">
             Get in
             <span className="block bg-gradient-to-r from-tesla-blue via-success to-warning bg-clip-text text-transparent">
               Touch

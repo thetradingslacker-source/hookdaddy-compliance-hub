@@ -14,14 +14,14 @@ const CallToAction = () => {
           <span className="text-sm text-white font-bold">⚡ Limited Time Offer</span>
         </div>
           
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-[0.9] tracking-tighter">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight">
             Ready to
             <span className="block text-gradient">
               Transform Your Content?
             </span>
           </h2>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
             Join 10,000+ successful marketers who've already boosted their engagement by 
             <span className="text-tesla-blue font-semibold"> 300%</span> using our proven viral hooks system.
           </p>
