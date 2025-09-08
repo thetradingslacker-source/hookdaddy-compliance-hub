@@ -43,11 +43,11 @@ const Services = () => {
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
                   <Download className="h-4 w-4 text-tesla-blue" />
-                  <span className="text-white text-sm font-medium">50K+ Downloads</span>
+                  <span className="text-white text-xs font-medium">50K+ Downloads</span>
                 </div>
                 <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
                   <Star className="h-4 w-4 text-warning" />
-                  <span className="text-white text-sm font-medium">4.9 Rating</span>
+                  <span className="text-white text-xs font-medium">4.9 Rating</span>
                 </div>
               </div>
               
@@ -85,11 +85,11 @@ const Services = () => {
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
                   <Users className="h-4 w-4 text-tesla-blue" />
-                  <span className="text-white text-sm font-medium">25K+ Students</span>
+                  <span className="text-white text-xs font-medium">25K+ Students</span>
                 </div>
                 <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
                   <CheckCircle className="h-4 w-4 text-success" />
-                  <span className="text-white text-sm font-medium">Certified</span>
+                  <span className="text-white text-xs font-medium">Certified</span>
                 </div>
               </div>
               
@@ -127,11 +127,11 @@ const Services = () => {
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
                   <Target className="h-4 w-4 text-tesla-blue" />
-                  <span className="text-white text-sm font-medium">100% ROI</span>
+                  <span className="text-white text-xs font-medium">100% ROI</span>
                 </div>
                 <div className="flex items-center gap-1 glass-subtle px-3 py-1 rounded-full">
                   <Award className="h-4 w-4 text-warning" />
-                  <span className="text-white text-sm font-medium">Premium</span>
+                  <span className="text-white text-xs font-medium">Premium</span>
                 </div>
               </div>
               
