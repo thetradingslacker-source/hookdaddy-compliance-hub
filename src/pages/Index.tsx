@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   // Trigger rebuild for preview deployment
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <div className="min-h-screen master-bg pt-20">
       <Header />
       <Hero />
       <About />

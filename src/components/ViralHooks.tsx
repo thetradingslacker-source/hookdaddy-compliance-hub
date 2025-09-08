@@ -4,7 +4,7 @@ import { Target, TrendingUp, Zap, ArrowRight, Download, Star, CheckCircle, Rocke
 
 const ViralHooks = () => {
   return (
-    <section id="viral-hooks" className="section-padding master-bg relative overflow-hidden">
+    <section id="viral-hooks" className="section-padding relative overflow-hidden">
       {/* Section-specific glow overlay */}
       <div className="section-glow"></div>
       
