@@ -347,11 +347,11 @@
 
         /* Enhanced Apple-style glass effects */
         .glass-effect {
-            backdrop-filter: blur(16px) saturate(180%);
+            backdrop-filter: blur(24px) saturate(180%);
             background: var(--gradient-glass-medium);
             border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: var(--shadow-glass);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .glass-effect:hover {
@@ -359,6 +359,115 @@
             border-color: rgba(255, 255, 255, 0.25);
             transform: translateY(-2px);
             box-shadow: var(--shadow-elevated);
+        }
+
+        /* Section glass backgrounds */
+        .section-glass {
+            backdrop-filter: blur(20px) saturate(150%);
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.02) 0%, 
+                rgba(255, 255, 255, 0.005) 50%, 
+                rgba(59, 130, 246, 0.015) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-glass::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.3) 50%, 
+                transparent 100%);
+        }
+
+        /* Widget glass effects */
+        .widget-glass {
+            backdrop-filter: blur(16px) saturate(140%);
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.06) 0%, 
+                rgba(255, 255, 255, 0.02) 50%, 
+                rgba(59, 130, 246, 0.03) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .widget-glass::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.4) 50%, 
+                transparent 100%);
+        }
+
+        .widget-glass:hover {
+            transform: translateY(-3px) scale(1.02);
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.08) 0%, 
+                rgba(255, 255, 255, 0.03) 50%, 
+                rgba(59, 130, 246, 0.05) 100%);
+            border-color: rgba(59, 130, 246, 0.2);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 8px 32px rgba(59, 130, 246, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        /* Floating glass orbs */
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            backdrop-filter: blur(40px);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .orb-1 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            top: 10%;
+            right: 10%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .orb-2 {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+            bottom: 20%;
+            left: 15%;
+            animation: float 25s infinite ease-in-out reverse;
+        }
+
+        .orb-3 {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.06) 0%, transparent 70%);
+            top: 50%;
+            left: 5%;
+            animation: float 30s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+            25% { transform: translateY(-20px) translateX(10px) scale(1.05); }
+            50% { transform: translateY(0px) translateX(20px) scale(0.95); }
+            75% { transform: translateY(20px) translateX(-10px) scale(1.02); }
         }
 
         /* Tesla Hero Gradient - Warmer and more sophisticated */
@@ -851,6 +960,11 @@
 
     <!-- Main Content -->
     <main class="master-bg pt-20">
+        <!-- Floating Glass Orbs -->
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+        
         <!-- Background Orbs -->
         <div class="bg-orb" style="width: 600px; height: 600px; top: 10%; left: -10%;"></div>
         <div class="bg-orb-secondary" style="width: 400px; height: 400px; top: 60%; right: -5%;"></div>
@@ -908,61 +1022,63 @@
         <!-- About Section -->
         <section id="about" class="py-16 md:py-24 lg:py-32 relative">
             <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
-                <div class="text-center mb-12">
-                    <h2 class="section-title font-bold mb-4 tracking-tighter">Why Choose HookDaddy?</h2>
-                    <p class="section-description text-muted-foreground max-w-3xl mx-auto">
-                        We deliver enterprise-grade digital content solutions with proven results. 
-                        Our comprehensive approach combines viral marketing strategies with educational excellence.
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                    <div class="card-bg text-center">
-                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="award" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="card-title font-semibold mb-2">Proven Expertise</h3>
-                        <p class="text-muted-foreground card-text">5+ years of proven success in digital content strategy and viral marketing</p>
+                <div class="section-glass p-8 mb-8">
+                    <div class="text-center mb-12">
+                        <h2 class="section-title font-bold mb-4 tracking-tighter">Why Choose HookDaddy?</h2>
+                        <p class="section-description text-muted-foreground max-w-3xl mx-auto">
+                            We deliver enterprise-grade digital content solutions with proven results. 
+                            Our comprehensive approach combines viral marketing strategies with educational excellence.
+                        </p>
                     </div>
                     
-                    <div class="card-bg text-center">
-                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="zap" class="w-6 h-6"></i>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                        <div class="widget-glass p-6 text-center">
+                            <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="card-title font-semibold mb-2">Proven Expertise</h3>
+                            <p class="text-muted-foreground card-text">5+ years of proven success in digital content strategy and viral marketing</p>
                         </div>
-                        <h3 class="card-title font-semibold mb-2">Rapid Results</h3>
-                        <p class="text-muted-foreground card-text">See immediate impact with our tested hooks and strategies within 24 hours</p>
+                        
+                        <div class="widget-glass p-6 text-center">
+                            <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="card-title font-semibold mb-2">Rapid Results</h3>
+                            <p class="text-muted-foreground card-text">See immediate impact with our tested hooks and strategies within 24 hours</p>
+                        </div>
+                        
+                        <div class="widget-glass p-6 text-center">
+                            <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="card-title font-semibold mb-2">Secure & Compliant</h3>
+                            <p class="text-muted-foreground card-text">All our solutions are fully compliant with international business standards</p>
+                        </div>
+                        
+                        <div class="widget-glass p-6 text-center">
+                            <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="card-title font-semibold mb-2">Innovation First</h3>
+                            <p class="text-muted-foreground card-text">Cutting-edge strategies that keep you ahead of the competition</p>
+                        </div>
                     </div>
                     
-                    <div class="card-bg text-center">
-                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    <!-- Stats -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div class="widget-glass p-4">
+                            <div class="stat-number font-bold mb-2">2019</div>
+                            <div class="text-muted-foreground stat-label">Founded</div>
                         </div>
-                        <h3 class="card-title font-semibold mb-2">Secure & Compliant</h3>
-                        <p class="text-muted-foreground card-text">All our solutions are fully compliant with international business standards</p>
-                    </div>
-                    
-                    <div class="card-bg text-center">
-                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                        <div class="widget-glass p-4">
+                            <div class="stat-number font-bold mb-2">50+</div>
+                            <div class="text-muted-foreground stat-label">Countries Served</div>
                         </div>
-                        <h3 class="card-title font-semibold mb-2">Innovation First</h3>
-                        <p class="text-muted-foreground card-text">Cutting-edge strategies that keep you ahead of the competition</p>
-                    </div>
-                </div>
-                
-                <!-- Stats -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div>
-                        <div class="stat-number font-bold mb-2">2019</div>
-                        <div class="text-muted-foreground stat-label">Founded</div>
-                    </div>
-                    <div>
-                        <div class="stat-number font-bold mb-2">50+</div>
-                        <div class="text-muted-foreground stat-label">Countries Served</div>
-                    </div>
-                    <div>
-                        <div class="stat-number font-bold mb-2">100%</div>
-                        <div class="text-muted-foreground stat-label">Compliance Rate</div>
+                        <div class="widget-glass p-4">
+                            <div class="stat-number font-bold mb-2">100%</div>
+                            <div class="text-muted-foreground stat-label">Compliance Rate</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -971,135 +1087,137 @@
         <!-- Services Section -->
         <section id="services" class="py-16 md:py-24 lg:py-32 relative">
             <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
-                <div class="text-center mb-12">
-                    <h2 class="section-title font-bold mb-4 tracking-tighter">Our Premium Services</h2>
-                    <p class="section-description text-muted-foreground max-w-3xl mx-auto">
-                        Enterprise-grade content solutions designed to transform your digital presence and drive unprecedented engagement.
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-                    <!-- Viral Hooks Pack -->
-                    <div class="card-bg">
-                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="trending-up" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="card-title font-semibold mb-3">Viral Hooks Packs</h3>
-                        <p class="text-muted-foreground mb-4 card-text">Ready-to-use viral hooks that guarantee engagement. Tested on millions of views.</p>
-                        
-                        <div class="mb-4">
-                            <div class="stat-number font-bold">50,000+</div>
-                            <div class="card-text text-muted-foreground">Downloads</div>
-                        </div>
-                        
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center gap-2 card-text">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                100+ Proven Hooks
-                            </div>
-                            <div class="flex items-center gap-2 card-text">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                Industry Specific
-                            </div>
-                            <div class="flex items-center gap-2 card-text">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                Instant Download
-                            </div>
-                            <div class="flex items-center gap-2 card-text">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                Regular Updates
-                            </div>
-                        </div>
-                        
-                        <a href="#viral-hooks" class="btn btn-primary w-full">
-                            <i data-lucide="download" class="w-4 h-4"></i>
-                            Get Hooks Pack
-                        </a>
+                <div class="section-glass p-8 mb-8">
+                    <div class="text-center mb-12">
+                        <h2 class="section-title font-bold mb-4 tracking-tighter">Our Premium Services</h2>
+                        <p class="section-description text-muted-foreground max-w-3xl mx-auto">
+                            Enterprise-grade content solutions designed to transform your digital presence and drive unprecedented engagement.
+                        </p>
                     </div>
                     
-                    <!-- Educational Content -->
-                    <div class="card-bg">
-                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                        <!-- Viral Hooks Pack -->
+                        <div class="widget-glass p-6">
+                            <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="trending-up" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="card-title font-semibold mb-3">Viral Hooks Packs</h3>
+                            <p class="text-muted-foreground mb-4 card-text">Ready-to-use viral hooks that guarantee engagement. Tested on millions of views.</p>
+                            
+                            <div class="mb-4">
+                                <div class="stat-number font-bold">50,000+</div>
+                                <div class="card-text text-muted-foreground">Downloads</div>
+                            </div>
+                            
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center gap-2 card-text">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    100+ Proven Hooks
+                                </div>
+                                <div class="flex items-center gap-2 card-text">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    Industry Specific
+                                </div>
+                                <div class="flex items-center gap-2 card-text">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    Instant Download
+                                </div>
+                                <div class="flex items-center gap-2 card-text">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    Regular Updates
+                                </div>
+                            </div>
+                            
+                            <a href="#viral-hooks" class="btn btn-primary w-full">
+                                <i data-lucide="download" class="w-4 h-4"></i>
+                                Get Hooks Pack
+                            </a>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Educational Content</h3>
-                        <p class="text-muted-foreground mb-4">Comprehensive courses and resources to master digital content creation.</p>
                         
-                        <div class="mb-4">
-                            <div class="text-2xl font-bold">5,000+</div>
-                            <div class="text-sm text-muted-foreground">Students</div>
+                        <!-- Educational Content -->
+                        <div class="widget-glass p-6">
+                            <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Educational Content</h3>
+                            <p class="text-muted-foreground mb-4">Comprehensive courses and resources to master digital content creation.</p>
+                            
+                            <div class="mb-4">
+                                <div class="text-2xl font-bold">5,000+</div>
+                                <div class="text-sm text-muted-foreground">Students</div>
+                            </div>
+                            
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center gap-2 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    Expert-Led Courses
+                                </div>
+                                <div class="flex items-center gap-2 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    Practical Exercises
+                                </div>
+                                <div class="flex items-center gap-2 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    Community Access
+                                </div>
+                                <div class="flex items-center gap-2 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    Certificate
+                                </div>
+                            </div>
+                            
+                            <a href="#contact" class="btn btn-secondary w-full">
+                                <i data-lucide="book-open" class="w-4 h-4"></i>
+                                Learn More
+                            </a>
                         </div>
                         
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                Expert-Led Courses
+                        <!-- Custom Solutions -->
+                        <div class="widget-glass p-6">
+                            <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="settings" class="w-6 h-6"></i>
                             </div>
-                            <div class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                Practical Exercises
+                            <h3 class="text-xl font-semibold mb-3">Custom Solutions</h3>
+                            <p class="text-muted-foreground mb-4">Tailored content strategies and implementations for enterprise clients.</p>
+                            
+                            <div class="mb-4">
+                                <div class="text-2xl font-bold">Enterprise</div>
+                                <div class="text-sm text-muted-foreground">Solutions</div>
                             </div>
-                            <div class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                Community Access
+                            
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center gap-2 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    Strategy Development
+                                </div>
+                                <div class="flex items-center gap-2 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    Content Creation
+                                </div>
+                                <div class="flex items-center gap-2 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    Performance Analytics
+                                </div>
+                                <div class="flex items-center gap-2 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                    Dedicated Support
+                                </div>
                             </div>
-                            <div class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                Certificate
-                            </div>
+                            
+                            <a href="#contact" class="btn btn-secondary w-full">
+                                <i data-lucide="mail" class="w-4 h-4"></i>
+                                Get Quote
+                            </a>
                         </div>
-                        
-                        <a href="#contact" class="btn btn-secondary w-full">
-                            <i data-lucide="book-open" class="w-4 h-4"></i>
-                            Learn More
-                        </a>
                     </div>
                     
-                    <!-- Custom Solutions -->
-                    <div class="card-bg">
-                        <div class="w-12 h-12 icon-container rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="settings" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">Custom Solutions</h3>
-                        <p class="text-muted-foreground mb-4">Tailored content strategies and implementations for enterprise clients.</p>
-                        
-                        <div class="mb-4">
-                            <div class="text-2xl font-bold">Enterprise</div>
-                            <div class="text-sm text-muted-foreground">Solutions</div>
-                        </div>
-                        
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                Strategy Development
-                            </div>
-                            <div class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                Content Creation
-                            </div>
-                            <div class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                Performance Analytics
-                            </div>
-                            <div class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-                                Dedicated Support
-                            </div>
-                        </div>
-                        
-                        <a href="#contact" class="btn btn-secondary w-full">
-                            <i data-lucide="mail" class="w-4 h-4"></i>
-                            Get Quote
+                    <div class="text-center">
+                        <p class="text-lg text-muted-foreground mb-6">Ready to transform your content strategy?</p>
+                        <a href="#viral-hooks" class="btn btn-primary btn-lg">
+                            <i data-lucide="rocket" class="w-5 h-5"></i>
+                            Start Your Journey
                         </a>
                     </div>
-                </div>
-                
-                <div class="text-center">
-                    <p class="text-lg text-muted-foreground mb-6">Ready to transform your content strategy?</p>
-                    <a href="#viral-hooks" class="btn btn-primary btn-lg">
-                        <i data-lucide="rocket" class="w-5 h-5"></i>
-                        Start Your Journey
-                    </a>
                 </div>
             </div>
         </section>
@@ -1144,7 +1262,7 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <!-- Proven to Convert -->
-                    <div class="card-bg text-center">
+                    <div class="widget-glass p-6 text-center">
                         <div class="w-16 h-16 icon-container rounded-full flex items-center justify-center mx-auto mb-6">
                             <i data-lucide="trending-up" class="w-8 h-8"></i>
                         </div>
@@ -1173,7 +1291,7 @@
                     </div>
                     
                     <!-- Ready-to-Use -->
-                    <div class="card-bg text-center">
+                    <div class="widget-glass p-6 text-center">
                         <div class="w-16 h-16 icon-container rounded-full flex items-center justify-center mx-auto mb-6">
                             <i data-lucide="clock" class="w-8 h-8"></i>
                         </div>
@@ -1202,7 +1320,7 @@
                     </div>
                     
                     <!-- Instant Access -->
-                    <div class="card-bg text-center">
+                    <div class="widget-glass p-6 text-center">
                         <div class="w-16 h-16 icon-container rounded-full flex items-center justify-center mx-auto mb-6">
                             <i data-lucide="download" class="w-8 h-8"></i>
                         </div>
@@ -1299,108 +1417,110 @@
         <!-- Contact Section -->
         <section id="contact" class="py-16 md:py-24 lg:py-32 relative">
             <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
-                <div class="text-center mb-12">
-                    <div class="badge mb-4">
-                        <i data-lucide="headphones" class="w-4 h-4"></i>
-                        Professional Support
-                    </div>
-                    <h2 class="section-title font-bold mb-4 tracking-tighter">Get in Touch</h2>
-                    <p class="section-description text-muted-foreground max-w-3xl mx-auto">
-                        Ready to transform your content strategy? Contact our team of experts for personalized solutions 
-                        and enterprise-grade support.
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                    <!-- Contact Information -->
-                    <div class="space-y-6">
-                        <div class="card-bg">
-                            <h3 class="card-title font-semibold mb-6">Business Information</h3>
-                            
-                            <div class="space-y-4">
-                                <div class="flex items-start gap-4">
-                                    <i data-lucide="building" class="w-5 h-5 mt-1 text-primary"></i>
-                                    <div>
-                                        <div class="font-medium card-text">HookDaddy Digital Solutions</div>
-                                        <div class="text-muted-foreground text-xs">Professional Content Services</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start gap-4">
-                                    <i data-lucide="mail" class="w-5 h-5 mt-1 text-primary"></i>
-                                    <div>
-                                        <div class="font-medium card-text">hello@hookdaddy.store</div>
-                                        <div class="text-muted-foreground text-xs">Business Inquiries & Support</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start gap-4">
-                                    <i data-lucide="clock" class="w-5 h-5 mt-1 text-primary"></i>
-                                    <div>
-                                        <div class="font-medium card-text">Monday - Friday: 9 AM - 6 PM EST</div>
-                                        <div class="text-muted-foreground text-xs">Response within 24 hours</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start gap-4">
-                                    <i data-lucide="shield-check" class="w-5 h-5 mt-1 text-primary"></i>
-                                    <div>
-                                        <div class="font-medium card-text">Fully Compliant & Secure</div>
-                                        <div class="text-muted-foreground text-xs">International business standards</div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="section-glass p-8">
+                    <div class="text-center mb-12">
+                        <div class="badge mb-4">
+                            <i data-lucide="headphones" class="w-4 h-4"></i>
+                            Professional Support
                         </div>
-                        
-                        <div class="card-bg">
-                            <h3 class="card-title font-semibold mb-4">Enterprise Partnerships</h3>
-                            <p class="text-muted-foreground card-text mb-4">
-                                Looking for custom solutions or enterprise partnerships? 
-                                We offer tailored content strategies for large organizations.
-                            </p>
-                            <a href="mailto:partnerships@hookdaddy.store" class="btn btn-secondary">
-                                <i data-lucide="mail" class="w-4 h-4"></i>
-                                Inquire About Partnership
-                            </a>
-                        </div>
+                        <h2 class="section-title font-bold mb-4 tracking-tighter">Get in Touch</h2>
+                        <p class="section-description text-muted-foreground max-w-3xl mx-auto">
+                            Ready to transform your content strategy? Contact our team of experts for personalized solutions 
+                            and enterprise-grade support.
+                        </p>
                     </div>
                     
-                    <!-- Contact Form -->
-                    <div class="card-bg">
-                        <h3 class="text-xl font-semibold mb-6">Send us a Message</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        <!-- Contact Information -->
+                        <div class="space-y-6">
+                            <div class="widget-glass p-6">
+                                <h3 class="card-title font-semibold mb-6">Business Information</h3>
+                                
+                                <div class="space-y-4">
+                                    <div class="flex items-start gap-4">
+                                        <i data-lucide="building" class="w-5 h-5 mt-1 text-primary"></i>
+                                        <div>
+                                            <div class="font-medium card-text">HookDaddy Digital Solutions</div>
+                                            <div class="text-muted-foreground text-xs">Professional Content Services</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <i data-lucide="mail" class="w-5 h-5 mt-1 text-primary"></i>
+                                        <div>
+                                            <div class="font-medium card-text">hello@hookdaddy.store</div>
+                                            <div class="text-muted-foreground text-xs">Business Inquiries & Support</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <i data-lucide="clock" class="w-5 h-5 mt-1 text-primary"></i>
+                                        <div>
+                                            <div class="font-medium card-text">Monday - Friday: 9 AM - 6 PM EST</div>
+                                            <div class="text-muted-foreground text-xs">Response within 24 hours</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <i data-lucide="shield-check" class="w-5 h-5 mt-1 text-primary"></i>
+                                        <div>
+                                            <div class="font-medium card-text">Fully Compliant & Secure</div>
+                                            <div class="text-muted-foreground text-xs">International business standards</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="widget-glass p-6">
+                                <h3 class="card-title font-semibold mb-4">Enterprise Partnerships</h3>
+                                <p class="text-muted-foreground card-text mb-4">
+                                    Looking for custom solutions or enterprise partnerships? 
+                                    We offer tailored content strategies for large organizations.
+                                </p>
+                                <a href="mailto:partnerships@hookdaddy.store" class="btn btn-secondary">
+                                    <i data-lucide="mail" class="w-4 h-4"></i>
+                                    Inquire About Partnership
+                                </a>
+                            </div>
+                        </div>
                         
-                        <form onsubmit="handleSubmit(event)" class="space-y-4">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-sm font-medium mb-2">First Name *</label>
-                                    <input type="text" name="firstName" required class="form-input" placeholder="John">
+                        <!-- Contact Form -->
+                        <div class="widget-glass p-6">
+                            <h3 class="text-xl font-semibold mb-6">Send us a Message</h3>
+                            
+                            <form onsubmit="handleSubmit(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">First Name *</label>
+                                        <input type="text" name="firstName" required class="form-input" placeholder="John">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Last Name *</label>
+                                        <input type="text" name="lastName" required class="form-input" placeholder="Doe">
+                                    </div>
                                 </div>
+                                
                                 <div>
-                                    <label class="block text-sm font-medium mb-2">Last Name *</label>
-                                    <input type="text" name="lastName" required class="form-input" placeholder="Doe">
+                                    <label class="block text-sm font-medium mb-2">Email Address *</label>
+                                    <input type="email" name="email" required class="form-input" placeholder="john@example.com">
                                 </div>
-                            </div>
-                            
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Email Address *</label>
-                                <input type="email" name="email" required class="form-input" placeholder="john@example.com">
-                            </div>
-                            
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Company (Optional)</label>
-                                <input type="text" name="company" class="form-input" placeholder="Your Company">
-                            </div>
-                            
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Message *</label>
-                                <textarea name="message" required class="form-textarea" rows="5" placeholder="Tell us about your project or inquiry..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary w-full">
-                                <i data-lucide="send" class="w-4 h-4"></i>
-                                Send Message
-                            </button>
-                        </form>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Company (Optional)</label>
+                                    <input type="text" name="company" class="form-input" placeholder="Your Company">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Message *</label>
+                                    <textarea name="message" required class="form-textarea" rows="5" placeholder="Tell us about your project or inquiry..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary w-full">
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
