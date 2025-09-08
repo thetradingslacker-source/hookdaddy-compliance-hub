@@ -26,7 +26,7 @@ const ViralHooks = () => {
             and drive sales. Trusted by 10,000+ marketers worldwide.
           </p>
 
-          <div className="flex items-center justify-center gap-8 text-sm text-white/70 mb-12">
+          <div className="flex items-center justify-center gap-8 text-sm text-white/70 mb-8">
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
@@ -40,6 +40,19 @@ const ViralHooks = () => {
               <Download className="w-4 h-4" />
               <span>10,000+ Downloads</span>
             </div>
+          </div>
+
+          <div className="mb-12">
+            <a 
+              href="https://hookdaddy.store/checkouts/checkout-2/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="text-lg font-bold px-8 py-4 magnetic-button">
+                Get Hooks Pack
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
 
