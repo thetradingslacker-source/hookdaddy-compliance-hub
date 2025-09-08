@@ -4,9 +4,10 @@ import { ArrowRight, PlayCircle, Zap, Sparkles, TrendingUp } from "lucide-react"
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center master-bg overflow-hidden pt-20">
-      {/* Floating background orbs */}
-      <div className="bg-orb w-80 h-80 -top-40 -left-40"></div>
-      <div className="bg-orb-secondary w-96 h-96 -bottom-40 -right-40"></div>
+      {/* Enhanced floating background orbs */}
+      <div className="bg-orb w-96 h-96 -top-40 -left-40"></div>
+      <div className="bg-orb-secondary w-80 h-80 -bottom-40 -right-40"></div>
+      <div className="bg-orb-tertiary w-[500px] h-[500px] top-10 right-10"></div>
       <div className="bg-orb w-[600px] h-[600px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 float-delayed"></div>
       
       <div className="container-width relative z-10">

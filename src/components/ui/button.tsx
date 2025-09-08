@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-white text-black hover:bg-white/90 hover:shadow-lg hover:-translate-y-0.5 shadow-button magnetic-button",
-        premium: "bg-gradient-to-r from-tesla-blue to-tesla-purple text-white hover:shadow-xl hover:-translate-y-1 shadow-tesla magnetic-button",
+        premium: "bg-gradient-to-r from-tesla-blue to-tesla-purple text-white hover:shadow-xl hover:-translate-y-1 shadow-tesla magnetic-button backdrop-blur-md border border-white/20",
         electric: "bg-gradient-to-r from-tesla-electric to-tesla-blue text-white hover:shadow-xl hover:-translate-y-1 shadow-tesla magnetic-button",
         success: "bg-gradient-to-r from-tesla-green to-tesla-blue text-white hover:shadow-lg hover:-translate-y-0.5 magnetic-button",
         outline: "border-2 border-white/20 bg-white/5 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-xl glass-effect",
