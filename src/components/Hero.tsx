@@ -3,7 +3,7 @@ import { ArrowRight, PlayCircle, Zap, Sparkles, TrendingUp } from "lucide-react"
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center tesla-hero-gradient overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center tesla-hero-gradient overflow-hidden pt-20">
       {/* Sophisticated background pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
