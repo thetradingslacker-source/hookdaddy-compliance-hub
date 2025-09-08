@@ -3,7 +3,7 @@ import { Menu, Zap, ArrowRight } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
       <div className="container-width">
         <div className="flex items-center justify-between py-6">
           <div className="flex items-center space-x-4">

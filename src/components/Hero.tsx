@@ -26,8 +26,10 @@ const Hero = () => {
           
           {/* Epic headline */}
           <div className="space-y-8">
-            <h1 className="hero-text text-white font-black leading-[0.85]">
-              Create Content
+            <h1 className="hero-text font-black leading-[0.85]">
+              <span className="bg-gradient-to-r from-tesla-blue via-success to-warning bg-clip-text text-transparent">
+                Create Content
+              </span>
               <br />
               <span className="bg-gradient-to-r from-tesla-blue via-success to-warning bg-clip-text text-transparent">
                 That Converts
@@ -45,7 +47,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
             <Button 
               size="lg" 
-              className="magnetic-button tesla-gradient text-white text-xl px-12 py-8 rounded-2xl font-bold text-shadow-lg group min-w-[280px]"
+              className="magnetic-button bg-white text-black hover:bg-white/90 text-xl px-12 py-8 rounded-2xl font-bold shadow-tesla group min-w-[280px] transition-all duration-300"
             >
               Start Creating Now
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />

@@ -34,10 +34,10 @@ const CallToAction = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            <Button 
-              size="lg" 
-              className="magnetic-button tesla-gradient text-white text-2xl px-16 py-10 rounded-2xl font-black shadow-intense group min-w-[320px]"
-            >
+              <Button 
+                size="lg" 
+                className="magnetic-button bg-white text-black hover:bg-white/90 text-2xl px-16 py-10 rounded-2xl font-black shadow-intense group min-w-[320px]"
+              >
               Get Started Today
               <ArrowRight className="ml-4 h-7 w-7 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
