@@ -3,7 +3,7 @@ import { ArrowRight, PlayCircle, Zap, Sparkles, TrendingUp } from "lucide-react"
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-18 px-4 sm:px-6 lg:px-8">
       {/* Enhanced floating background orbs */}
       <div className="bg-orb w-96 h-96 -top-40 -left-40"></div>
       <div className="bg-orb-secondary w-80 h-80 -bottom-40 -right-40"></div>
@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="w-full max-w-7xl mx-auto relative z-10">
         <div className="text-center animate-slide-up">
           {/* Trusted Badge */}
-          <div className="inline-flex items-center px-3 py-1.5 mb-6 glass-medium rounded-full">
+          <div className="inline-flex items-center px-3 py-1.5 mb-4 glass-medium rounded-full">
             <span className="text-sm text-white font-medium">
               ✨ Trusted by 10,000+ Creators Worldwide
             </span>
