@@ -229,7 +229,7 @@
         .max-w-6xl { max-width: 72rem; }
         .max-w-7xl { max-width: 80rem; }
 
-        /* Typography */
+        /* Typography - Mobile First Responsive */
         .text-xs { font-size: 0.75rem; line-height: 1rem; }
         .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
         .text-base { font-size: 1rem; line-height: 1.5rem; }
@@ -242,6 +242,22 @@
         .text-6xl { font-size: 3.75rem; line-height: 1; }
         .text-7xl { font-size: 4.5rem; line-height: 1; }
         .text-8xl { font-size: 6rem; line-height: 1; }
+
+        /* Mobile Typography Classes */
+        .footer-brand-title { font-size: 1.25rem; font-weight: 800; }
+        .footer-section-title { font-size: 1rem; font-weight: 600; }
+        .footer-link { font-size: 0.875rem; font-weight: 500; }
+        .footer-description { font-size: 0.875rem; line-height: 1.5; }
+        .footer-copyright { font-size: 0.75rem; }
+        .footer-small { font-size: 0.75rem; }
+
+        @media (min-width: 768px) {
+            .footer-brand-title { font-size: 1.5rem; }
+            .footer-section-title { font-size: 1.125rem; }
+            .footer-link { font-size: 0.875rem; }
+            .footer-description { font-size: 1rem; }
+            .footer-copyright { font-size: 0.875rem; }
+        }
 
         .font-medium { font-weight: 500; }
         .font-semibold { font-weight: 600; }
@@ -326,6 +342,15 @@
             border-color: rgba(255, 255, 255, 0.25);
             transform: translateY(-2px);
             box-shadow: var(--shadow-elevated);
+        }
+
+        /* Tesla Footer Styling */
+        .tesla-footer {
+            background: 
+                radial-gradient(ellipse 80% 50% at 50% 100%, hsl(217 91% 60% / 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 80% at 20% 50%, hsl(258 90% 66% / 0.02) 0%, transparent 50%),
+                linear-gradient(135deg, hsl(0 0% 0% / 0.95) 0%, hsl(217 91% 10% / 0.98) 100%);
+            color: hsl(var(--primary));
         }
 
         /* Webapp-style card backgrounds */
@@ -1319,55 +1344,113 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer py-16 md:py-24">
-        <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <!-- Brand -->
+    <footer class="tesla-footer py-12 md:py-16 relative overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, hsl(217 91% 60% / 0.03) 0%, hsl(258 90% 66% / 0.02) 50%, hsl(188 100% 50% / 0.03) 100%);"></div>
+            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 40px 40px;"></div>
+        </div>
+        
+        <div class="absolute top-0 left-0 w-96 h-96" style="background: hsl(217 91% 60% / 0.1); border-radius: 50%; filter: blur(3rem);"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80" style="background: hsl(188 100% 50% / 0.1); border-radius: 50%; filter: blur(3rem);"></div>
+        
+        <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12 relative" style="z-index: 2;">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Brand Section -->
                 <div class="md:col-span-2">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="w-8 h-8 icon-container rounded-lg flex items-center justify-center">
-                            <i data-lucide="zap" class="w-5 h-5"></i>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 glass-effect rounded-xl flex items-center justify-center">
+                            <i data-lucide="zap" class="w-6 h-6" style="color: hsl(var(--primary));"></i>
                         </div>
-                        <span class="font-bold footer-brand-title">HookDaddy</span>
+                        <div>
+                            <h3 class="footer-brand-title" style="color: hsl(var(--primary));">HookDaddy</h3>
+                            <p class="text-muted-foreground footer-small font-medium">Digital Content Solutions</p>
+                        </div>
                     </div>
-                    <p class="text-muted-foreground mb-6 max-w-md footer-description">
-                        Professional digital content solutions for modern businesses. 
-                        We deliver enterprise-grade viral marketing strategies and educational resources worldwide.
+                    
+                    <p class="text-muted-foreground mb-6 max-w-lg footer-description leading-relaxed font-light">
+                        Premium digital content solutions engineered for modern businesses. 
+                        We deliver innovative strategies that drive measurable results.
                     </p>
-                    <div class="flex items-center gap-2 footer-small">
-                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-                        <span class="text-muted-foreground">All Operational</span>
+                    
+                    <div class="glass-effect rounded-xl p-4" style="border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i data-lucide="mail" class="w-4 h-4" style="color: hsl(var(--tesla-blue));"></i>
+                            <span class="font-semibold footer-small">Professional Support</span>
+                        </div>
+                        <p class="text-muted-foreground footer-small">
+                            Licensed digital content provider • Fully compliant with international standards
+                        </p>
                     </div>
                 </div>
-                
+
                 <!-- Company Links -->
                 <div>
-                    <h4 class="font-semibold mb-4 footer-section-title">Company</h4>
+                    <h4 class="font-bold mb-6 footer-section-title" style="color: hsl(var(--primary));">Company</h4>
                     <div class="space-y-3">
-                        <div><a href="#about" class="text-muted-foreground hover:text-primary transition-colors footer-link" style="text-decoration: none;">About Us</a></div>
-                        <div><a href="#services" class="text-muted-foreground hover:text-primary transition-colors footer-link" style="text-decoration: none;">Our Services</a></div>
-                        <div><a href="#contact" class="text-muted-foreground hover:text-primary transition-colors footer-link" style="text-decoration: none;">Contact</a></div>
+                        <div><a href="#about" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium group flex items-center" style="text-decoration: none;">
+                            About Us
+                            <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </a></div>
+                        <div><a href="#services" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium group flex items-center" style="text-decoration: none;">
+                            Our Services
+                            <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </a></div>
+                        <div><a href="#contact" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium group flex items-center" style="text-decoration: none;">
+                            Contact
+                            <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </a></div>
+                        <div><a href="mailto:admin@hookdaddy.store" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium group flex items-center" style="text-decoration: none;">
+                            Careers
+                            <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </a></div>
                     </div>
                 </div>
-                
+
                 <!-- Legal Links -->
                 <div>
-                    <h4 class="font-semibold mb-4 footer-section-title">Legal & Support</h4>
+                    <h4 class="font-bold mb-6 footer-section-title" style="color: hsl(var(--primary));">Legal & Support</h4>
                     <div class="space-y-3">
-                        <div><a href="#" class="text-muted-foreground hover:text-primary transition-colors footer-link" style="text-decoration: none;">Privacy Policy</a></div>
-                        <div><a href="#" class="text-muted-foreground hover:text-primary transition-colors footer-link" style="text-decoration: none;">Terms & Conditions</a></div>
-                        <div><a href="#" class="text-muted-foreground hover:text-primary transition-colors footer-link" style="text-decoration: none;">Return & Refund</a></div>
-                        <div><a href="#" class="text-muted-foreground hover:text-primary transition-colors footer-link" style="text-decoration: none;">Support Center</a></div>
+                        <div><a href="https://hookdaddy.store/tc/" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium group flex items-center" style="text-decoration: none;">
+                            Privacy Policy
+                            <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </a></div>
+                        <div><a href="https://hookdaddy.store/tc/" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium group flex items-center" style="text-decoration: none;">
+                            Terms & Conditions
+                            <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </a></div>
+                        <div><a href="https://hookdaddy.store/tc/#refund" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium group flex items-center" style="text-decoration: none;">
+                            Return & Refund
+                            <i data-lucide="external-link" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </a></div>
+                        <div><a href="mailto:contact@hookdaddy.store" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium group flex items-center" style="text-decoration: none;">
+                            Support Center
+                            <i data-lucide="mail" class="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </a></div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Bottom Bar -->
-            <div class="pt-8 border-t" style="border-color: hsl(var(--border));">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-muted-foreground footer-copyright">
-                        © 2025 HookDaddy Digital Solutions. All rights reserved.
-                    </p>
+
+            <!-- Bottom Section -->
+            <div class="border-t pt-6" style="border-color: rgba(255,255,255,0.1);">
+                <div class="flex flex-col lg:flex-row justify-between items-center gap-6">
+                    <div class="text-center lg:text-left">
+                        <p class="text-muted-foreground footer-copyright mb-2">
+                            © 2025 HookDaddy. All rights reserved.
+                        </p>
+                        <p class="text-muted-foreground footer-small">
+                            Professional digital solutions • International compliance • Secure transactions
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="glass-effect rounded-lg px-4 py-2" style="border: 1px solid rgba(255,255,255,0.1);">
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full animate-pulse" style="background: linear-gradient(to right, #ec4899, #3b82f6, #10b981);"></div>
+                                <span class="text-muted-foreground font-medium footer-small">All Operational</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
