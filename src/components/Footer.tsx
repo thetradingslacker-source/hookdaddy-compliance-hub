@@ -32,9 +32,7 @@ const Footer = () => {
             
             <div className="glass-effect rounded-xl p-4 border border-white/10">
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center border border-white/20">
-                  <Mail className="w-4 h-4 text-white" />
-                </div>
+                <Mail className="w-4 h-4 text-tesla-blue" />
                 <span className="font-semibold text-sm">Professional Support</span>
               </div>
               <p className="text-white/70 text-xs">
