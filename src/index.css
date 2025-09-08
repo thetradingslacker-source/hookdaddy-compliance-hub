@@ -6,73 +6,73 @@
 
 @layer base {
   :root {
-    /* Tesla-inspired light theme with perfect contrast */
-    --background: 255 255 255;
-    --foreground: 15 15 15;
-    --card: 255 255 255;
-    --card-foreground: 15 15 15;
-    --popover: 255 255 255;
-    --popover-foreground: 15 15 15;
-    --primary: 15 15 15;
-    --primary-foreground: 255 255 255;
-    --secondary: 248 250 252;
-    --secondary-foreground: 15 15 15;
-    --muted: 241 245 249;
-    --muted-foreground: 71 85 105;
-    --accent: 59 130 246;
-    --accent-foreground: 255 255 255;
-    --destructive: 239 68 68;
-    --destructive-foreground: 255 255 255;
-    --border: 226 232 240;
-    --input: 248 250 252;
-    --ring: 59 130 246;
+    /* Tesla-inspired light theme with perfect HSL colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 6%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 6%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 6%;
+    --primary: 0 0% 6%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 9% 46%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 221 83% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
     --radius: 12px;
 
-    /* Tesla-inspired colors with high contrast */
-    --tesla-blue: 59 130 246;
-    --tesla-red: 220 38 127;
-    --tesla-silver: 100 116 139;
-    --success: 34 197 94;
-    --warning: 251 146 60;
+    /* Tesla-inspired colors - all HSL format */
+    --tesla-blue: 221 83% 53%;
+    --tesla-red: 348 83% 47%;
+    --tesla-silver: 220 9% 46%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
 
-    /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(15 15 15) 0%, hsl(51 51 51) 100%);
-    --gradient-blue: linear-gradient(135deg, hsl(59 130 246) 0%, hsl(99 102 241) 100%);
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(15 15 15) 0%, hsl(0 0 0) 100%);
+    /* Premium gradients using proper HSL */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(220 9% 46%) 100%);
+    --gradient-blue: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(262 83% 58%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(0 0% 0%) 100%);
     
     /* Enhanced shadows for depth */
-    --shadow-glass: 0 8px 32px 0 rgba(15, 15, 15, 0.1), 0 2px 16px 0 rgba(15, 15, 15, 0.08);
-    --shadow-tesla: 0 25px 50px -12px rgba(15, 15, 15, 0.25), 0 8px 16px -8px rgba(15, 15, 15, 0.1);
-    --shadow-elevated: 0 20px 25px -5px rgba(15, 15, 15, 0.1), 0 10px 10px -5px rgba(15, 15, 15, 0.04);
-    --shadow-intense: 0 32px 64px -12px rgba(15, 15, 15, 0.4);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.12), 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+    --shadow-tesla: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.1);
+    --shadow-elevated: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-intense: 0 32px 64px -12px rgba(0, 0, 0, 0.4);
   }
 
   .dark {
-    /* Tesla-inspired dark theme with perfect contrast */
-    --background: 0 0 0;
-    --foreground: 255 255 255;
-    --card: 15 15 15;
-    --card-foreground: 255 255 255;
-    --popover: 15 15 15;
-    --popover-foreground: 255 255 255;
-    --primary: 255 255 255;
-    --primary-foreground: 0 0 0;
-    --secondary: 24 24 27;
-    --secondary-foreground: 255 255 255;
-    --muted: 24 24 27;
-    --muted-foreground: 163 163 163;
-    --accent: 59 130 246;
-    --accent-foreground: 255 255 255;
-    --destructive: 220 38 127;
-    --destructive-foreground: 255 255 255;
-    --border: 39 39 42;
-    --input: 24 24 27;
-    --ring: 59 130 246;
+    /* Tesla-inspired dark theme with perfect HSL colors */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 221 83% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 348 83% 47%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 10%;
+    --ring: 221 83% 53%;
 
-    /* Dark theme gradients */
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(0 0 0) 0%, hsl(15 15 15) 100%);
+    /* Dark theme gradients using proper HSL */
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 6%) 100%);
     --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.9), 0 2px 16px 0 rgba(0, 0, 0, 0.5);
     --shadow-intense: 0 32px 64px -12px rgba(0, 0, 0, 0.8);
   }
