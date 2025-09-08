@@ -229,7 +229,7 @@
         .max-w-6xl { max-width: 72rem; }
         .max-w-7xl { max-width: 80rem; }
 
-        /* Typography - Mobile First Responsive */
+        /* Typography - Mobile First Responsive - Fixed */
         .text-xs { font-size: 0.75rem; line-height: 1rem; }
         .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
         .text-base { font-size: 1rem; line-height: 1.5rem; }
@@ -243,21 +243,37 @@
         .text-7xl { font-size: 4.5rem; line-height: 1; }
         .text-8xl { font-size: 6rem; line-height: 1; }
 
-        /* Mobile Typography Classes */
-        .footer-brand-title { font-size: 1.125rem; font-weight: 800; }
-        .footer-section-title { font-size: 0.875rem; font-weight: 600; }
-        .footer-link { font-size: 0.75rem; font-weight: 500; }
-        .footer-description { font-size: 0.75rem; line-height: 1.4; }
-        .footer-copyright { font-size: 0.75rem; }
-        .footer-small { font-size: 0.7rem; }
+        /* Responsive Typography Classes - Mobile First */
+        .footer-brand-title { 
+            font-size: 1.125rem; /* 18px mobile */
+            font-weight: 800; 
+        }
+        .footer-section-title { 
+            font-size: 1rem; /* 16px mobile */
+            font-weight: 700; 
+        }
+        .footer-link { 
+            font-size: 0.875rem; /* 14px mobile */
+            font-weight: 500; 
+        }
+        .footer-description { 
+            font-size: 0.875rem; /* 14px mobile */
+            line-height: 1.5; 
+        }
+        .footer-copyright { 
+            font-size: 0.875rem; /* 14px mobile */
+        }
+        .footer-small { 
+            font-size: 0.75rem; /* 12px mobile */
+        }
 
-        @media (min-width: 768px) {
-            .footer-brand-title { font-size: 1.5rem; }
-            .footer-section-title { font-size: 1rem; }
-            .footer-link { font-size: 0.875rem; }
-            .footer-description { font-size: 0.875rem; }
-            .footer-copyright { font-size: 0.875rem; }
-            .footer-small { font-size: 0.75rem; }
+        @media (min-width: 640px) {
+            .footer-brand-title { font-size: 1.5rem; } /* 24px tablet+ */
+            .footer-section-title { font-size: 1.125rem; } /* 18px tablet+ */
+            .footer-link { font-size: 0.875rem; } /* 14px tablet+ */
+            .footer-description { font-size: 1rem; } /* 16px tablet+ */
+            .footer-copyright { font-size: 0.875rem; } /* 14px tablet+ */
+            .footer-small { font-size: 0.75rem; } /* 12px tablet+ */
         }
 
         .font-medium { font-weight: 500; }
@@ -345,12 +361,22 @@
             box-shadow: var(--shadow-elevated);
         }
 
-        /* Tesla Footer Styling */
-        .tesla-footer {
+        /* Tesla Hero Gradient - Match React version exactly */
+        .tesla-hero-gradient {
             background: 
-                radial-gradient(ellipse 80% 50% at 50% 100%, hsl(217 91% 60% / 0.03) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 80% at 20% 50%, hsl(258 90% 66% / 0.02) 0%, transparent 50%),
+                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px),
+                radial-gradient(ellipse 80% 50% at 30% 20%, hsl(217 91% 60% / 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 80% at 70% 70%, hsl(258 90% 66% / 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse 100% 60% at 50% 90%, hsl(188 100% 50% / 0.04) 0%, transparent 40%),
                 linear-gradient(135deg, hsl(0 0% 0% / 0.95) 0%, hsl(217 91% 10% / 0.98) 100%);
+            background-size: 
+                40px 40px,
+                40px 40px,
+                100% 100%,
+                100% 100%,
+                100% 100%,
+                100% 100%;
             color: hsl(var(--primary));
         }
 
@@ -599,23 +625,62 @@
             border-top: 1px solid hsl(var(--border));
         }
 
-        /* Responsive Design */
+        /* Mobile Menu Styling */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+            gap: 0.25rem;
+        }
+
+        .mobile-menu-toggle span {
+            width: 1.5rem;
+            height: 2px;
+            background: hsl(var(--foreground));
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            transition: right 0.3s ease;
+            z-index: 100;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        /* Responsive Design - Fixed Mobile Fonts */
         @media (max-width: 767px) {
             .nav-links { display: none; }
             .mobile-menu-toggle { display: flex; }
             .grid-cols-3 { grid-template-columns: 1fr; }
             .grid-cols-2 { grid-template-columns: 1fr; }
-            .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
-            .text-6xl { font-size: 2.5rem; }
-            .text-5xl { font-size: 2rem; }
-            .text-4xl { font-size: 1.75rem; }
-            .text-7xl { font-size: 3rem; }
-            .text-8xl { font-size: 4rem; }
+            .grid-cols-4 { grid-template-columns: 1fr; }
+            
+            /* Fixed mobile font sizes - much smaller */
+            .text-6xl { font-size: 2rem; }        /* Was 2.5rem, now 32px */
+            .text-5xl { font-size: 1.75rem; }     /* Was 2rem, now 28px */
+            .text-4xl { font-size: 1.5rem; }      /* Was 1.75rem, now 24px */
+            .text-7xl { font-size: 2.25rem; }     /* Was 3rem, now 36px */
+            .text-8xl { font-size: 2.5rem; }      /* Was 4rem, now 40px */
+            
             .section-padding { padding-top: 3rem; padding-bottom: 3rem; }
             .py-16 { padding-top: 3rem; padding-bottom: 3rem; }
             .py-24 { padding-top: 4rem; padding-bottom: 4rem; }
             .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
             .container { padding: 0 1rem; }
+            
+            /* Header mobile fix */
+            .header .font-bold { font-size: 1.125rem; } /* 18px for mobile logo */
         }
 
         @media (min-width: 768px) {
@@ -642,24 +707,24 @@
             .xl\\:px-12 { padding-left: 3rem; padding-right: 3rem; }
         }
 
-        /* Hero text styling - Match React version exactly */
+        /* Hero text styling - Fixed for mobile */
         .hero-text {
-            font-size: 2.25rem; /* text-4xl */
+            font-size: 1.875rem; /* 30px mobile - much smaller */
             font-weight: 900;
-            line-height: 0.9;
-            letter-spacing: -0.05em;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
         }
 
         @media (min-width: 640px) {
-            .hero-text { font-size: 3rem; } /* text-5xl */
+            .hero-text { font-size: 2.25rem; } /* 36px tablet */
         }
 
         @media (min-width: 768px) {
-            .hero-text { font-size: 3.75rem; } /* text-6xl */
+            .hero-text { font-size: 3rem; } /* 48px desktop */
         }
 
         @media (min-width: 1024px) {
-            .hero-text { font-size: 4.5rem; } /* text-7xl */
+            .hero-text { font-size: 3.75rem; } /* 60px large desktop */
         }
 
         /* Mobile header padding - exactly 50px */
@@ -667,56 +732,54 @@
             .pt-20 { padding-top: 50px !important; }
         }
 
-        /* Footer font sizing - match React version */
-        .footer-brand-title { font-size: 1.25rem; } /* text-xl */
-        @media (min-width: 640px) {
-            .footer-brand-title { font-size: 1.5rem; } /* text-2xl */
-        }
-        
-        .footer-brand-subtitle { font-size: 0.875rem; } /* text-sm */
-        .footer-description { font-size: 0.875rem; } /* text-sm */
-        @media (min-width: 640px) {
-            .footer-description { font-size: 1rem; } /* text-base */
-        }
-        
-        .footer-section-title { font-size: 1.125rem; } /* text-lg */
-        .footer-link { font-size: 0.875rem; } /* text-sm */
-        .footer-copyright { font-size: 0.875rem; } /* text-sm */
-        .footer-small { font-size: 0.75rem; } /* text-xs */
-
-        /* Uniform paragraph and text sizing */
+        /* Uniform text sizing - Mobile First */
         .hero-subtitle { 
-            font-size: 1.125rem; /* text-lg */
+            font-size: 1rem; /* 16px mobile */
+        }
+        @media (min-width: 640px) {
+            .hero-subtitle { font-size: 1.125rem; } /* 18px tablet */
         }
         @media (min-width: 768px) {
-            .hero-subtitle { font-size: 1.25rem; } /* text-xl */
+            .hero-subtitle { font-size: 1.25rem; } /* 20px desktop */
         }
 
         .section-title {
-            font-size: 2.25rem; /* text-4xl */
+            font-size: 1.875rem; /* 30px mobile */
+        }
+        @media (min-width: 640px) {
+            .section-title { font-size: 2.25rem; } /* 36px tablet */
         }
         @media (min-width: 768px) {
-            .section-title { font-size: 3rem; } /* text-5xl */
+            .section-title { font-size: 2.75rem; } /* 44px desktop */
         }
 
         .section-description {
-            font-size: 1.25rem; /* text-xl */
+            font-size: 1rem; /* 16px mobile */
+        }
+        @media (min-width: 640px) {
+            .section-description { font-size: 1.125rem; } /* 18px tablet */
         }
 
         .card-title {
-            font-size: 1.125rem; /* text-lg */
+            font-size: 1rem; /* 16px mobile */
+        }
+        @media (min-width: 640px) {
+            .card-title { font-size: 1.125rem; } /* 18px tablet */
         }
 
         .card-text {
-            font-size: 0.875rem; /* text-sm */
+            font-size: 0.875rem; /* 14px all sizes */
         }
 
         .stat-number {
-            font-size: 1.875rem; /* text-3xl */
+            font-size: 1.5rem; /* 24px mobile */
+        }
+        @media (min-width: 640px) {
+            .stat-number { font-size: 1.875rem; } /* 30px tablet+ */
         }
 
         .stat-label {
-            font-size: 0.875rem; /* text-sm */
+            font-size: 0.875rem; /* 14px all sizes */
         }
 
         @media (min-width: 640px) {
@@ -1345,23 +1408,22 @@
     </main>
 
     <!-- Footer -->
-    <footer class="tesla-footer py-12 md:py-16 relative overflow-hidden">
-        <!-- Background Effects -->
+    <footer class="tesla-hero-gradient py-12 md:py-16 relative overflow-hidden">
+        <!-- Background effects -->
         <div class="absolute inset-0">
-            <div class="absolute inset-0" style="background: linear-gradient(135deg, hsl(217 91% 60% / 0.03) 0%, hsl(258 90% 66% / 0.02) 50%, hsl(188 100% 50% / 0.03) 100%);"></div>
             <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 40px 40px;"></div>
         </div>
         
         <div class="absolute top-0 left-0 w-96 h-96" style="background: hsl(217 91% 60% / 0.1); border-radius: 50%; filter: blur(3rem);"></div>
         <div class="absolute bottom-0 right-0 w-80 h-80" style="background: hsl(188 100% 50% / 0.1); border-radius: 50%; filter: blur(3rem);"></div>
         
-        <div class="container max-w-7xl mx-auto px-6 sm:px-8 xl:px-12 relative" style="z-index: 2;">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" style="z-index: 10;">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                 <!-- Brand Section -->
                 <div class="md:col-span-2">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 glass-effect rounded-lg flex items-center justify-center">
-                            <i data-lucide="zap" class="w-5 h-5" style="color: hsl(var(--primary));"></i>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 glass-effect rounded-xl flex items-center justify-center" style="background: transparent; border: 1px solid rgba(255,255,255,0.2);">
+                            <i data-lucide="zap" class="w-6 h-6" style="color: hsl(var(--primary));"></i>
                         </div>
                         <div>
                             <h3 class="footer-brand-title" style="color: hsl(var(--primary));">HookDaddy</h3>
@@ -1369,14 +1431,14 @@
                         </div>
                     </div>
                     
-                    <p class="text-muted-foreground mb-4 max-w-lg footer-description leading-relaxed">
+                    <p class="text-muted-foreground mb-6 max-w-lg footer-description leading-relaxed font-light">
                         Premium digital content solutions engineered for modern businesses. 
                         We deliver innovative strategies that drive measurable results.
                     </p>
                     
-                    <div class="glass-effect rounded-lg p-3" style="border: 1px solid rgba(255,255,255,0.1);">
-                        <div class="flex items-center gap-2 mb-1">
-                            <i data-lucide="mail" class="w-3 h-3" style="color: hsl(var(--tesla-blue));"></i>
+                    <div class="glass-effect rounded-xl p-4" style="border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i data-lucide="mail" class="w-4 h-4" style="color: hsl(var(--tesla-blue));"></i>
                             <span class="font-semibold footer-small">Professional Support</span>
                         </div>
                         <p class="text-muted-foreground footer-small">
@@ -1387,8 +1449,8 @@
 
                 <!-- Company Links -->
                 <div>
-                    <h4 class="font-bold mb-4 footer-section-title" style="color: hsl(var(--primary));">Company</h4>
-                    <div class="space-y-2">
+                    <h4 class="font-bold mb-6 footer-section-title" style="color: hsl(var(--primary));">Company</h4>
+                    <div class="space-y-3">
                         <div><a href="#about" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium" style="text-decoration: none;">
                             About Us
                         </a></div>
@@ -1406,8 +1468,8 @@
 
                 <!-- Legal Links -->
                 <div>
-                    <h4 class="font-bold mb-4 footer-section-title" style="color: hsl(var(--primary));">Legal & Support</h4>
-                    <div class="space-y-2">
+                    <h4 class="font-bold mb-6 footer-section-title" style="color: hsl(var(--primary));">Legal & Support</h4>
+                    <div class="space-y-3">
                         <div><a href="https://hookdaddy.store/tc/" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-primary transition-all duration-300 footer-link font-medium" style="text-decoration: none;">
                             Privacy Policy
                         </a></div>
@@ -1425,10 +1487,10 @@
             </div>
 
             <!-- Bottom Section -->
-            <div class="border-t pt-6" style="border-color: rgba(255,255,255,0.1);">
+            <div class="border-t pt-8" style="border-color: rgba(255,255,255,0.1);">
                 <div class="flex flex-col lg:flex-row justify-between items-center gap-6">
                     <div class="text-center lg:text-left">
-                        <p class="text-muted-foreground footer-copyright" style="margin-bottom: 10px;">
+                        <p class="text-muted-foreground footer-copyright mb-2">
                             © 2025 HookDaddy. All rights reserved.
                         </p>
                         <p class="text-muted-foreground footer-small">
