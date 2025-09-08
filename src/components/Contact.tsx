@@ -10,11 +10,10 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Contact Us
+              Get in Touch
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Get in touch with our professional team for inquiries about our services 
-              and business opportunities.
+              Have questions about our products or services? Reach out today and our team will respond promptly.
             </p>
           </div>
 

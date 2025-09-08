@@ -19,7 +19,7 @@ const Footer = () => {
                 innovative strategies for modern businesses worldwide.
               </p>
               <p className="text-primary-foreground/60 text-sm">
-                © 2024 HookDaddy. All rights reserved.
+                © 2025 HookDaddy. All rights reserved. Professional digital solutions for businesses worldwide.
               </p>
             </div>
 
