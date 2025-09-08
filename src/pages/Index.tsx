@@ -6,6 +6,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  // Trigger rebuild for preview deployment
   return (
     <div className="min-h-screen bg-background">
       <Header />
