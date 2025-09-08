@@ -32,72 +32,72 @@
 
     <style>
         :root {
-            /* Premium Tesla/Apple-inspired theme - Dark Mode Excellence */
-            --background: 0 0% 0%;
-            --foreground: 0 0% 100%;
-            --card: 0 0% 6%;
-            --card-foreground: 0 0% 100%;
-            --popover: 0 0% 6%;
-            --popover-foreground: 0 0% 100%;
-            --primary: 0 0% 100%;
-            --primary-foreground: 0 0% 0%;
-            --secondary: 240 3% 11%;
-            --secondary-foreground: 0 0% 100%;
-            --muted: 240 5% 26%;
-            --muted-foreground: 0 0% 64%;
-            --accent: 217 91% 60%;
-            --accent-foreground: 0 0% 100%;
-            --destructive: 0 84% 60%;
-            --destructive-foreground: 0 0% 100%;
-            --border: 240 6% 25%;
-            --input: 240 3% 11%;
-            --ring: 217 91% 60%;
+            /* Premium Tesla/Apple-inspired theme - Warm Dark Mode */
+            --background: 240 10% 3.9%;           /* Very dark blue-gray instead of pure black */
+            --foreground: 0 0% 98%;               /* Warm white instead of pure white */
+            --card: 240 10% 3.9%;                 /* Match background */
+            --card-foreground: 0 0% 98%;          /* Match foreground */
+            --popover: 240 10% 3.9%;              /* Match background */
+            --popover-foreground: 0 0% 98%;       /* Match foreground */
+            --primary: 0 0% 98%;                  /* Warm white */
+            --primary-foreground: 240 5.9% 10%;   /* Dark blue-gray */
+            --secondary: 240 3.7% 15.9%;          /* Warm dark gray */
+            --secondary-foreground: 0 0% 98%;     /* Warm white */
+            --muted: 240 3.7% 15.9%;              /* Warm dark gray */
+            --muted-foreground: 240 5% 64.9%;     /* Mid gray */
+            --accent: 217 91% 60%;                 /* Tesla blue */
+            --accent-foreground: 0 0% 98%;        /* Warm white */
+            --destructive: 0 84% 60%;              /* Keep red */
+            --destructive-foreground: 0 0% 98%;   /* Warm white */
+            --border: 240 3.7% 15.9%;             /* Warm dark gray */
+            --input: 240 3.7% 15.9%;              /* Warm dark gray */
+            --ring: 217 91% 60%;                  /* Tesla blue */
             --radius: 16px;
 
-            /* Premium Tesla color palette - Tech webapp focused */
+            /* Premium Tesla color palette - Warmer tones */
             --tesla-blue: 217 91% 60%;
             --tesla-red: 0 84% 60%;
             --tesla-silver: 215 25% 27%;
             --tesla-electric: 188 95% 45%;
             --tesla-purple: 258 90% 66%;
-            --success: 217 91% 60%;
+            --success: 142 76% 36%;               /* Green instead of blue */
             --warning: 45 93% 47%;
 
-            /* Enhanced Apple AI-style background with prominent accents */
+            /* Enhanced background with warmer tones */
             --gradient-apple-ai: 
-                radial-gradient(ellipse 80% 50% at 30% 20%, hsl(240 100% 70% / 0.00441) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 80% at 70% 70%, hsl(280 90% 65% / 0.003528) 0%, transparent 50%),
-                radial-gradient(ellipse 100% 60% at 50% 90%, hsl(200 100% 60% / 0.002772) 0%, transparent 40%),
-                linear-gradient(125deg, hsl(240 100% 70% / 0.002268) 0%, hsl(280 90% 65% / 0.00189) 30%, hsl(320 80% 60% / 0.001512) 60%, hsl(200 100% 60% / 0.00252) 100%);
+                radial-gradient(ellipse 80% 50% at 30% 20%, hsl(240 100% 70% / 0.015) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 80% at 70% 70%, hsl(280 90% 65% / 0.012) 0%, transparent 50%),
+                radial-gradient(ellipse 100% 60% at 50% 90%, hsl(200 100% 60% / 0.01) 0%, transparent 40%),
+                linear-gradient(125deg, hsl(240 100% 70% / 0.008) 0%, hsl(280 90% 65% / 0.006) 30%, hsl(320 80% 60% / 0.005) 60%, hsl(200 100% 60% / 0.007) 100%);
             --gradient-master: 
                 var(--gradient-apple-ai),
-                radial-gradient(ellipse 120% 120% at 50% 0%, hsl(0 0% 0% / 0.7) 0%, hsl(0 0% 0% / 0.85) 40%, hsl(0 0% 0% / 0.95) 100%),
-                radial-gradient(circle at 20% 20%, hsl(217 91% 60% / 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, hsl(258 90% 66% / 0.132) 0%, transparent 50%),
-                radial-gradient(circle at 60% 10%, hsl(188 100% 50% / 0.108) 0%, transparent 40%),
-                radial-gradient(circle at 90% 30%, hsl(270 100% 70% / 0.09) 0%, transparent 60%),
-                linear-gradient(135deg, hsl(217 91% 60% / 0.048) 0%, transparent 50%, hsl(258 90% 66% / 0.036) 100%);
+                radial-gradient(ellipse 120% 120% at 50% 0%, hsl(240 10% 3.9% / 0.8) 0%, hsl(240 10% 3.9% / 0.9) 40%, hsl(240 10% 3.9% / 0.98) 100%),
+                radial-gradient(circle at 20% 20%, hsl(217 91% 60% / 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, hsl(258 90% 66% / 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 60% 10%, hsl(188 100% 50% / 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 30%, hsl(270 100% 70% / 0.04) 0%, transparent 60%),
+                linear-gradient(135deg, hsl(217 91% 60% / 0.02) 0%, transparent 50%, hsl(258 90% 66% / 0.015) 100%);
             --grid-pattern: 
-                linear-gradient(hsl(255 255% 255% / 0.084) 1px, transparent 1px),
-                linear-gradient(90deg, hsl(255 255% 255% / 0.084) 1px, transparent 1px);
-            --gradient-section: radial-gradient(ellipse 100% 60% at 50% 50%, hsl(217 91% 10% / 0.08) 0%, transparent 70%);
+                linear-gradient(hsl(0 0% 98% / 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, hsl(0 0% 98% / 0.05) 1px, transparent 1px);
+            --gradient-section: radial-gradient(ellipse 100% 60% at 50% 50%, hsl(217 91% 60% / 0.04) 0%, transparent 70%);
             --gradient-blue: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(258 90% 66%) 100%);
             --gradient-electric: linear-gradient(135deg, hsl(188 100% 50%) 0%, hsl(217 91% 60%) 100%);
             --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(217 91% 60%) 100%);
             
-            /* Apple-style glass effects - Ultra refined */
-            --gradient-glass-subtle: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
-            --gradient-glass-medium: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.04) 100%);
-            --gradient-glass-strong: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(15,15,25,0.6) 100%);
-            --gradient-card-bg: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(10,15,25,0.7) 100%);
+            /* Warmer glass effects */
+            --gradient-glass-subtle: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+            --gradient-glass-medium: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.05) 100%);
+            --gradient-glass-strong: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(15,25,35,0.8) 100%);
+            --gradient-card-bg: linear-gradient(135deg, rgba(240,244,248,0.03) 0%, rgba(15,25,35,0.8) 100%);
             
-            /* Apple-style shadows with subtle depth */
-            --shadow-glass: 0 1px 3px rgba(0, 0, 0, 0.5), 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.08);
-            --shadow-webapp: 0 8px 30px rgba(0, 0, 0, 0.6), 0 2px 12px rgba(59, 130, 246, 0.2);
-            --shadow-elevated: 0 12px 24px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(59, 130, 246, 0.15);
-            --shadow-intense: 0 20px 40px rgba(0, 0, 0, 0.7), 0 8px 32px rgba(59, 130, 246, 0.2);
-            --shadow-button: 0 4px 16px rgba(59, 130, 246, 0.3), 0 1px 4px rgba(0, 0, 0, 0.2);
-            --shadow-icon: 0 2px 8px rgba(59, 130, 246, 0.25), 0 1px 3px rgba(0, 0, 0, 0.3);
+            /* Warmer shadows */
+            --shadow-glass: 0 1px 3px rgba(0, 0, 0, 0.7), 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            --shadow-webapp: 0 8px 30px rgba(0, 0, 0, 0.8), 0 2px 12px rgba(59, 130, 246, 0.15);
+            --shadow-elevated: 0 12px 24px rgba(0, 0, 0, 0.6), 0 4px 16px rgba(59, 130, 246, 0.1);
+            --shadow-intense: 0 20px 40px rgba(0, 0, 0, 0.9), 0 8px 32px rgba(59, 130, 246, 0.15);
+            --shadow-button: 0 4px 16px rgba(59, 130, 246, 0.25), 0 1px 4px rgba(0, 0, 0, 0.3);
+            --shadow-icon: 0 2px 8px rgba(59, 130, 246, 0.2), 0 1px 3px rgba(0, 0, 0, 0.4);
         }
 
         *, ::before, ::after {
@@ -361,15 +361,15 @@
             box-shadow: var(--shadow-elevated);
         }
 
-        /* Tesla Hero Gradient - Match React version exactly */
+        /* Tesla Hero Gradient - Warmer and more sophisticated */
         .tesla-hero-gradient {
             background: 
-                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px),
-                radial-gradient(ellipse 80% 50% at 30% 20%, hsl(217 91% 60% / 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 80% at 70% 70%, hsl(258 90% 66% / 0.06) 0%, transparent 50%),
-                radial-gradient(ellipse 100% 60% at 50% 90%, hsl(188 100% 50% / 0.04) 0%, transparent 40%),
-                linear-gradient(135deg, hsl(0 0% 0% / 0.95) 0%, hsl(217 91% 10% / 0.98) 100%);
+                linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px),
+                radial-gradient(ellipse 80% 50% at 30% 20%, hsl(217 91% 60% / 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 80% at 70% 70%, hsl(258 90% 66% / 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse 100% 60% at 50% 90%, hsl(188 100% 50% / 0.03) 0%, transparent 40%),
+                linear-gradient(135deg, hsl(240 10% 3.9% / 0.98) 0%, hsl(240 8% 6% / 1) 100%);
             background-size: 
                 40px 40px,
                 40px 40px,
