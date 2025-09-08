@@ -28,8 +28,8 @@ const Services = () => {
                 <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
                   Professionally crafted video hooks designed to capture attention fast.
                 </p>
-                <Button variant="outline" className="w-full">
-                  Learn More
+                <Button variant="outline" className="w-full" asChild>
+                  <a href="#viral-hooks">Learn More</a>
                 </Button>
               </CardContent>
             </Card>
@@ -45,8 +45,8 @@ const Services = () => {
                 <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
                   Guides, PDFs, and resources for marketers and business owners.
                 </p>
-                <Button variant="outline" className="w-full">
-                  Learn More
+                <Button variant="outline" className="w-full" asChild>
+                  <a href="#educational-content">Learn More</a>
                 </Button>
               </CardContent>
             </Card>
@@ -62,8 +62,8 @@ const Services = () => {
                 <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
                   Tailored strategies for businesses seeking scalable growth.
                 </p>
-                <Button variant="outline" className="w-full">
-                  Learn More
+                <Button variant="outline" className="w-full" asChild>
+                  <a href="#custom-solutions">Learn More</a>
                 </Button>
               </CardContent>
             </Card>
