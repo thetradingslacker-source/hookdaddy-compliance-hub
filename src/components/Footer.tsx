@@ -45,16 +45,13 @@ const Footer = () => {
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-primary-foreground/80">
                 <li>
-                  <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
+                  <a href="https://hookdaddy.store/tc/" className="hover:text-accent transition-colors">Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
+                  <a href="https://hookdaddy.store/tc/" className="hover:text-accent transition-colors">Terms & Conditions</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-accent transition-colors">Cookie Policy</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-accent transition-colors">Compliance</a>
+                  <a href="https://hookdaddy.store/tc/#refund" className="hover:text-accent transition-colors">Return & Refund</a>
                 </li>
               </ul>
             </div>
@@ -66,13 +63,7 @@ const Footer = () => {
                 Licensed digital content solutions provider. Fully compliant with international business standards.
               </div>
               <div className="flex space-x-6">
-                <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors text-sm">
-                  Business License
-                </a>
-                <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors text-sm">
-                  Payment Security
-                </a>
-                <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors text-sm">
+                <a href="mailto:contact@hookdaddy.store" className="text-primary-foreground/60 hover:text-accent transition-colors text-sm">
                   Support
                 </a>
               </div>

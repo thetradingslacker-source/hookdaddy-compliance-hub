@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HookDaddy - Professional Digital Content Solutions</title>
+    <meta name="description" content="HookDaddy delivers proven digital hooks, video packs, and marketing insights designed to help businesses capture attention, increase engagement, and grow revenue.">
     <style>
         * {
             margin: 0;
@@ -98,7 +99,7 @@
             line-height: 1.2;
         }
         
-        .hero .gradient-text {
+        .gradient-text {
             background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -107,158 +108,157 @@
         
         .hero p {
             font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.8);
             max-width: 48rem;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 2rem auto;
+            line-height: 1.6;
         }
         
         .hero-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
             flex-wrap: wrap;
         }
         
         .btn {
             padding: 1rem 2rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
             font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+            display: inline-block;
         }
         
         .btn-primary {
-            background: #f8fafc;
+            background: white;
             color: #2c3e50;
         }
         
+        .btn-primary:hover {
+            background: #f8fafc;
+            transform: translateY(-2px);
+        }
+        
         .btn-outline {
-            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
             color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: transparent;
         }
         
         .btn-outline:hover {
             background: rgba(255, 255, 255, 0.1);
         }
         
+        .btn-accent {
+            background: #22d3ee;
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            background: #0891b2;
+            transform: translateY(-2px);
+        }
+        
+        .btn-full {
+            width: 100%;
+        }
+        
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin-top: 4rem;
         }
         
         .feature-card {
             background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 1rem;
-            padding: 1.5rem;
+            padding: 2rem;
             text-align: center;
-            backdrop-filter: blur(10px);
         }
         
         .feature-icon {
             width: 3rem;
             height: 3rem;
-            border-radius: 0.5rem;
-            margin: 0 auto 1rem;
+            border-radius: 0.75rem;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0 auto 1rem auto;
             font-size: 1.5rem;
         }
         
-        .icon-accent { background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%); }
-        .icon-gold { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); }
-        .icon-success { background: #10b981; }
-        
-        /* About Section */
-        .about {
-            padding: 5rem 0;
-            background: #fafbfc;
+        .icon-accent {
+            background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
         }
         
+        .icon-gold {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        
+        .icon-success {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        
+        /* Sections */
         .section-title {
-            text-align: center;
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #2c3e50;
+            text-align: center;
             margin-bottom: 1.5rem;
+            color: #2c3e50;
         }
         
         .section-subtitle {
-            text-align: center;
             font-size: 1.25rem;
+            text-align: center;
             color: #64748b;
             max-width: 48rem;
-            margin: 0 auto 4rem;
+            margin: 0 auto 3rem auto;
+            line-height: 1.6;
         }
         
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            margin-bottom: 4rem;
-        }
-        
-        .about-text h3 {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-        }
-        
-        .about-text p {
-            font-size: 1.125rem;
-            color: #64748b;
-            margin-bottom: 1.5rem;
+        .about {
+            padding: 5rem 0;
+            background: white;
         }
         
         .card {
             background: white;
             border-radius: 1rem;
             padding: 2rem;
-            box-shadow: 0 4px 20px -4px rgba(44, 62, 80, 0.15);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
         }
         
-        .value-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 2rem;
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
         }
         
-        .value-icon {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            flex-shrink: 0;
+        .why-choose-card {
+            text-align: center;
         }
         
-        .value-content h4 {
+        .why-choose-card h4 {
             font-size: 1.125rem;
             font-weight: 600;
+            margin-bottom: 0.75rem;
             color: #2c3e50;
-            margin-bottom: 0.5rem;
         }
         
         .stats-card {
             background: linear-gradient(135deg, rgba(34, 211, 238, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
-            border: 1px solid #e2e8f0;
             border-radius: 1rem;
             padding: 2rem;
+            border: 1px solid #e2e8f0;
         }
         
         .stats-grid {
@@ -275,126 +275,177 @@
         }
         
         .stat-accent { color: #22d3ee; }
-        .stat-gold { color: #fbbf24; }
+        .stat-gold { color: #f59e0b; }
         .stat-success { color: #10b981; }
         
-        /* Services Section */
+        /* Services */
         .services {
             padding: 5rem 0;
-            background: rgba(248, 250, 252, 0.5);
+            background: #f9fafc;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
         }
         
         .service-card {
             background: white;
             border-radius: 1rem;
             padding: 2rem;
-            box-shadow: 0 4px 20px -4px rgba(44, 62, 80, 0.15);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
         }
         
         .service-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 40px -10px rgba(44, 62, 80, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
         
         .service-icon {
             width: 4rem;
             height: 4rem;
-            border-radius: 0.75rem;
+            border-radius: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
         }
         
         .service-card h3 {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #2c3e50;
             margin-bottom: 1rem;
+            color: #2c3e50;
         }
         
         .service-card p {
             color: #64748b;
-            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        /* Viral Hooks Section */
+        .viral-hooks {
+            padding: 5rem 0;
+            background: #f9fafc;
+        }
+        
+        .viral-hooks .section-title {
             margin-bottom: 1.5rem;
         }
         
-        .service-features {
-            list-style: none;
-            margin-bottom: 1.5rem;
+        .viral-hooks .section-subtitle {
+            margin-bottom: 4rem;
         }
         
-        .service-features li {
-            display: flex;
-            align-items: center;
-            color: #64748b;
-            margin-bottom: 0.75rem;
+        .viral-hooks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
         
-        .service-features li::before {
-            content: '';
-            width: 0.5rem;
-            height: 0.5rem;
-            border-radius: 50%;
-            margin-right: 0.75rem;
-        }
-        
-        .accent-bullet::before { background: #22d3ee; }
-        .gold-bullet::before { background: #fbbf24; }
-        
-        .enterprise-card {
-            background: linear-gradient(135deg, rgba(44, 62, 80, 0.05) 0%, rgba(34, 211, 238, 0.05) 100%);
-            border: 1px solid rgba(44, 62, 80, 0.2);
+        .viral-hooks-card {
+            background: white;
             border-radius: 1rem;
-            padding: 2rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .viral-hooks-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .viral-hooks-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #2c3e50;
+        }
+        
+        .viral-hooks-card p {
+            color: #64748b;
+        }
+        
+        .viral-hooks-cta {
             text-align: center;
         }
         
-        .btn-accent {
-            background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+        .btn-cta {
+            background: #0073e6;
+            color: white;
+            padding: 1rem 3rem;
+            font-size: 1.25rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn-cta:hover {
+            background: #005bb5;
+            transform: translateY(-2px);
+        }
+        
+        /* Call to Action */
+        .cta {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c3e50 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
             color: white;
         }
         
-        .btn-accent:hover {
-            opacity: 0.9;
+        .cta p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 48rem;
+            margin: 0 auto 2rem auto;
+            line-height: 1.6;
         }
         
-        /* Contact Section */
+        /* Contact */
         .contact {
             padding: 5rem 0;
-            background: #fafbfc;
+            background: white;
         }
         
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
+            margin-top: 3rem;
         }
         
         .contact-info {
-            margin-bottom: 2rem;
+            padding: 2rem;
         }
         
         .info-item {
             display: flex;
             align-items: flex-start;
             gap: 1rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
         
         .info-icon {
             width: 3rem;
             height: 3rem;
-            border-radius: 0.5rem;
+            border-radius: 0.75rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -404,79 +455,50 @@
         
         .info-content h4 {
             font-weight: 600;
-            color: #2c3e50;
             margin-bottom: 0.25rem;
+            color: #2c3e50;
         }
         
         .info-content p {
             color: #64748b;
         }
         
-        .partnership-card {
-            background: linear-gradient(135deg, rgba(34, 211, 238, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
-            border: 1px solid rgba(34, 211, 238, 0.2);
-            border-radius: 1rem;
-            padding: 1.5rem;
-        }
-        
-        .partnership-card h3 {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 1rem;
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
         }
         
         .form-group {
             margin-bottom: 1.5rem;
         }
         
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
         .form-label {
             display: block;
-            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
             font-weight: 500;
             color: #2c3e50;
-            margin-bottom: 0.5rem;
         }
         
-        .form-input {
+        .form-input,
+        .form-textarea {
             width: 100%;
             padding: 0.75rem;
-            border: 1px solid #e2e8f0;
+            border: 2px solid #e2e8f0;
             border-radius: 0.5rem;
             font-size: 1rem;
             transition: border-color 0.3s;
         }
         
-        .form-input:focus {
-            outline: none;
-            border-color: #22d3ee;
-        }
-        
-        .form-textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            min-height: 120px;
-            resize: vertical;
-            font-family: inherit;
-        }
-        
+        .form-input:focus,
         .form-textarea:focus {
             outline: none;
             border-color: #22d3ee;
         }
         
-        .btn-full {
-            width: 100%;
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
         }
         
         /* Footer */
@@ -496,7 +518,7 @@
         .footer-brand p {
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 1rem;
-            max-width: 400px;
+            line-height: 1.6;
         }
         
         .footer-links h4 {
@@ -567,7 +589,6 @@
                 font-size: 2rem;
             }
             
-            .about-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -592,6 +613,15 @@
             .form-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -611,6 +641,7 @@
                 <nav class="nav">
                     <a href="#about">About</a>
                     <a href="#services">Services</a>
+                    <a href="#viral-hooks">Viral Hooks</a>
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
@@ -621,17 +652,16 @@
     <section class="hero">
         <div class="container">
             <h1>
-                Professional Digital
-                <span class="gradient-text"> Content Solutions</span>
+                Unlock the Power of
+                <span class="gradient-text"> Viral Content</span>
             </h1>
             
             <p>
-                HookDaddy delivers enterprise-grade digital content services to businesses worldwide, 
-                specializing in viral marketing strategies and educational resources.
+                HookDaddy delivers proven digital hooks, video packs, and marketing insights designed to help businesses capture attention, increase engagement, and grow revenue.
             </p>
 
             <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary">Learn More</a>
+                <a href="#viral-hooks" class="btn btn-primary">Get Started Today</a>
                 <a href="#services" class="btn btn-outline">Our Services</a>
             </div>
 
@@ -660,51 +690,36 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About HookDaddy</h2>
+            <h2 class="section-title">Who We Are</h2>
             <p class="section-subtitle">
-                A professional digital content company committed to delivering innovative solutions 
-                for modern businesses and content creators.
+                At HookDaddy, we specialize in creating professional, results-driven digital solutions. From viral video hooks to educational resources, our content is crafted to meet the highest standards of compliance, innovation, and business impact. With a focus on global accessibility and secure transactions, we're trusted by entrepreneurs, marketers, and brands worldwide.
             </p>
 
-            <div class="about-grid">
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>
-                        HookDaddy operates as a legitimate digital content solutions provider, 
-                        specializing in viral marketing strategies and educational resources. 
-                        We maintain full compliance with international business standards and 
-                        payment gateway requirements.
-                    </p>
-                    <p>
-                        Our team consists of experienced professionals in digital marketing, 
-                        content creation, and business development, ensuring our clients receive 
-                        top-tier service and results.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="value-item">
-                        <div class="value-icon icon-accent">🌟</div>
-                        <div class="value-content">
-                            <h4>Excellence</h4>
-                            <p>Committed to delivering the highest quality solutions</p>
-                        </div>
+            <div>
+                <h3 style="font-size: 2rem; font-weight: bold; color: #2c3e50; margin-bottom: 3rem; text-align: center;">Why Choose HookDaddy</h3>
+                <div class="why-choose-grid">
+                    <div class="card why-choose-card">
+                        <div class="feature-icon icon-accent" style="margin-bottom: 1rem;">🎯</div>
+                        <h4>Proven Expertise</h4>
+                        <p>Years of experience in digital marketing and viral content creation.</p>
                     </div>
 
-                    <div class="value-item">
-                        <div class="value-icon icon-gold">🤝</div>
-                        <div class="value-content">
-                            <h4>Trust</h4>
-                            <p>Building long-term relationships through transparency</p>
-                        </div>
+                    <div class="card why-choose-card">
+                        <div class="feature-icon icon-gold" style="margin-bottom: 1rem;">⚡</div>
+                        <h4>Rapid Results</h4>
+                        <p>Strategies designed for speed, efficiency, and measurable growth.</p>
                     </div>
 
-                    <div class="value-item">
-                        <div class="value-icon icon-success">🚀</div>
-                        <div class="value-content">
-                            <h4>Innovation</h4>
-                            <p>Staying ahead with cutting-edge strategies</p>
-                        </div>
+                    <div class="card why-choose-card">
+                        <div class="feature-icon icon-success" style="margin-bottom: 1rem;">🔒</div>
+                        <h4>Secure & Compliant</h4>
+                        <p>Built with international payment and business standards in mind.</p>
+                    </div>
+
+                    <div class="card why-choose-card">
+                        <div class="feature-icon" style="background: #2c3e50; margin-bottom: 1rem;">🚀</div>
+                        <h4>Innovation First</h4>
+                        <p>Fresh, creative solutions that keep your brand ahead of the curve.</p>
                     </div>
                 </div>
             </div>
@@ -733,62 +748,93 @@
         <div class="container">
             <h2 class="section-title">Our Services</h2>
             <p class="section-subtitle">
-                Professional digital content solutions designed to meet modern business requirements 
-                and compliance standards.
+                Professional content solutions designed to capture attention, increase engagement, and drive results.
             </p>
 
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon icon-accent">🎬</div>
-                    <h3>Digital Content Strategy</h3>
+                    <h3>Viral Hooks Packs</h3>
                     <p>
-                        Comprehensive viral marketing strategies and content frameworks designed 
-                        to maximize engagement across digital platforms. Our solutions include 
-                        proven methodologies and data-driven approaches.
+                        Professionally crafted video hooks designed to capture attention fast.
                     </p>
-                    <ul class="service-features">
-                        <li class="accent-bullet">Strategic content planning</li>
-                        <li class="accent-bullet">Viral marketing frameworks</li>
-                        <li class="accent-bullet">Performance analytics</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline btn-full">Learn More</a>
+                    <a href="#viral-hooks" class="btn btn-outline btn-full">Learn More</a>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon icon-gold">📚</div>
-                    <h3>Educational Resources</h3>
+                    <h3>Educational Content</h3>
                     <p>
-                        Professional training materials and educational content for businesses 
-                        and individuals looking to enhance their digital marketing capabilities 
-                        through structured learning programs.
+                        Guides, PDFs, and resources for marketers and business owners.
                     </p>
-                    <ul class="service-features">
-                        <li class="gold-bullet">Digital marketing courses</li>
-                        <li class="gold-bullet">Business development guides</li>
-                        <li class="gold-bullet">Industry best practices</li>
-                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-full">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon icon-success">🎯</div>
+                    <h3>Custom Solutions</h3>
+                    <p>
+                        Tailored strategies for businesses seeking scalable growth.
+                    </p>
                     <a href="#contact" class="btn btn-outline btn-full">Learn More</a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="enterprise-card">
-                <h3>Enterprise Solutions</h3>
-                <p>
-                    Custom solutions tailored for enterprise clients requiring specialized 
-                    digital content strategies and comprehensive support packages.
-                </p>
-                <a href="#contact" class="btn btn-accent">Contact Us</a>
+    <!-- Viral Hooks Pack Section -->
+    <section id="viral-hooks" class="viral-hooks">
+        <div class="container">
+            <h2 class="section-title">Upgrade Your Marketing with Viral Hooks</h2>
+            <p class="section-subtitle">
+                Get instant access to our <strong>Viral Hooks Pack</strong>—a proven collection of high-performing video hooks designed to capture attention, boost engagement, and drive sales. Trusted by marketers and businesses worldwide.
+            </p>
+
+            <div class="viral-hooks-grid">
+                <div class="viral-hooks-card">
+                    <div class="feature-icon icon-accent" style="margin-bottom: 1rem;">🎯</div>
+                    <h3>Proven to Convert</h3>
+                    <p>Hooks crafted from top-performing campaigns to maximize ROI.</p>
+                </div>
+                <div class="viral-hooks-card">
+                    <div class="feature-icon icon-gold" style="margin-bottom: 1rem;">📈</div>
+                    <h3>Ready-to-Use</h3>
+                    <p>Plug directly into your ads and start seeing results immediately.</p>
+                </div>
+                <div class="viral-hooks-card">
+                    <div class="feature-icon icon-success" style="margin-bottom: 1rem;">⚡</div>
+                    <h3>Instant Download</h3>
+                    <p>Secure checkout and immediate access to your hooks pack.</p>
+                </div>
             </div>
+
+            <div class="viral-hooks-cta">
+                <a href="https://hookdaddy.store/checkouts/checkout-2/" class="btn-cta" target="_blank" rel="noopener noreferrer">
+                    Buy the Viral Hooks Pack Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Upgrade Your Marketing Today</h2>
+            <p>
+                Get the latest Viral Hooks Pack and stay ahead in the fast-moving world of digital marketing.
+            </p>
+            <a href="https://hookdaddy.store/checkouts/checkout-2/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                Buy Now
+            </a>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Contact Us</h2>
+            <h2 class="section-title">Get in Touch</h2>
             <p class="section-subtitle">
-                Get in touch with our professional team for inquiries about our services 
-                and business opportunities.
+                Have questions about our products or services? Reach out today and our team will respond promptly.
             </p>
 
             <div class="contact-grid">
@@ -808,7 +854,7 @@
                             <div class="info-icon icon-gold">📧</div>
                             <div class="info-content">
                                 <h4>Email</h4>
-                                <p>contact@hookdaddy.store</p>
+                                <p><a href="mailto:contact@hookdaddy.store" style="color: #64748b; text-decoration: none;">contact@hookdaddy.store</a></p>
                             </div>
                         </div>
 
@@ -827,15 +873,6 @@
                                 <p>Fully compliant with international business standards</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="partnership-card">
-                        <h3>Professional Partnership</h3>
-                        <p style="margin-bottom: 1rem;">
-                            We work with businesses of all sizes to deliver comprehensive digital content solutions. 
-                            Our team is committed to maintaining the highest standards of professionalism and compliance.
-                        </p>
-                        <a href="#contact" class="btn btn-outline btn-full">Partnership Inquiries</a>
                     </div>
                 </div>
 
@@ -894,7 +931,7 @@
                         innovative strategies for modern businesses worldwide.
                     </p>
                     <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.875rem;">
-                        © 2024 HookDaddy. All rights reserved.
+                        © 2025 HookDaddy. All rights reserved. Professional digital solutions for businesses worldwide.
                     </p>
                 </div>
 
@@ -911,10 +948,9 @@
                 <div class="footer-links">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                        <li><a href="#">Compliance</a></li>
+                        <li><a href="https://hookdaddy.store/tc/" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+                        <li><a href="https://hookdaddy.store/tc/" target="_blank" rel="noopener noreferrer">Terms & Conditions</a></li>
+                        <li><a href="https://hookdaddy.store/tc/#refund" target="_blank" rel="noopener noreferrer">Return & Refund</a></li>
                     </ul>
                 </div>
             </div>
@@ -924,9 +960,7 @@
                     Licensed digital content solutions provider. Fully compliant with international business standards.
                 </div>
                 <div class="footer-bottom-links">
-                    <a href="#">Business License</a>
-                    <a href="#">Payment Security</a>
-                    <a href="#">Support</a>
+                    <a href="mailto:contact@hookdaddy.store">Support</a>
                 </div>
             </div>
         </div>
