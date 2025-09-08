@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 tesla-gradient rounded-xl flex items-center justify-center shadow-tesla">
+              <div className="w-12 h-12 bg-transparent border border-white/20 rounded-xl flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -149,7 +149,7 @@ const Footer = () => {
             <div className="flex items-center">
               <div className="glass-effect rounded-lg px-4 py-2 border border-white/10">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-tesla-blue via-tesla-electric to-tesla-purple rounded-full animate-pulse"></div>
                   <span className="text-white/80 font-medium text-xs">All Operational</span>
                 </div>
               </div>
