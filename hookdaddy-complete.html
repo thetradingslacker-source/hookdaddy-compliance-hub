@@ -27,16 +27,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script>
-        // Initialize Lucide icons when DOM loads
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        });
-    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
@@ -445,7 +437,7 @@
                 <!-- Logo -->
                 <div class="flex items-center gap-2">
                     <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                        <i data-lucide="zap" class="w-5 h-5" style="color: hsl(var(--primary-foreground));"></i>
+                        <i class="fas fa-bolt w-5 h-5" style="color: hsl(var(--primary-foreground));"></i>
                     </div>
                     <span class="font-bold text-xl">HookDaddy</span>
                 </div>
@@ -503,7 +495,7 @@
             <div class="container">
                 <div class="text-center max-w-4xl mx-auto">
                     <div class="badge mb-6">
-                        <i data-lucide="users" class="w-4 h-4"></i>
+                        <i class="fas fa-users w-4 h-4"></i>
                         Trusted by 10,000+ Creators Worldwide
                     </div>
                     
@@ -519,11 +511,11 @@
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                         <a href="#services" class="btn btn-primary btn-lg">
-                            <i data-lucide="rocket" class="w-5 h-5"></i>
+                            <i class="fas fa-rocket w-5 h-5"></i>
                             Start Creating Now
                         </a>
                         <a href="#viral-hooks" class="btn btn-secondary btn-lg">
-                            <i data-lucide="play" class="w-5 h-5"></i>
+                            <i class="fas fa-play w-5 h-5"></i>
                             Watch Demo
                         </a>
                     </div>
@@ -561,7 +553,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                     <div class="card text-center">
                         <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="award" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                            <i class="fas fa-trophy w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Proven Expertise</h3>
                         <p class="text-muted-foreground text-sm">5+ years of proven success in digital content strategy and viral marketing</p>
@@ -569,7 +561,7 @@
                     
                     <div class="card text-center">
                         <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="zap" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                            <i class="fas fa-bolt w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Rapid Results</h3>
                         <p class="text-muted-foreground text-sm">See immediate impact with our tested hooks and strategies within 24 hours</p>
@@ -577,7 +569,7 @@
                     
                     <div class="card text-center">
                         <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="shield-check" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                            <i class="fas fa-shield-alt w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Secure & Compliant</h3>
                         <p class="text-muted-foreground text-sm">All our solutions are fully compliant with international business standards</p>
@@ -585,7 +577,7 @@
                     
                     <div class="card text-center">
                         <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="lightbulb" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                            <i class="fas fa-lightbulb w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">Innovation First</h3>
                         <p class="text-muted-foreground text-sm">Cutting-edge strategies that keep you ahead of the competition</p>
@@ -624,7 +616,7 @@
                     <!-- Viral Hooks Pack -->
                     <div class="card">
                         <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="trending-up" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                            <i class="fas fa-chart-line w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Viral Hooks Packs</h3>
                         <p class="text-muted-foreground mb-4">Ready-to-use viral hooks that guarantee engagement. Tested on millions of views.</p>
@@ -636,25 +628,25 @@
                         
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 100+ Proven Hooks
                             </li>
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 Industry Specific
                             </li>
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 Instant Download
                             </li>
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 Regular Updates
                             </li>
                         </ul>
                         
                         <a href="#viral-hooks" class="btn btn-primary w-full">
-                            <i data-lucide="download" class="w-4 h-4"></i>
+                            <i class="fas fa-download w-4 h-4"></i>
                             Get Hooks Pack
                         </a>
                     </div>
@@ -662,7 +654,7 @@
                     <!-- Educational Content -->
                     <div class="card">
                         <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="graduation-cap" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                            <i class="fas fa-graduation-cap w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Educational Content</h3>
                         <p class="text-muted-foreground mb-4">Comprehensive courses and resources to master digital content creation.</p>
@@ -674,25 +666,25 @@
                         
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 Expert-Led Courses
                             </li>
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 Practical Exercises
                             </li>
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 Community Access
                             </li>
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 Certificate
                             </li>
                         </ul>
                         
                         <a href="#contact" class="btn btn-secondary w-full">
-                            <i data-lucide="book-open" class="w-4 h-4"></i>
+                            <i class="fas fa-book-open w-4 h-4"></i>
                             Learn More
                         </a>
                     </div>
@@ -700,7 +692,7 @@
                     <!-- Custom Solutions -->
                     <div class="card">
                         <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="settings" class="w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
+                            <i class="fas fa-cog w-6 h-6" style="color: hsl(var(--primary-foreground));"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Custom Solutions</h3>
                         <p class="text-muted-foreground mb-4">Tailored content strategies and implementations for enterprise clients.</p>
@@ -712,25 +704,25 @@
                         
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 Strategy Development
                             </li>
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 Content Creation
                             </li>
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 Performance Analytics
                             </li>
                             <li class="flex items-center gap-2 text-sm">
-                                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                <i class="fas fa-check w-4 h-4 text-green-400"></i>
                                 Dedicated Support
                             </li>
                         </ul>
                         
                         <a href="#contact" class="btn btn-secondary w-full">
-                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            <i class="fas fa-envelope w-4 h-4"></i>
                             Get Quote
                         </a>
                     </div>
@@ -739,7 +731,7 @@
                 <div class="text-center">
                     <p class="text-lg text-muted-foreground mb-6">Ready to transform your content strategy?</p>
                     <a href="#viral-hooks" class="btn btn-primary btn-lg">
-                        <i data-lucide="rocket" class="w-5 h-5"></i>
+                        <i class="fas fa-rocket w-5 h-5"></i>
                         Start Your Journey
                     </a>
                 </div>
@@ -751,7 +743,7 @@
             <div class="container">
                 <div class="text-center mb-12">
                     <div class="badge badge-success mb-4">
-                        <i data-lucide="star" class="w-4 h-4"></i>
+                        <i class="fas fa-star w-4 h-4"></i>
                         Bestseller Pack
                     </div>
                     <h2 class="text-4xl font-bold mb-4">Get Our Viral Hooks Pack</h2>
@@ -762,23 +754,23 @@
                     
                     <div class="flex items-center justify-center gap-4 mb-6">
                         <div class="flex items-center gap-1">
-                            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
+                            <i class="fas fa-star w-5 h-5 text-yellow-400"></i>
+                            <i class="fas fa-star w-5 h-5 text-yellow-400"></i>
+                            <i class="fas fa-star w-5 h-5 text-yellow-400"></i>
+                            <i class="fas fa-star w-5 h-5 text-yellow-400"></i>
+                            <i class="fas fa-star w-5 h-5 text-yellow-400"></i>
                             <span class="font-semibold ml-2">4.9/5</span>
                         </div>
                         <div class="text-muted-foreground">|</div>
                         <div>
-                            <i data-lucide="download" class="w-5 h-5 inline mr-1"></i>
+                            <i class="fas fa-download w-5 h-5 inline mr-1"></i>
                             <span class="font-semibold">50,000+ Downloads</span>
                         </div>
                     </div>
                     
                     <div class="mb-8">
                         <a href="https://hookdaddy.gumroad.com/l/hookpack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg animate-float">
-                            <i data-lucide="zap" class="w-5 h-5"></i>
+                            <i class="fas fa-bolt w-5 h-5"></i>
                             Get Hooks Pack Now - $27
                         </a>
                     </div>
@@ -788,7 +780,7 @@
                     <!-- Proven to Convert -->
                     <div class="card text-center">
                         <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="trending-up" class="w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
+                            <i class="fas fa-chart-line w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Proven to Convert</h3>
                         <p class="text-muted-foreground mb-6">
@@ -796,19 +788,19 @@
                         </p>
                         <ul class="space-y-3 text-left">
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Tested on 50M+ views</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">300% average engagement boost</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Multi-platform optimized</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Industry-specific variations</span>
                             </li>
                         </ul>
@@ -817,7 +809,7 @@
                     <!-- Ready-to-Use -->
                     <div class="card text-center">
                         <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="clock" class="w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
+                            <i class="fas fa-clock w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Ready-to-Use</h3>
                         <p class="text-muted-foreground mb-6">
@@ -825,19 +817,19 @@
                         </p>
                         <ul class="space-y-3 text-left">
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">100+ hooks included</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Categorized by industry</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Easy customization guide</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Multiple format options</span>
                             </li>
                         </ul>
@@ -846,7 +838,7 @@
                     <!-- Instant Access -->
                     <div class="card text-center">
                         <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="download" class="w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
+                            <i class="fas fa-download w-8 h-8" style="color: hsl(var(--primary-foreground));"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Instant Access</h3>
                         <p class="text-muted-foreground mb-6">
@@ -854,19 +846,19 @@
                         </p>
                         <ul class="space-y-3 text-left">
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Instant digital delivery</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Lifetime access included</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">Free updates forever</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <i class="fas fa-check-circle w-5 h-5 text-green-400"></i>
                                 <span class="text-sm">30-day money-back guarantee</span>
                             </li>
                         </ul>
@@ -880,7 +872,7 @@
             <div class="container">
                 <div class="text-center max-w-4xl mx-auto">
                     <div class="badge mb-6">
-                        <i data-lucide="clock" class="w-4 h-4"></i>
+                        <i class="fas fa-clock w-4 h-4"></i>
                         Limited Time Offer
                     </div>
                     
@@ -911,26 +903,26 @@
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                         <a href="https://hookdaddy.gumroad.com/l/hookpack" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                            <i data-lucide="zap" class="w-5 h-5"></i>
+                            <i class="fas fa-bolt w-5 h-5"></i>
                             Get Viral Hooks Pack Now
                         </a>
                         <a href="#services" class="btn btn-secondary btn-lg">
-                            <i data-lucide="info" class="w-5 h-5"></i>
+                            <i class="fas fa-info-circle w-5 h-5"></i>
                             Learn More
                         </a>
                     </div>
                     
                     <div class="flex items-center justify-center gap-6 text-sm text-muted-foreground">
                         <div class="flex items-center gap-2">
-                            <i data-lucide="credit-card" class="w-4 h-4"></i>
+                            <i class="fas fa-credit-card w-4 h-4"></i>
                             Secure Payment
                         </div>
                         <div class="flex items-center gap-2">
-                            <i data-lucide="shield" class="w-4 h-4"></i>
+                            <i class="fas fa-shield w-4 h-4"></i>
                             30-Day Guarantee
                         </div>
                         <div class="flex items-center gap-2">
-                            <i data-lucide="download" class="w-4 h-4"></i>
+                            <i class="fas fa-download w-4 h-4"></i>
                             Instant Access
                         </div>
                     </div>
@@ -943,7 +935,7 @@
             <div class="container">
                 <div class="text-center mb-12">
                     <div class="badge mb-4">
-                        <i data-lucide="headphones" class="w-4 h-4"></i>
+                        <i class="fas fa-headphones w-4 h-4"></i>
                         Professional Support
                     </div>
                     <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
@@ -961,7 +953,7 @@
                             
                             <div class="space-y-4">
                                 <div class="flex items-start gap-3">
-                                    <i data-lucide="building" class="w-5 h-5 mt-1 text-primary"></i>
+                                    <i class="fas fa-building w-5 h-5 mt-1 text-primary"></i>
                                     <div>
                                         <div class="font-medium">HookDaddy Digital Solutions</div>
                                         <div class="text-muted-foreground text-sm">Professional Content Services</div>
@@ -969,7 +961,7 @@
                                 </div>
                                 
                                 <div class="flex items-start gap-3">
-                                    <i data-lucide="mail" class="w-5 h-5 mt-1 text-primary"></i>
+                                    <i class="fas fa-envelope w-5 h-5 mt-1 text-primary"></i>
                                     <div>
                                         <div class="font-medium">hello@hookdaddy.store</div>
                                         <div class="text-muted-foreground text-sm">Business Inquiries & Support</div>
@@ -977,7 +969,7 @@
                                 </div>
                                 
                                 <div class="flex items-start gap-3">
-                                    <i data-lucide="clock" class="w-5 h-5 mt-1 text-primary"></i>
+                                    <i class="fas fa-clock w-5 h-5 mt-1 text-primary"></i>
                                     <div>
                                         <div class="font-medium">Monday - Friday: 9 AM - 6 PM EST</div>
                                         <div class="text-muted-foreground text-sm">Response within 24 hours</div>
@@ -985,7 +977,7 @@
                                 </div>
                                 
                                 <div class="flex items-start gap-3">
-                                    <i data-lucide="shield-check" class="w-5 h-5 mt-1 text-primary"></i>
+                                    <i class="fas fa-shield-alt w-5 h-5 mt-1 text-primary"></i>
                                     <div>
                                         <div class="font-medium">Fully Compliant & Secure</div>
                                         <div class="text-muted-foreground text-sm">International business standards</div>
@@ -1001,7 +993,7 @@
                                 We offer tailored content strategies for large organizations.
                             </p>
                             <a href="mailto:partnerships@hookdaddy.store" class="btn btn-secondary">
-                                <i data-lucide="mail" class="w-4 h-4"></i>
+                                <i class="fas fa-envelope w-4 h-4"></i>
                                 Inquire About Partnership
                             </a>
                         </div>
@@ -1039,7 +1031,7 @@
                             </div>
                             
                             <button type="submit" class="btn btn-primary w-full">
-                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <i class="fas fa-paper-plane w-4 h-4"></i>
                                 Send Message
                             </button>
                         </form>
@@ -1057,7 +1049,7 @@
                 <div class="md:col-span-2">
                     <div class="flex items-center gap-2 mb-4">
                         <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                            <i data-lucide="zap" class="w-5 h-5" style="color: hsl(var(--primary-foreground));"></i>
+                            <i class="fas fa-bolt w-5 h-5" style="color: hsl(var(--primary-foreground));"></i>
                         </div>
                         <span class="font-bold text-xl">HookDaddy</span>
                     </div>
